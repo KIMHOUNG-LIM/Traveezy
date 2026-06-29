@@ -42,7 +42,7 @@ This is the whole point of this structure — it stops two people from editing t
 | `assets/images/shared/`                               | Logo, icons, or images reused across pages             | Whoever sets up branding                                  |
 | `assets/fonts/`                                       | Site-wide font files                                   | Set up once, at the start, by one person                  |
 | `assets/icons/`, `assets/logo/`, `assets/videos/` | Site-wide icons/logo/video assets                      | Whoever owns branding/media                               |
-| `services/bravo-api.js`                               | API calls (if your page needs to fetch live data)      | Whoever is building the data-driven page(s)               |
+| `services/bravo-api.js`                               | API calls      | Whoever is building subscribe email & newsletter to send customwr email to Bravo               |
 
 If you think something should become shared (e.g. a color you used that other pages should also use), **don't just add it to your own CSS file** — flag it to the team and move it into `shared/variables.css` together.
 
