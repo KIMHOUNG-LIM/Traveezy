@@ -1,3 +1,3 @@
-# Project
+# Traveezy - Travel Made Easy
 
-Feature-based static website front end.
+Traveezy helps people discover Cambodia's best destinations, local culture, and hidden gems. We make travel planning easy for both local and international travelers.
