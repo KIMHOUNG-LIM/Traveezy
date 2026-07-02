@@ -1,1 +1,61 @@
 /* reusable helper classes you use everywhere in HTML */
+
+/* For Flex and Align utilities */
+.d-flex {
+    display: flex;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Typo Helper */
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-muted {
+    opacity: 0.7;
+}
+
+/* Reusable Card and Button */
+/* jam dol pel write card jam kit mer dak oy use dea =.= */
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* image helper */
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-rounded {
+    border-radius: var(--radius-md);
+}
