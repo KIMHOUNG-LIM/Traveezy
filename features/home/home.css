@@ -1,1 +1,23 @@
 /* home feature styles */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("../../assets/images/home/kompot.webp");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column; /*make the children go horizontal */
+    color: var(--white);
+}
+
+.hero > * {
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 54px;
+    font-weight: 700;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.50);
+}
