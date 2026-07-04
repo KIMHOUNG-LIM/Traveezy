@@ -1,1 +1,106 @@
-/* navbar component styles */
+
+.custom-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    gap:2rem;
+}
+
+/* Logo */
+
+.navbar-logo {
+    height: 150px;
+}
+
+/* Navigation Menu */
+
+.navbar-menu {
+    border: 1px solid var(--grey);
+    background: rgba(255,255,255,0.08);
+
+    --bs-nav-link-color: #fff;
+    --bs-nav-pills-link-active-color: var(--black);
+    --bs-nav-pills-link-active-bg: #fff;
+}
+
+/* Contact Button */
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+}
+
+.contact-btn:hover {
+    color: var(--white);
+    /* background: rgba(255,255,255,0.08); */
+}
+
+.contact-btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    background: var(--white);
+    border-radius: 50%;
+}
+
+/* ==========================================
+   Tablet and Mobile
+========================================== */
+
+@media (max-width: 950px) {
+
+    .custom-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+        
+    }
+    
+    .navbar-menu {
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 690px) {
+
+    .custom-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+    
+    .navbar-menu {
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .contact-btn{
+        display: none;
+    }
+}
