@@ -24,7 +24,10 @@
     --bs-nav-pills-link-active-color: var(--black);
     --bs-nav-pills-link-active-bg: #fff;
 }
-
+.navbar-menu .nav-link:hover {
+    color: var(--grey);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
 /* Contact Button */
 
 .contact-btn {
@@ -39,7 +42,7 @@
 
 .contact-btn:hover {
     color: var(--white);
-    background: rgba(255,255,255,0.1);
+    background: rgba(0, 0, 0, 0.35);
 }
 
 .contact-btn-icon {
