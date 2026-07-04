@@ -1,7 +1,5 @@
 // Main entry JS
 
-const swiper = new Swiper(".swiper");
-
 async function loadNavbar() {
     const response = await fetch("components/navbar/navbar.html");
     const html = await response.text();
