@@ -10,81 +10,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/features/province/province.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="/components/navbar/navbar.css">
+      <!-- Custom styles (loaded after Bootstrap so they can override it) -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="shared/variables.css">
+  <link rel="stylesheet" href="shared/global.css">
+  <link rel="stylesheet" href="shared/theme.css">
+  <link rel="stylesheet" href="shared/fonts.css">
+  <link rel="stylesheet" href="features/home/home.css">
+  <link rel="stylesheet" href="components/navbar/navbar.css">
 </head>
 <body>
     <div class="hero-section container-fluid mx-0 mb-5">
          <div id="navbar-container"></div>
-         
-        
     </div>
 
-    <section>
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-6">
-                    <h1 class="playfair-display font-size">Discover Your <br> Perfect Place</h1>
-                </div>
-                <div class="col-6 pt-2">
-                    <p class="inter ps-5">Siem Reap is a vibrant blend of culture, history, and natural beauty, offering something for every traveller. Whether wandering through the ancient corridors of Angkor Wat or diving into the lively local </p>
-                    <button type="button" class="btn btn-outline-primary rounded-5 fs-5 px-4 mleft">See More</button>
-                </div>
+
+    <section class="py-2">
+    <div class="container">
+        <div class="row align-items-center g-4">
+
+            <!-- Left -->
+            <div class="col-12 col-lg-6">
+                <h1 class="playfair-display font-size">
+                    Discover Your <br>
+                    Perfect Place
+                </h1>
             </div>
+
+            <!-- Right -->
+            <div class="col-12 col-lg-6">
+                <p class="inter mb-4 text-secondary">
+                    Siem Reap is a vibrant blend of culture, history, and natural beauty,
+                    offering something for every traveller. Whether wandering through the
+                    ancient corridors of Angkor Wat or diving into the lively local...
+                </p>
+
+                <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-outline-primary rounded-pill px-4 py-2">
+        See More
+    </button>
+</div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <section>
-        <div class="container section-2 mt-5">
-            <div class="row">
-                <div class="col-4">
-                   <a href="" class="text-decoration-none">
+    <div class="container section-2 mt-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+               <a href="" class="text-decoration-none">
+                <div class="top">
+                 <img src="/image/Phare.webp" alt="" class="w-100 h-100 rounded-top-4">
+               </div>
+               <div class="bottom mt-4">
+                <h3 class="playfair-display mb-3 text-dark">Phare, The Cambodian Circus</h3>
+                <p class="inter text-secondary text-start">Phare, The Cambodian Circus "Amazing vibe & energy, transforming the lives of Cambodian youth" Experience Siem Reap's most unique, authentic top rated (TripAdvisor & Lonely Planet) evening entertainment.</p>
+               </div>
+               </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="" class="text-decoration-none">
                     <div class="top">
-                     <img src="/image/Phare.webp" alt="" class="w-100 h-100 rounded-top-4">
-                   </div>
-                   <div class="bottom mt-4">
-                    <h3 class="playfair-display mb-3 text-dark">Phare, The Cambodian Circus</h3>
-                    <p class="inter text-secondary">Phare, The Cambodian Circus "Amazing vibe & energy, transforming the lives of Cambodian youth" Experience Siem Reap's most unique, authentic top rated (TripAdvisor & Lonely Planet) evening entertainment.</p>
-                   </div>
-                   </a>
-                </div>
-                <div class="col-4">
-                    <a href="" class="text-decoration-none">
-                        <div class="top">
-                     <img src="/image/Night Market.webp" alt="" class="w-100 h-100 rounded-top-4">
-                   </div>
-                   <div class="bottom mt-4">
-                    <h3 class="playfair-display mb-3 text-dark">Siem Reap Night Market</h3>
-                    <p class="inter text-secondary">Established in 2007, the Angkor Night Market in Siem Reap is Cambodia’s first night market and a top destination for an authentic shopping experience. Located on Street 08, it features over 240 vendors. </p>
-                   </div>
-                    </a>
-                </div>
-                <div class="col-4">
-                    <a href="" class="text-decoration-none">
-                   <div class="top">
-                     <img src="/image/Apsara Dance.webp" alt="" class="w-100 h-100 rounded-top-4">
-                   </div>
-                   <div class="bottom mt-4">
-                    <h3 class="playfair-display mb-3 text-dark">Apsara Dance Performance</h3>
-                    <p class="inter text-secondary">Gain a deeper understanding of the Angkorian period at the Angkor National Museum, a premier cultural institution in Siem Reap. This museum houses an extensive collection of artefacts and exhibits.</p>
-                   </div>
-                    </a>
-                </div>
+                 <img src="/image/Night Market.webp" alt="" class="w-100 h-100 rounded-top-4">
+               </div>
+               <div class="bottom mt-4">
+                <h3 class="playfair-display mb-3 text-dark">Siem Reap Night Market</h3>
+                <p class="inter text-secondary text-start">Established in 2007, the Angkor Night Market in Siem Reap is Cambodia's first night market and a top destination for an authentic shopping experience. Located on Street 08, it features over 240 vendors. </p>
+               </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="" class="text-decoration-none">
+               <div class="top">
+                 <img src="/image/Apsara Dance.webp" alt="" class="w-100 h-100 rounded-top-4">
+               </div>
+               <div class="bottom mt-4">
+                <h3 class="playfair-display mb-3 text-dark">Apsara Dance Performance</h3>
+                <p class="inter text-secondary text-start">Gain a deeper understanding of the Angkorian period at the Angkor National Museum, a premier cultural institution in Siem Reap. This museum houses an extensive collection of artefacts and exhibits.</p>
+               </div>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-        <section>
-        <div class="container mt-5">
-            <div class="row d-flex">
-                <div class="col-6">
-                    <h1 class="playfair-display ">Best Local Food</h1>
-                </div>
-                <div class="col-6 pt-2">
-                    <button type="button" class="btn btn-outline-primary rounded-5 fs-5 px-4 mleft">See More</button>
-                </div>
+    
+       <section>
+    <div class="container mt-5">
+        <div class="row d-flex align-items-center">
+            <div class="col-6 col-lg-6 col-md-6 text-center text-md-start">
+                <h1 class="playfair-display fs-2 fs-md-1">Best Local Food</h1>
+            </div>
+            <div class="col-6 col-lg-6 col-md-6 pt-3 pt-md-2 text-center text-md-end">
+                <button type="button" class="btn btn-outline-primary rounded-5 fs-6 fs-md-5 px-4 ">See More</button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section>
     <div class="container-fluid section-3 mt-4">
@@ -152,7 +177,7 @@
 
                 <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
                     <h5 class="text-white me-5 playfair-display">Mealea Watbo</h5>
-                    <div class="text-white btn-view rounded-5 align-items-center">
+                    <div class="text-white btn-view rounded-5 align-items-center ms-3">
                         <a href="" class="text-white text-decoration-none">View Details</a>
                     </div>
                 </div>
@@ -244,7 +269,7 @@
 
                 <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
                     <h5 class="text-white me-5 playfair-display">Mealea Watbo</h5>
-                    <div class="text-white btn-view rounded-5 align-items-center">
+                    <div class="text-white btn-view rounded-5 align-items-center ms-3">
                         <a href="" class="text-white text-decoration-none">View Details</a>
                     </div>
                 </div>
@@ -277,18 +302,18 @@
     </div>
 </section>
 
-    <section>
-        <div class="container mt-5">
-            <div class="row d-flex">
-                <div class="col-6">
-                    <h1 class="playfair-display">Best Accommodation</h1>
-                </div>
-                <div class="col-6 pt-2">
-                    <button type="button" class="btn btn-outline-primary rounded-5 fs-5 px-4 mleft">See More</button>
-                </div>
+           <section>
+    <div class="container mt-5">
+        <div class="row d-flex align-items-center">
+            <div class="col-6 col-lg-6 col-md-6 text-center text-md-start">
+                <h1 class="playfair-display fs-2 fs-md-1">Best Accomedation</h1>
+            </div>
+            <div class="col-6 col-lg-6 col-md-6 pt-3 pt-md-2 text-center text-md-end">
+                <button type="button" class="btn btn-outline-primary rounded-5 fs-6 fs-md-5 px-4 btn-see-more">See More</button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section>
         <div class="container section-4 mt-4">
@@ -378,13 +403,18 @@
         </div>
     </section>
 
+    
     <section class="mt-5">
          <div class="hero-section container-fluid mx-0 mb-5"></div>
     </section>
 
 
-    <script src="/components/navbar/navbar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="/features/province/province.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="components/navbar/navbar.js"></script>
+  <script src="shared/main.js"></script>
+  <script src="features/home/home.js"></script>
 </body>
 </html>

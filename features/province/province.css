@@ -16,7 +16,7 @@
     font-size: 60px;
 }
 .mleft{
-    margin-left: 500px;
+    margin-left: 480px;
 }
 .section-2 .top{
     width: 100%;
@@ -118,3 +118,49 @@
     width: 70px;
     height: 40px;
 }
+
+
+.font-size {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+    .font-size {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .inter {
+        text-align: center;
+    }
+
+    .btn {
+        display: block;
+        margin-right: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .font-size {
+        font-size: 2.2rem;
+    }
+
+    .inter {
+        font-size: 0.95rem;
+    }
+    .btn {
+        display: block;
+        margin:auto;
+    }
+}
+
+@media(width:820px){
+    .btn-see-more{
+        margin-left: 175px;
+    }
+}
+
+
