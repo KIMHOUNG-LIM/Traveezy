@@ -7,11 +7,14 @@
     background-size: cover;
 
     display: flex;
-    flex-direction: column; /*make the children go horizontal */
+    flex-direction: column;
+    /*make the children go horizontal */
     color: var(--white);
+    margin: 0px;
+    padding: 3rem;
 }
 
-.hero > * {
+.hero>* {
     z-index: 1;
 }
 
@@ -26,26 +29,31 @@
     margin-top: 3.5rem;
     display: flex;
     width: 100%;
+    justify-content: flex-start;
 }
 
 .swiper {
     width: 50%;
-    margin-left: auto; /* pushes it to the right*/
+    margin-left: auto;
+    /* pushes it to the right*/
     margin-right: 0;
 }
 
 .destination-card {
-    margin-top: 0;  
+    margin-top: 0;
     margin-bottom: 2rem;
-    width: 200px;
+    width: 100%;
+    max-width: 360px;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    transform: translateY(10rem); /* pushes card down by default */
-    transition: transform 0.45s ease;
+    transform: translateY(10rem);
+    /* pushes card down by default */
+    transition: transform 1.0s ease;
 }
 
 .swiper-slide-active .destination-card {
-    transform: translateY(0); /* moves card up when active */
+    transform: translateY(0);
+    /* moves card up when active */
 }
 
 .destination-image {
@@ -58,48 +66,93 @@
     display: none;
 }
 
-/* section 1 design */
 .swiper-slide-active .destination-content {
     display: block;
     margin-top: 1rem;
 }
 
-.destination-title {
-    margin-bottom: 0.5rem;
-}
-.line{
-    width:4rem;
-    height:1rem;
+/* section 1 and 3 design */
+.line {
+    width: 4.5rem;
+    height: 0.85rem;
     background-color: var(--secondary);
-    display: block;
-}
-.section1{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    gap: 1.5rem;
 }
 
-.section-content{
-    display: flex;
-    height: 5rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 50%;
-    padding: 0px;
-    
-}
 .section-title {
     font-family: var(--font-heading);
     font-size: 42px;
     font-weight: 500;
 }
-.section-body{
+
+.section-body {
     font-family: var(--font-body);
     font-size: 23px;
 }
-.section-swiper {
-    width: 50%;
 
+/* section 2 */
+.section2 {
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-pic {
+    flex: 1;
+    display: grid;
+    min-height: 0;
+    /* Allows the flex item to shrink below content size */
+    grid-template-rows: 1fr;
+    /* Constrains the grid row height */
+}
+
+.top-row {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bottom-row {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pic-section2 {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    /* Force grid items to occupy 100% of the grid cell height */
+}
+
+.section2-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* sldfjdl;kajf;ladsjf */
+.image-square {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.square-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Crop instead of stretching */
+    display: block;
+}
+
+/* Responsive adjustment for swiper container */
+@media (max-width: 992px) {
+    .swiper {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .destination-card {
+        max-width: 100%;
+    }
 }
