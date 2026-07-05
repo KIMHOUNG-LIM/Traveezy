@@ -69,9 +69,9 @@
 }
 .line{
     width:4rem;
-    height:0.5rem;
+    height:1rem;
     background-color: var(--secondary);
-    border:none;
+    display: block;
 }
 .section1{
     display: flex;
