@@ -9,9 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/features/province/province.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/components/navbar/navbar.css">
 </head>
 <body>
-    <div class="hero-section">
+    <div class="hero-section container-fluid mx-0 mb-5">
+         <div id="navbar-container"></div>
+         
         
     </div>
 
@@ -33,31 +37,37 @@
         <div class="container section-2 mt-5">
             <div class="row">
                 <div class="col-4">
-                   <div class="top">
+                   <a href="" class="text-decoration-none">
+                    <div class="top">
                      <img src="/image/Phare.webp" alt="" class="w-100 h-100 rounded-top-4">
                    </div>
                    <div class="bottom mt-4">
-                    <h3 class="playfair-display mb-3">Phare, The Cambodian Circus</h3>
+                    <h3 class="playfair-display mb-3 text-dark">Phare, The Cambodian Circus</h3>
                     <p class="inter text-secondary">Phare, The Cambodian Circus "Amazing vibe & energy, transforming the lives of Cambodian youth" Experience Siem Reap's most unique, authentic top rated (TripAdvisor & Lonely Planet) evening entertainment.</p>
                    </div>
+                   </a>
                 </div>
                 <div class="col-4">
-                   <div class="top">
+                    <a href="" class="text-decoration-none">
+                        <div class="top">
                      <img src="/image/Night Market.webp" alt="" class="w-100 h-100 rounded-top-4">
                    </div>
                    <div class="bottom mt-4">
-                    <h3 class="playfair-display mb-3">Siem Reap Night Market</h3>
+                    <h3 class="playfair-display mb-3 text-dark">Siem Reap Night Market</h3>
                     <p class="inter text-secondary">Established in 2007, the Angkor Night Market in Siem Reap is Cambodia’s first night market and a top destination for an authentic shopping experience. Located on Street 08, it features over 240 vendors. </p>
                    </div>
+                    </a>
                 </div>
                 <div class="col-4">
+                    <a href="" class="text-decoration-none">
                    <div class="top">
                      <img src="/image/Apsara Dance.webp" alt="" class="w-100 h-100 rounded-top-4">
                    </div>
                    <div class="bottom mt-4">
-                    <h3 class="playfair-display mb-3">Apsara Dance Performance</h3>
+                    <h3 class="playfair-display mb-3 text-dark">Apsara Dance Performance</h3>
                     <p class="inter text-secondary">Gain a deeper understanding of the Angkorian period at the Angkor National Museum, a premier cultural institution in Siem Reap. This museum houses an extensive collection of artefacts and exhibits.</p>
                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -77,22 +87,303 @@
     </section>
 
     <section>
-    <div class="container-fluid section-3">
+    <div class="container-fluid section-3 mt-4">
         <div class="food-scroll">
-            <div class="bfood rounded-4">
-                <img src="/image/" alt="">
+            <div class="bfood rounded-4 position-relative">
+                <img src="/image/Krousa lotchea.jpg" alt="" class="w-100 h-100 rounded-4 object-fit-cover">
+                <div class="top position-absolute top-0 mt-4 px-3">
+                    <div class="row d-flex ">
+                        <div class="col-6 col-left ms-3 rounded-5 d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-solid fa-star me-1 fs-6"></i>
+                            4.5
+                        </div>
+                        <div class="col-6 rounded-5 col-right d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-regular fa-clock me-1"></i>
+                           <p class="fs-7 mt-3">5 Hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
+                    <h5 class="text-white me-5 playfair-display">Krousa Lotchea</h5>
+                    <div class="text-white btn-view rounded-5 align-items-center">
+                        <a href="" class="text-white text-decoration-none">View Details</a>
+                    </div>
+                </div>
             </div>
-            <div class="bfood rounded-4"></div>
-            <div class="bfood rounded-4"></div>
-            <div class="bfood rounded-4"></div>
-            <div class="bfood rounded-4"></div>
-            <div class="bfood rounded-4"></div>
+
+            <div class="bfood rounded-4 position-relative">
+                <img src="/image/Mesa Restaurant.jpg" alt="" class="w-100 h-100 rounded-4 object-fit-cover">
+                <div class="top position-absolute top-0 mt-4 px-3">
+                    <div class="row d-flex ">
+                        <div class="col-6 col-left ms-3 rounded-5 d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-solid fa-star me-1 fs-6"></i>
+                            4.5
+                        </div>
+                        <div class="col-6 rounded-5 col-right d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-regular fa-clock me-1"></i>
+                           <p class="fs-7 mt-3">5 Hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
+                    <h5 class="text-white me-5 playfair-display">Mesa Restaurant</h5>
+                    <div class="text-white btn-view rounded-5 align-items-center">
+                        <a href="" class="text-white text-decoration-none">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bfood rounded-4 position-relative">
+                <img src="/image/Mealea.jpeg" alt="" class="w-100 h-100 rounded-4 object-fit-cover">
+                <div class="top position-absolute top-0 mt-4 px-3">
+                    <div class="row d-flex ">
+                        <div class="col-6 col-left ms-3 rounded-5 d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-solid fa-star me-1 fs-6"></i>
+                            4.5
+                        </div>
+                        <div class="col-6 rounded-5 col-right d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-regular fa-clock me-1"></i>
+                           <p class="fs-7 mt-3">5 Hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
+                    <h5 class="text-white me-5 playfair-display">Mealea Watbo</h5>
+                    <div class="text-white btn-view rounded-5 align-items-center">
+                        <a href="" class="text-white text-decoration-none">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bfood rounded-4 position-relative">
+                <img src="/image/Golden Pumpkin.jpg" alt="" class="w-100 h-100 rounded-4 object-fit-cover">
+                <div class="top position-absolute top-0 mt-4 px-3">
+                    <div class="row d-flex ">
+                        <div class="col-6 col-left ms-3 rounded-5 d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-solid fa-star me-1 fs-6"></i>
+                            4.5
+                        </div>
+                        <div class="col-6 rounded-5 col-right d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-regular fa-clock me-1"></i>
+                           <p class="fs-7 mt-3">5 Hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
+                    <h5 class="text-white me-5 playfair-display">Golden Pumpkin</h5>
+                    <div class="text-white btn-view rounded-5 align-items-center">
+                        <a href="" class="text-white text-decoration-none">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="bfood rounded-4 position-relative">
+                <img src="/image/Krousa lotchea.jpg" alt="" class="w-100 h-100 rounded-4 object-fit-cover">
+                <div class="top position-absolute top-0 mt-4 px-3">
+                    <div class="row d-flex ">
+                        <div class="col-6 col-left ms-3 rounded-5 d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-solid fa-star me-1 fs-6"></i>
+                            4.5
+                        </div>
+                        <div class="col-6 rounded-5 col-right d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-regular fa-clock me-1"></i>
+                           <p class="fs-7 mt-3">5 Hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
+                    <h5 class="text-white me-5 playfair-display">Krousa Lotchea</h5>
+                    <div class="text-white btn-view rounded-5 align-items-center">
+                        <a href="" class="text-white text-decoration-none">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bfood rounded-4 position-relative">
+                <img src="/image/Mesa Restaurant.jpg" alt="" class="w-100 h-100 rounded-4 object-fit-cover">
+                <div class="top position-absolute top-0 mt-4 px-3">
+                    <div class="row d-flex ">
+                        <div class="col-6 col-left ms-3 rounded-5 d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-solid fa-star me-1 fs-6"></i>
+                            4.5
+                        </div>
+                        <div class="col-6 rounded-5 col-right d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-regular fa-clock me-1"></i>
+                           <p class="fs-7 mt-3">5 Hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
+                    <h5 class="text-white me-5 playfair-display">Mesa Restaurant</h5>
+                    <div class="text-white btn-view rounded-5 align-items-center">
+                        <a href="" class="text-white text-decoration-none">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bfood rounded-4 position-relative">
+                <img src="/image/Mealea.jpeg" alt="" class="w-100 h-100 rounded-4 object-fit-cover">
+                <div class="top position-absolute top-0 mt-4 px-3">
+                    <div class="row d-flex ">
+                        <div class="col-6 col-left ms-3 rounded-5 d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-solid fa-star me-1 fs-6"></i>
+                            4.5
+                        </div>
+                        <div class="col-6 rounded-5 col-right d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-regular fa-clock me-1"></i>
+                           <p class="fs-7 mt-3">5 Hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
+                    <h5 class="text-white me-5 playfair-display">Mealea Watbo</h5>
+                    <div class="text-white btn-view rounded-5 align-items-center">
+                        <a href="" class="text-white text-decoration-none">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bfood rounded-4 position-relative">
+                <img src="/image/Golden Pumpkin.jpg" alt="" class="w-100 h-100 rounded-4 object-fit-cover">
+                <div class="top position-absolute top-0 mt-4 px-3">
+                    <div class="row d-flex ">
+                        <div class="col-6 col-left ms-3 rounded-5 d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-solid fa-star me-1 fs-6"></i>
+                            4.5
+                        </div>
+                        <div class="col-6 rounded-5 col-right d-flex align-items-center justify-content-center p-2 text-white">
+                            <i class="fa-regular fa-clock me-1"></i>
+                           <p class="fs-7 mt-3">5 Hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom position-absolute bottom-0 mb-4 px-3 d-flex justify-content-between">
+                    <h5 class="text-white me-5 playfair-display">Golden Pumpkin</h5>
+                    <div class="text-white btn-view rounded-5 align-items-center">
+                        <a href="" class="text-white text-decoration-none">View Details</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
+    <section>
+        <div class="container mt-5">
+            <div class="row d-flex">
+                <div class="col-6">
+                    <h1 class="playfair-display">Best Accommodation</h1>
+                </div>
+                <div class="col-6 pt-2">
+                    <button type="button" class="btn btn-outline-primary rounded-5 fs-5 px-4 mleft">See More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container section-4 mt-4">
+            <div class="row">
+                <div class="col-5 bhotel-left position-relative">
+                     <div class="position-absolute bottom-0">
+                        <h1 class="text-white playfair-display ps-5">Sleep well enjoy <br>the trip</h1>
+                        <div class="box-bhotel-img rounded-5 bg-white">
+                            <div class="px-3 pt-2 d-flex gap-3">
+                                <div class="box-bhotel-img1">
+                                    <img src="image/bhotel1.jpg" alt="" class="object-fit-cover rounded-5 w-100 h-100">
+                                </div>
+                                <div class="box-bhotel-img1">
+                                    <img src="image/bhotel1.jpg" alt="" class="object-fit-cover rounded-5 w-100 h-100">
+                                </div>
+                                <div class="box-bhotel-img1">
+                                    <img src="image/bhotel1.jpg" alt="" class="object-fit-cover rounded-5 w-100 h-100">
+                                </div>
+                                <div class="box-bhotel-img1">
+                                    <img src="image/bhotel1.jpg" alt="" class="object-fit-cover rounded-5 w-100 h-100">
+                                </div>
+                                <div class="box-bhotel-img1">
+                                    <img src="image/bhotel1.jpg" alt="" class="object-fit-cover rounded-5 w-100 h-100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="/image/bhotel.jpg" alt="" class="object-fit-cover rounded-4" >
+                   
+                </div>
+                <div class="col-7 danger bhotel-right">
+                    <div class="row d-flex">
+                        <div class="col-6 me-2 ms-2">
+                            <div class="img-frame mb-3">
+                                <img src="/image/bhotel.jpg" alt="" class="object-fit-cover rounded-4 mb-4 w-100 h-100" >
+                            </div>
+                            <h5 class="playfair-display">Homewood Hotel</h5>
+                            <p class="text-secondary inter sub-title-bhotel">HOMEWOOD HOTEL, is one of the luxurious standard designing hotels that is located in the central city, nearby SIEM REAP RIVER, PUB STREET and many famous visiting places. </p>
+
+                            <div class="d-flex">
+                                <h5 class="mt-2">$20/night</h5>
+                                 <button type="button" class="btn btn-outline-primary rounded-5 fs-7 px-4 btn-book">Book Now</button>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="img-frame mb-3">
+                                <img src="/image/bhotel.jpg" alt="" class="object-fit-cover rounded-4 mb-4 w-100 h-100" >
+                            </div>
+                            <h5 class="playfair-display">Homewood Hotel</h5>
+                            <p class="text-secondary inter sub-title-bhotel">HOMEWOOD HOTEL, is one of the luxurious standard designing hotels that is located in the central city, nearby SIEM REAP RIVER, PUB STREET and many famous visiting places. </p>
+
+                            <div class="d-flex">
+                                <h5 class="mt-2">$20/night</h5>
+                                 <button type="button" class="btn btn-outline-primary rounded-5 fs-7 px-4 btn-book">Book Now</button>
+                            </div>
+                        </div>
+
+                          <div class="col-6 mx-2 mt-4">
+                            <div class="img-frame mb-3">
+                                <img src="/image/bhotel.jpg" alt="" class="object-fit-cover rounded-4 mb-4 w-100 h-100" >
+                            </div>
+                            <h5 class="playfair-display">Homewood Hotel</h5>
+                            <p class="text-secondary inter sub-title-bhotel">HOMEWOOD HOTEL, is one of the luxurious standard designing hotels that is located in the central city, nearby SIEM REAP RIVER, PUB STREET and many famous visiting places. </p>
+
+                            <div class="d-flex">
+                                <h5 class="mt-2">$20/night</h5>
+                                 <button type="button" class="btn btn-outline-primary rounded-5 fs-7 px-4 btn-book">Book Now</button>
+                            </div>
+                        </div>
+
+                        <div class="col-6 mt-4">
+                            <div class="img-frame mb-3">
+                                <img src="/image/bhotel.jpg" alt="" class="object-fit-cover rounded-4 mb-4 w-100 h-100" >
+                            </div>
+                            <h5 class="playfair-display">Homewood Hotel</h5>
+                            <p class="text-secondary inter sub-title-bhotel">HOMEWOOD HOTEL, is one of the luxurious standard designing hotels that is located in the central city, nearby SIEM REAP RIVER, PUB STREET and many famous visiting places. </p>
+
+                            <div class="d-flex">
+                                <h5 class="mt-2">$20/night</h5>
+                                 <button type="button" class="btn btn-outline-primary rounded-5 fs-7 px-4 btn-book">Book Now</button>
+                            </div>
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5">
+         <div class="hero-section container-fluid mx-0 mb-5"></div>
+    </section>
 
 
+    <script src="/components/navbar/navbar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="/features/province/province.js"></script>
 </body>

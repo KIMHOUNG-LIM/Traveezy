@@ -27,7 +27,7 @@ This is the whole point of this structure — it stops two people from editing t
 
 ---
 
-## Shared Files — Team-Owned, Not Solo-Edited
+## Shared Files
 
 | File / Folder                                           | Purpose                                                | Who touches it                                            |
 | ------------------------------------------------------- | ------------------------------------------------------ | --------------------------------------------------------- |

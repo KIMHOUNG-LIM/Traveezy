@@ -54,3 +54,67 @@
     height: 400px;
     background: #ddd;
 }
+
+.hero-section{
+    width: 100%;
+    height: 800px;
+    background-image: url(/image/siem\ reap\ hero\ img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.bfood .col-left, .bfood .col-right{
+    width: 70px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.505);
+    border: 1px solid white;
+}
+.col-right{
+    width:100px!important;
+    margin-left: 90px;
+}
+.col-right .fs-7{
+    font-size: 15px;
+}
+
+.btn-view{
+    font-size: 10px;
+    width: 80px;
+    height: 30px;
+     background-color: rgba(255, 255, 255, 0.505);
+     border: 1px solid white;
+     /* margin-left: 40px; */
+     padding-left: 10px;
+     padding-top: 6px;
+}
+
+.bhotel-left img{
+    width: 100%;
+    height: 900px;
+}
+
+.bhotel-right .col-6{
+    width: 375px;
+}
+.img-frame{
+    height: 250px;
+}
+.sub-title-bhotel{
+    font-size: 12px;
+}
+.btn-book{
+    height: 35px;
+    margin-left: 130px;
+    font-size: 15px;
+}
+.box-bhotel-img{
+    width: 430px;
+    height: 55px;
+    margin-left: 45px;
+    margin-bottom: 70px;
+}
+.box-bhotel-img1{
+    width: 70px;
+    height: 40px;
+}

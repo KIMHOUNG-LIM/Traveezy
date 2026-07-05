@@ -1,1 +1,68 @@
 /* home feature styles */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("../../assets/images/home/kompot.webp");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column; /*make the children go horizontal */
+    color: var(--white);
+}
+
+.hero > * {
+    z-index: 1;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 54px;
+    font-weight: 700;
+    text-shadow: var(--shadow-lg);
+}
+.hero-swiper {
+    margin-top: 3.5rem;
+    display: flex;
+    width: 100%;
+}
+
+.swiper {
+    width: 50%;
+    margin-left: auto; /* pushes it to the right*/
+    margin-right: 0;
+}
+
+.destination-card {
+    margin-top: 0;  
+    margin-bottom: 2rem;
+    width: 200px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transform: translateY(10rem); /* pushes card down by default */
+    transition: transform 0.45s ease;
+}
+
+.swiper-slide-active .destination-card {
+    transform: translateY(0); /* moves card up when active */
+}
+
+.destination-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.destination-content {
+    display: none;
+}
+
+
+.swiper-slide-active .destination-content {
+    display: block;
+    margin-top: 1rem;
+}
+
+.destination-title {
+    margin-bottom: 0.5rem;
+}
