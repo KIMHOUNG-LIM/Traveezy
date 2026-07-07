@@ -157,9 +157,7 @@
     }
 }
 
-/* ----------------------------------------------------------------
-   7. EVENT SECTION
-   Image on the left, date + text content on the right
+/* EVENT SECTION
    ---------------------------------------------------------------- */
 .event-section {
     padding: 100px 0;
@@ -206,7 +204,7 @@
 
 
 /* ----------------------------------------------------------------
-   8. CTA BANNER — Full-width call-to-action section
+   CTA BANNER — Full-width call-to-action section
    ---------------------------------------------------------------- */
 .cta-section {
     position: relative;
@@ -215,7 +213,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(135deg, #0A2342 0%, #1B4F8C 50%, #2E86C1 100%);
+    background: url("../../assets/images/home/kompot.webp");
 }
 
 /* Emoji placeholder for background image */
@@ -233,7 +231,7 @@
 .cta-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(5, 20, 50, 0.55);
+    background: rgba(5, 20, 50, 0.10);
 }
 
 /* Centered text and button */
@@ -246,14 +244,15 @@
 }
 
 .cta-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-    line-height: 1.3;
+    text-shadow: var(--shadow-md);
     margin-bottom: 16px;
 }
 
 .cta-content p {
-    font-size: 1rem;
+    font-size: var(--fs-body);
+    text-shadow: var(--shadow-md);
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 30px;
 }
