@@ -12,15 +12,10 @@ const swiper = new Swiper('.swiper', {
   },
 
   breakpoints: {
-    // When window width is >= 320px (mobile)
+    // When window width is >= 320px (mobile / tablet)
     320: {
-      slidesPerView: 1,
-      spaceBetween: 16
-    },
-    // When window width is >= 768px (tablet)
-    768: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 8
     },
     // When window width is >= 1024px (desktop)
     1024: {

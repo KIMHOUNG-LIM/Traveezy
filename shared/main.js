@@ -7,6 +7,9 @@ async function loadNavbar() {
 
     // Only run active-link detection AFTER the navbar HTML exists in the DOM
     setActiveNavLink();
+
+    // Trigger scroll check to initialize styling based on current scroll position
+    window.dispatchEvent(new Event("scroll"));
 }
 
 function setActiveNavLink() {

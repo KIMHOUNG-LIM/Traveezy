@@ -11,12 +11,13 @@
     /*make the children go horizontal */
     color: var(--white);
     margin: 0px;
-    padding: 3rem;
+    padding-top: 10%;
+    padding-bottom: 1%;
 }
 
-.hero>* {
-    z-index: 1;
-}
+/* .hero>* {
+    z-index: 99;
+} */
 
 .hero-title {
     font-family: var(--font-heading);
@@ -27,6 +28,7 @@
 
 .hero-swiper {
     margin-top: 3.5rem;
+    z-index: 1;
     display: flex;
     width: 100%;
     justify-content: flex-start;
@@ -69,6 +71,18 @@
 .swiper-slide-active .destination-content {
     display: block;
     margin-top: 1rem;
+}
+
+.destination-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.destination-description {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
 }
 
 /* section 1 and 3 design */
@@ -144,18 +158,7 @@
     display: block;
 }
 
-/* Responsive adjustment for swiper container */
-@media (max-width: 992px) {
-    .swiper {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
 
-    .destination-card {
-        max-width: 100%;
-    }
-}
 
 /* EVENT SECTION
    ---------------------------------------------------------------- */
@@ -203,9 +206,7 @@
 }
 
 
-/* ----------------------------------------------------------------
-   CTA BANNER — Full-width call-to-action section
-   ---------------------------------------------------------------- */
+/*  CTA BANNER — Full-width call-to-action section*/
 .cta-section {
     position: relative;
     min-height: 380px;
@@ -237,7 +238,7 @@
 /* Centered text and button */
 .cta-content {
     position: relative;
-    z-index: 2;
+    z-index: 99;
     text-align: center;
     color: white;
     padding: 0 20px;
@@ -272,4 +273,67 @@
 .btn-cta:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustment for swiper container */
+@media (max-width: 800px) {
+    .hero {
+        padding-bottom: 0;
+    }
+
+    .hero-swiper {
+        margin-top: auto;
+    }
+
+    .swiper {
+        width: 50%;
+        margin-left: auto;
+        /* margin-right: 0; */
+    }
+
+    .destination-card {
+        max-width: 150px;
+        margin-bottom: 1rem;
+        transform: translateY(5rem);
+    }
+
+    .destination-image {
+        height: 220px;
+    }
+
+    .destination-title {
+        font-size: 1.1rem;
+    }
+
+    .destination-description {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+}
+
+/* For Phones (Width <= 600px) */
+@media (max-width: 600px) {
+
+
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+
+    .destination-card {
+        max-width: 100px;
+        transform: translateY(3.5rem);
+    }
+
+    .destination-image {
+        height: 160px;
+    }
+
+    .destination-title {
+        font-size: 0.95rem;
+    }
+
+    .destination-description {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
 }
