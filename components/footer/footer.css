@@ -73,7 +73,7 @@
 
 .sub-btn {
     padding: 11px 22px;
-    background: #15294b;
+    background: var(--primary);
     color: #fff;
     border: none;
     border-radius: 0 4px 4px 0;
