@@ -15,9 +15,43 @@
     padding-bottom: 1%;
 }
 
-/* .hero>* {
-    z-index: 99;
-} */
+/* Booking Now button with circular arrow chip, like the sample */
+.btn-booking {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 8px 8px 28px;
+    font-size: .92rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.btn-booking:hover {
+    background: var(--secondary);
+    color: #fff;
+}
+
+.btn-booking:hover .circle-arrow {
+    color: var(--secondary);
+}
+
+.circle-arrow {
+    background: #fff;
+    color: var(--primary);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    transition: color 0.25s ease;
+}
 
 .hero-title {
     font-family: var(--font-heading);
@@ -214,7 +248,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: url("../../assets/images/home/kompot.webp");
+    background: url("../../assets/images/home/kompot.webp") no-repeat center;
+    background-size: cover;
 }
 
 /* Emoji placeholder for background image */
@@ -267,12 +302,16 @@
     border-radius: 30px;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.25s, border-color 0.25s;
 }
 
 .btn-cta:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    color: var(--secondary);
+    border-color: var(--secondary);
 }
 
 /* Responsive adjustment for swiper container */
