@@ -78,8 +78,7 @@
 }
 
 .navbar-menu .nav-link:hover {
-    color: var(--grey);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    color: var(--secondary);
 }
 
 #mainNav.scrolled .navbar-menu {
@@ -92,7 +91,7 @@
 }
 
 #mainNav.scrolled .navbar-menu .nav-link:hover {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 #mainNav.scrolled .navbar-menu .nav-link.active {
@@ -115,7 +114,12 @@
 
 .contact-btn:hover {
     color: var(--white);
-    background: rgba(0, 0, 0, 0.35);
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.contact-btn:hover .contact-btn-icon i {
+    color: var(--secondary) !important;
 }
 
 #mainNav.scrolled .contact-btn {
@@ -125,7 +129,17 @@
 }
 
 #mainNav.scrolled .contact-btn:hover {
-    background: rgba(15, 76, 129, 0.08);
+    color: var(--white);
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+#mainNav.scrolled .contact-btn:hover .contact-btn-icon {
+    background: var(--white);
+}
+
+#mainNav.scrolled .contact-btn:hover .contact-btn-icon i {
+    color: var(--secondary) !important;
 }
 
 .contact-btn-icon {
