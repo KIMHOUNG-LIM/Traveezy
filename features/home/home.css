@@ -7,12 +7,50 @@
     background-size: cover;
 
     display: flex;
-    flex-direction: column; /*make the children go horizontal */
+    flex-direction: column;
+    /*make the children go horizontal */
     color: var(--white);
+    margin: 0px;
+    padding-top: 10%;
+    padding-bottom: 1%;
 }
 
-.hero > * {
-    z-index: 1;
+/* Booking Now button with circular arrow chip, like the sample */
+.btn-booking {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 8px 8px 28px;
+    font-size: .92rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.btn-booking:hover {
+    background: var(--secondary);
+    color: #fff;
+}
+
+.btn-booking:hover .circle-arrow {
+    color: var(--secondary);
+}
+
+.circle-arrow {
+    background: #fff;
+    color: var(--primary);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    transition: color 0.25s ease;
 }
 
 .hero-title {
@@ -24,28 +62,34 @@
 
 .hero-swiper {
     margin-top: 3.5rem;
+    z-index: 1;
     display: flex;
     width: 100%;
+    justify-content: flex-start;
 }
 
 .swiper {
     width: 50%;
-    margin-left: auto; /* pushes it to the right*/
+    margin-left: auto;
+    /* pushes it to the right*/
     margin-right: 0;
 }
 
 .destination-card {
-    margin-top: 0;  
+    margin-top: 0;
     margin-bottom: 2rem;
-    width: 200px;
+    width: 100%;
+    max-width: 360px;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    transform: translateY(10rem); /* pushes card down by default */
-    transition: transform 0.45s ease;
+    transform: translateY(10rem);
+    /* pushes card down by default */
+    transition: transform 1.0s ease;
 }
 
 .swiper-slide-active .destination-card {
-    transform: translateY(0); /* moves card up when active */
+    transform: translateY(0);
+    /* moves card up when active */
 }
 
 .destination-image {
@@ -58,48 +102,277 @@
     display: none;
 }
 
-/* section 1 design */
 .swiper-slide-active .destination-content {
     display: block;
     margin-top: 1rem;
 }
 
 .destination-title {
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
-.line{
-    width:4rem;
-    height:0.5rem;
-    background-color: var(--secondary);
-    border:none;
-}
-.section1{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    gap: 1.5rem;
+
+.destination-description {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
 }
 
-.section-content{
-    display: flex;
-    height: 5rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 50%;
-    padding: 0px;
-    
+/* section 1 and 3 design */
+.line {
+    width: 4.5rem;
+    height: 0.85rem;
+    background-color: var(--secondary);
 }
+
 .section-title {
     font-family: var(--font-heading);
     font-size: 42px;
     font-weight: 500;
 }
-.section-body{
+
+.section-body {
     font-family: var(--font-body);
     font-size: 23px;
 }
-.section-swiper {
-    width: 50%;
 
+/* section 2 */
+.section2 {
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-pic {
+    flex: 1;
+    display: grid;
+    min-height: 0;
+    /* Allows the flex item to shrink below content size */
+    grid-template-rows: 1fr;
+    /* Constrains the grid row height */
+}
+
+.top-row {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bottom-row {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pic-section2 {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    /* Force grid items to occupy 100% of the grid cell height */
+}
+
+.section2-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* sldfjdl;kajf;ladsjf */
+.image-square {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.square-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Crop instead of stretching */
+    display: block;
+}
+
+
+
+/* EVENT SECTION
+   ---------------------------------------------------------------- */
+.event-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+/* Right content */
+.event-content {
+    flex: 1;
+}
+
+/* Date display: big day number + smaller month label */
+.event-date {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    width: 150px;
+    border-left: 5px solid var(--secondary);
+    padding-left: 0.5rem;
+}
+
+.date-day {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0A2342;
+    line-height: 1;
+}
+
+.date-month {
+    font-size: 1.5rem;
+    color: #0A2342;
+    font-weight: 500;
+}
+
+
+.event-content p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+}
+
+
+/*  CTA BANNER — Full-width call-to-action section*/
+.cta-section {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: url("../../assets/images/home/kompot.webp") no-repeat center;
+    background-size: cover;
+}
+
+/* Emoji placeholder for background image */
+.cta-bg-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15rem;
+    opacity: 0.12;
+}
+
+/* Dark overlay for readability */
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 20, 50, 0.10);
+}
+
+/* Centered text and button */
+.cta-content {
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.cta-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    text-shadow: var(--shadow-md);
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    font-size: var(--fs-body);
+    text-shadow: var(--shadow-md);
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+/* The main CTA button */
+.btn-cta {
+    display: inline-block;
+    background: white;
+    color: #0A2342;
+    padding: 14px 34px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.25s, border-color 0.25s;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+/* Responsive adjustment for swiper container */
+@media (max-width: 800px) {
+    .hero {
+        padding-bottom: 0;
+    }
+
+    .hero-swiper {
+        margin-top: auto;
+    }
+
+    .swiper {
+        width: 50%;
+        margin-left: auto;
+        /* margin-right: 0; */
+    }
+
+    .destination-card {
+        max-width: 150px;
+        margin-bottom: 1rem;
+        transform: translateY(5rem);
+    }
+
+    .destination-image {
+        height: 220px;
+    }
+
+    .destination-title {
+        font-size: 1.1rem;
+    }
+
+    .destination-description {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+}
+
+/* For Phones (Width <= 600px) */
+@media (max-width: 600px) {
+
+
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+
+    .destination-card {
+        max-width: 100px;
+        transform: translateY(3.5rem);
+    }
+
+    .destination-image {
+        height: 160px;
+    }
+
+    .destination-title {
+        font-size: 0.95rem;
+    }
+
+    .destination-description {
+        font-size: 0.75rem;
+        line-height: 1.2;
+    }
 }
