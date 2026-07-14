@@ -1,1 +1,424 @@
-/* destinations feature styles */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+
+  background-image: url("https://i.pinimg.com/736x/08/7c/a6/087ca6e94292e4c15ece3380d8c88cf8.jpg");
+  background-size: cover;
+  /* background-position: center; */
+
+  display: flex;
+  flex-direction: column; /*make the children go horizontal */
+  justify-content: center;
+  color: var(--white);
+  padding: 0 16px;
+}
+.hero > * {
+  z-index: 1;
+}
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.35rem, 7vw, 54px);
+  font-weight: 700;
+  text-shadow: var(--shadow-lg);
+  line-height: 1.15;
+}
+.h1 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: clamp(1.75rem, 5vw, 34px);
+  line-height: 1.25;
+  margin: 56px auto 24px;
+  padding: 0 16px;
+}
+/* Layout style */
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #d9d9d9;
+    transform: translateX(-50%);
+}
+
+.timeline .row {
+    position: relative;
+}
+
+.timeline p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.timeline img,
+.siem_reap img,
+.featured-img {
+    aspect-ratio: 16 / 10;
+}
+
+.timeline .row::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: #999;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+}
+/* Travel */
+.container {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.siem_reap p {
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Typography styles matching the image design */
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin-bottom: 40px;
+}
+
+/* Flex layout for the content row */
+.content-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Left Section: Featured Image Container */
+.image-gallery {
+    flex: 1.8; /* Takes up more visual weight */
+}
+
+.featured-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px; /* Smooth rounded corners matching the design */
+    display: block;
+}
+
+/* Right Section: Sidebar list items */
+.activities-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 10px;
+}
+
+/* Individual list rows */
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Round Badge/Icon wrapper */
+.icon-wrapper {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Clips the image into a circle */
+    flex-shrink: 0;
+}
+
+.icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the image proportions clean without stretching */
+}
+
+/* Item Texts typography details */
+.activity-text h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.activity-text p {
+    font-size: 0.88rem;
+    color: #718096; /* Subtle grey tone text */
+    line-height: 1.3;
+}
+
+/* food experiences */
+.food-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    padding-bottom: 10px;
+}
+
+.food-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar (Chrome, Edge, Safari) */
+}
+
+.food-scroll {
+    scrollbar-width: none; /* Firefox */
+}
+
+.bfood {
+    flex: 0 0 min(82vw, 300px);
+    width: min(82vw, 350px);   /* Each card is 300px wide */
+    height: 400px;
+    background: #ddd;
+}
+
+.hero-section{
+    width: 100%;
+    height: 800px;
+    background-image: url(/image/siem\ reap\ hero\ img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.bfood .col-left, .bfood .col-right{
+    width: 70px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.505);
+    border: 1px solid white;
+}
+
+.bfood .top {
+    width: 100%;
+}
+
+.bfood .top .row {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-right{
+    width:100px!important;
+    margin-left: 0;
+}
+.col-right .fs-7{
+    font-size: 15px;
+}
+
+.btn-view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    width: 80px;
+    height: 30px;
+     background-color: rgba(255, 255, 255, 0.505);
+     border: 1px solid white;
+}
+
+.bhotel-left img{
+    width: 100%;
+    height: 900px;
+}
+
+.bhotel-right .col-6{
+    width: 375px;
+}
+.img-frame{
+    height: 250px;
+}
+.sub-title-bhotel{
+    font-size: 12px;
+}
+.btn-book{
+    height: 35px;
+    margin-left: 130px;
+    font-size: 15px;
+}
+.box-bhotel-img{
+    width: 430px;
+    height: 55px;
+    margin-left: 45px;
+    margin-bottom: 70px;
+}
+.box-bhotel-img1{
+    width: 70px;
+    height: 40px;
+}
+
+@media (max-width: 991.98px) {
+    .hero {
+        min-height: 72vh;
+    }
+
+    .timeline::before,
+    .timeline .row::before {
+        left: 18px;
+    }
+
+    .timeline .row {
+        padding-left: 42px;
+        row-gap: 18px;
+    }
+
+    .timeline .row > [class*="col-"] {
+        width: 100%;
+    }
+
+    .siem_reap .row {
+        row-gap: 22px;
+    }
+
+    .siem_reap .col-8,
+    .siem_reap .col-4 {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        gap: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 64vh;
+    }
+
+    .hero-content {
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+    }
+
+    .timeline {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .timeline .row {
+        margin-bottom: 2.5rem !important;
+    }
+
+    .timeline img,
+    .siem_reap img,
+    .featured-img {
+        aspect-ratio: 4 / 3;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .main-title {
+        margin-bottom: 28px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .image-gallery, .activities-sidebar {
+        flex: none;
+        width: 100%;
+    }
+
+    .activities-sidebar {
+        gap: 18px;
+    }
+
+    .section-3 {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .bfood {
+        height: 360px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero {
+        min-height: 56vh;
+    }
+
+    .hero-title br,
+    .main-title br {
+        display: none;
+    }
+
+    .h1 {
+        margin-top: 40px;
+    }
+
+    .timeline::before,
+    .timeline .row::before {
+        left: 12px;
+    }
+
+    .timeline .row {
+        padding-left: 30px;
+    }
+
+    .activity-item {
+        gap: 12px;
+    }
+
+    .icon-wrapper {
+        width: 46px;
+        height: 46px;
+    }
+
+    .activity-text h3 {
+        font-size: 1rem;
+    }
+
+    .activity-text p {
+        font-size: 0.82rem;
+    }
+
+    .food-scroll {
+        gap: 14px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .bfood {
+        flex-basis: 86vw;
+        height: 330px;
+    }
+
+    .bfood .bottom {
+        width: calc(100% - 24px);
+        gap: 10px;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .bfood .bottom h5 {
+        margin-right: 0 !important;
+        font-size: 1rem;
+    }
+
+    .btn-view {
+        flex: 0 0 auto;
+    }
+}
