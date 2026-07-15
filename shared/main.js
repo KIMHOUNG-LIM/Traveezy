@@ -23,6 +23,13 @@ function adjustRelativeLinks(container, prefix) {
         if (src && !src.startsWith("http") && !src.startsWith("/")) {
             img.setAttribute("src", prefix + src);
         }
+        // Also fix the logo swap data attributes
+        ["data-default-src", "data-scroll-src"].forEach(attr => {
+            const val = img.getAttribute(attr);
+            if (val && !val.startsWith("http") && !val.startsWith("/")) {
+                img.setAttribute(attr, prefix + val);
+            }
+        });
     });
 }
 
