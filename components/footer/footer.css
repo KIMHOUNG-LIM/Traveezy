@@ -126,3 +126,98 @@
     flex-wrap: wrap;
     gap: 8px;
 }
+
+/*  CTA BANNER — Full-width call-to-action section*/
+.cta-section {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: url("../../assets/images/home/siemreap.png") no-repeat center;
+    background-size: cover;
+}
+
+/* Emoji placeholder for background image */
+.cta-bg-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15rem;
+    opacity: 0.12;
+}
+
+/* Dark overlay for readability */
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 20, 50, 0.10);
+}
+
+/* Centered text and button */
+.cta-content {
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.cta-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    text-shadow: var(--shadow-md);
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    font-size: var(--fs-body);
+    text-shadow: var(--shadow-md);
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+/* The main CTA button */
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white);
+    border: 1px solid var(--grey);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.1);
+    transition: color 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
+    padding: 8px 8px 8px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.btn-cta:hover {
+    color: var(--white);
+    background: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--white);
+    border-radius: 50%;
+    transition: background-color 0.35s ease;
+}
+
+.btn-cta-icon i {
+    color: var(--black) !important;
+    transition: color 0.35s ease;
+}
+
+.btn-cta:hover .btn-cta-icon i {
+    color: var(--secondary) !important;
+}
