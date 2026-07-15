@@ -54,7 +54,7 @@
 .hero-section{
     width: 100%;
     height: 800px;
-    background-image: url(/image/siem\ reap\ hero\ img.jpg);
+    background-image: url("../../image/siem reap hero img.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -114,7 +114,7 @@
 
 .baccomedation{
     min-height: 850px;
-    background-image: url(/image/bhotel.jpg);
+    background-image: url("../../image/bhotel.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -203,7 +203,7 @@
 }
 .section-thrilling{
     height: 650px;
-    background-image: url(/image/section-thrilling.jpg);
+    background-image: url("../../image/section-thrilling.jpg");
     background-size: cover;
     background-position: top;
 }
@@ -216,7 +216,7 @@
 /* hero */
 .hero{
     height:100vh;
-    background:url("/image/angkor-bg.jpg") center/cover;
+    background:url("../../image/siem reap hero img.jpg") center/cover;
     position:relative;
     overflow:hidden;
 }
