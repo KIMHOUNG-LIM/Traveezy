@@ -18,7 +18,7 @@ This is the whole point of this structure — it stops two people from editing t
 | Page         | HTML file (structure/content) | CSS file (page-only styles)                | JS file (page-only behavior)              | Images folder                   |
 | ------------ | ----------------------------- | ------------------------------------------ | ----------------------------------------- | ------------------------------- |
 | Home         | `index.html`                | `features/home/home.css`                 | `features/home/home.js`                 | `assets/images/home/`         |
-| Destinations | `destinations.html`         | `features/destinations/destinations.css` | `features/destinations/destinations.js` | `assets/images/destinations/` |
+| Destinations | `province.html`             | `features/destinations/destinations.css` | `features/destinations/destinations.js` | `assets/images/destinations/` |
 | Food         | `food.html`                 | `features/food/food.css`                 | `features/food/food.js`                 | `assets/images/food/`         |
 | Hotels       | `hotels.html`               | `features/hotels/hotels.css`             | `features/hotels/hotels.js`             | `assets/images/hotels/`       |
 | About        | `about.html`                | `features/about-us/about-us.css`         | `features/about-us/about-us.js`         | `assets/images/about-us/`     |
@@ -141,7 +141,7 @@ Don't merge into `main` yourself. Push your branch, then open a Pull Request (PR
 ## Quick Reference: Folder Map
 
 ```
-├── index.html, destinations.html, food.html, hotels.html, about.html
+├── index.html, province.html, food.html, hotels.html, about.html
 │   → One HTML file per page. Edit only your own.
 │
 ├── features/<your-page>/
