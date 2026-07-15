@@ -7,6 +7,9 @@ async function loadNavbar() {
 
     // Only run active-link detection AFTER the navbar HTML exists in the DOM
     setActiveNavLink();
+
+    // Trigger scroll check to initialize styling based on current scroll position
+    window.dispatchEvent(new Event("scroll"));
 }
 
 function setActiveNavLink() {
@@ -22,4 +25,17 @@ function setActiveNavLink() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", loadNavbar);
+async function loadFooter() {
+    const footerContainer = document.getElementById("footer-container");
+    if (!footerContainer) return;
+    const response = await fetch("components/footer/footer.html");
+    const html = await response.text();
+    footerContainer.innerHTML = html;
+}
+
+async function init() {
+    await loadNavbar();
+    await loadFooter();
+}
+
+document.addEventListener("DOMContentLoaded", init);
