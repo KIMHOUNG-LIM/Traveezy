@@ -17,7 +17,7 @@ This is the whole point of this structure — it stops two people from editing t
 
 | Page         | HTML file (structure/content) | CSS file (page-only styles)                | JS file (page-only behavior)              | Images folder                   |
 | ------------ | ----------------------------- | ------------------------------------------ | ----------------------------------------- | ------------------------------- |
-| Home         | `home.html`                 | `features/home/home.css`                 | `features/home/home.js`                 | `assets/images/home/`         |
+| Home         | `index.html`                | `features/home/home.css`                 | `features/home/home.js`                 | `assets/images/home/`         |
 | Destinations | `destinations.html`         | `features/destinations/destinations.css` | `features/destinations/destinations.js` | `assets/images/destinations/` |
 | Food         | `food.html`                 | `features/food/food.css`                 | `features/food/food.js`                 | `assets/images/food/`         |
 | Hotels       | `hotels.html`               | `features/hotels/hotels.css`             | `features/hotels/hotels.js`             | `assets/images/hotels/`       |
@@ -52,7 +52,7 @@ If you think something should become shared (e.g. a color you used that other pa
 
 Example: you're assigned the **Home** page.
 
-1. Write your markup in `home.html`.
+1. Write your markup in `index.html`.
 2. Confirm your `<head>` links these, in this order:
 
    - Bootstrap 5 CSS (CDN)
@@ -141,7 +141,7 @@ Don't merge into `main` yourself. Push your branch, then open a Pull Request (PR
 ## Quick Reference: Folder Map
 
 ```
-├── home.html, destinations.html, food.html, hotels.html, about.html
+├── index.html, destinations.html, food.html, hotels.html, about.html
 │   → One HTML file per page. Edit only your own.
 │
 ├── features/<your-page>/
