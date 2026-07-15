@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- Custom styles (loaded after Bootstrap so they can override it) -->
+  <link rel="stylesheet" href="shared/variables.css">
+  <link rel="stylesheet" href="shared/global.css">
+  <link rel="stylesheet" href="shared/theme.css">
+  <link rel="stylesheet" href="shared/fonts.css">
+  <link rel="stylesheet" href="features/home/home.css">
+  <link rel="stylesheet" href="components/navbar/navbar.css">
+  <link rel="stylesheet" href="components/footer/footer.css">
+
+</head>
+
+<body>
+  <!-- Preloader Screen -->
+  <div id="loader" class="loader-wrapper">
+    <div class="loader-content">
+      <div class="travel-icon-container">
+        <div class="globe-container">
+          <i class="fa-solid fa-earth-asia globe-animation"></i>
+        </div>
+        <i class="fa-solid fa-paper-plane plane-animation"></i>
+      </div>
+      <h2 class="loader-title">Traveezy</h2>
+      <p class="loader-text">Preparing your adventure to Cambodia...</p>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.body.classList.add('loading');
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('loader');
+        if (loader) {
+            loader.classList.add('fade-out');
+            setTimeout(() => {
+                loader.style.display = 'none';
+                document.body.classList.remove('loading');
+            }, 500);
+        }
+    });
+  </script>
+
+  <!-- Home page content -->
+
+
+  <div class="hero">
+    <div id="navbar-container"></div>
+
+    <div class="hero-content text-center my-5">
+      <h1 class="hero-title">Unforgettable Travel<br>Experience</h1>
+    </div>
+    <div class="hero-swiper">
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="destination-card">
+              <a href="province.html" class="card-pic">
+                <img src="assets/images/home/siemreap1.jpg" class="destination-image">
+              </a>
+
+              <div class="destination-content bg-transparent">
+                <h3 class="destination-title text-white">Siem Reap</h3>
+                <p class="destination-description">
+                  Explore the legendary Angkor Wat temples, rich cultural heritage, and vibrant night markets.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="destination-card">
+              <a href="province.html" class="card-pic">
+                <img src="assets/images/home/kep.png" class="destination-image">
+              </a>
+
+              <div class="destination-content bg-transparent">
+                <h3 class="destination-title text-white">Kep</h3>
+                <p class="destination-description">
+                  Enjoy scenic coastal views, relaxing beaches, and the famous local crab market.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="destination-card">
+              <a href="province.html" class="card-pic">
+                <img src="assets/images/home/phnompenh.png" class="destination-image">
+              </a>
+
+              <div class="destination-content bg-transparent">
+                <h3 class="destination-title text-white">Phnom Penh</h3>
+                <p class="destination-description">
+                  Discover the Royal Palace, historic temples, and bustling riverside atmosphere.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicated slides for smooth seamless infinite looping with slidesPerView: 3 -->
+          <div class="swiper-slide">
+            <div class="destination-card">
+              <a href="province.html" class="card-pic">
+                <img src="assets/images/home/siemreap.png" class="destination-image">
+              </a>
+
+              <div class="destination-content bg-transparent">
+                <h3 class="destination-title text-white">Siem Reap</h3>
+                <p class="destination-description">
+                  Explore the legendary Angkor Wat temples, rich cultural heritage, and vibrant night markets.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="destination-card">
+              <a href="province.html" class="card-pic">
+                <img src="assets/images/home/kep.png" class="destination-image">
+              </a>
+
+              <div class="destination-content bg-transparent">
+                <h3 class="destination-title text-white">Kep</h3>
+                <p class="destination-description">
+                  Enjoy scenic coastal views, relaxing beaches, and the famous local crab market.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="destination-card">
+              <a href="province.html" class="card-pic">
+                <img src="assets/images/home/phnompenh.png" class="destination-image">
+              </a>
+
+              <div class="destination-content bg-transparent">
+                <h3 class="destination-title text-white">Phnom Penh</h3>
+                <p class="destination-description">
+                  Discover the Royal Palace, historic temples, and bustling riverside atmosphere.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Explore Section Swiper -->
+  <div class="explore-section my-5">
+    <div class="swiper explore-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1: Heritage -->
+        <div class="swiper-slide">
+          <div class="container-fluid">
+            <div class="p-lg-5 p-md-4 p-3">
+              <div class="row align-items-center justify-content-center">
+                <!-- Text -->
+                <div class="col-12 col-lg-6 order-2 order-lg-1">
+                  <div class="p-lg-5 p-md-4 p-3">
+                    <h2 class="section-title">
+                      Heritage. Made <br> in Cambodia
+                    </h2>
+                    <div class="line my-3"></div>
+                    <h3 class="section-body">
+                      Discover the ancient wonders of Cambodia. From the majestic Angkor Wat to the hidden temple ruins
+                      engulfed by forest roots, experience the architectural masterpiece of the Khmer Empire.
+                    </h3>
+                    <a href="#rooms" class="btn-booking">
+                      Booking Now <span class="circle-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Image -->
+                <div class="col-12 col-lg-6 text-center order-1 order-lg-2">
+                  <div class="image-square">
+                    <img src="assets/images/home/siemreap2.jpg" class="square-image" alt="Heritage image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Nature -->
+        <div class="swiper-slide">
+          <div class="container-fluid">
+            <div class="p-lg-5 p-md-4 p-3">
+              <div class="row align-items-center justify-content-center">
+                <!-- Text -->
+                <div class="col-12 col-lg-6 order-2 order-lg-1">
+                  <div class="p-lg-5 p-md-4 p-3">
+                    <h2 class="section-title">
+                      Nature. Wild <br> and Untouched
+                    </h2>
+                    <div class="line my-3"></div>
+                    <h3 class="section-body">
+                      Immerse yourself in lush rainforests, thundering waterfalls, and scenic mountain ranges. Hike the
+                      Cardamom Mountains or explore pristine rivers and protected wildlife sanctuaries.
+                    </h3>
+                    <a href="#rooms" class="btn-booking">
+                      Booking Now <span class="circle-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Image -->
+                <div class="col-12 col-lg-6 text-center order-1 order-lg-2">
+                  <div class="image-square">
+                    <img src="assets/images/home/nature.png" class="square-image" alt="Nature image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Beaches -->
+        <div class="swiper-slide">
+          <div class="container-fluid">
+            <div class="p-lg-5 p-md-4 p-3">
+              <div class="row align-items-center justify-content-center">
+                <!-- Text -->
+                <div class="col-12 col-lg-6 order-2 order-lg-1">
+                  <div class="p-lg-5 p-md-4 p-3">
+                    <h2 class="section-title">
+                      Beaches. Serene <br> and Sunny
+                    </h2>
+                    <div class="line my-3"></div>
+                    <h3 class="section-body">
+                      Relax on pristine white-sand shores and swim in crystal-clear waters. Discover the tropical
+                      islands of Koh Rong, the peaceful coastline of Kep, and enjoy fresh seafood by the ocean.
+                    </h3>
+                    <a href="#rooms" class="btn-booking">
+                      Booking Now <span class="circle-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Image -->
+                <div class="col-12 col-lg-6 text-center order-1 order-lg-2">
+                  <div class="image-square">
+                    <img src="assets/images/home/beach.jpg" class="square-image" alt="Beach image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Culture -->
+        <div class="swiper-slide">
+          <div class="container-fluid">
+            <div class="p-lg-5 p-md-4 p-3">
+              <div class="row align-items-center justify-content-center">
+                <!-- Text -->
+                <div class="col-12 col-lg-6 order-2 order-lg-1">
+                  <div class="p-lg-5 p-md-4 p-3">
+                    <h2 class="section-title">
+                      Culture. Rich <br> and Vibrant
+                    </h2>
+                    <div class="line my-3"></div>
+                    <h3 class="section-body">
+                      Connect with friendly locals, experience traditional Apsara dance performances, and celebrate
+                      colorful festivals. Discover Cambodia's vibrant art, history, and unique way of life.
+                    </h3>
+                    <a href="#rooms" class="btn-booking">
+                      Booking Now <span class="circle-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Image -->
+                <div class="col-12 col-lg-6 text-center order-1 order-lg-2">
+                  <div class="image-square">
+                    <img src="assets/images/home/apsara1.jpg" class="square-image" alt="Culture image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Add Swiper Controls -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+
+  <div class="section2">
+    <div class="slide-pic top-row">
+      <a href="province.html" class="pic-section2">
+        <img src="https://image.thmeythmey.com/pictures/2016/01/10/5xtuep.jpg" class="section2-image">
+      </a>
+
+      <a href="province.html" class="pic-section2">
+        <img src="assets/images/home/phnompenh.png" class="section2-image">
+      </a>
+
+      <a href="province.html" class="pic-section2">
+        <img src="assets/images/home/kep.png" class="section2-image">
+      </a>
+    </div>
+
+    <div class="slide-pic bottom-row">
+      <a href="province.html" class="pic-section2">
+        <img src="assets/images/home/siemreap.png" class="section2-image">
+      </a>
+
+      <a href="province.html" class="pic-section2">
+        <img
+          src="https://cdn-b-i.pageflow.io/_a8640/_e18546/main/image_files/processed_attachments/000/252/241/v1/thumbnail_large/30405480680_70a9b49640_b.JPG?1554846260"
+          class="section2-image">
+      </a>
+    </div>
+  </div>
+
+  <div class="container-fluid my-5">
+    <div class="p-5">
+      <div class="row align-items-center justify-content-center">
+
+        <!-- Text -->
+        <div class="col-12 col-lg-6 order-2 order-lg-1">
+          <div class="p-lg-5 p-md-4 p-3">
+
+            <div class="image-square">
+              <img src="assets/images/home/khmer-new-year.jpg" class="square-image" alt="City image">
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Calander Section -->
+        <div class="col-12 col-lg-6 order-1 order-lg-2">
+
+          <div class="event-content">
+
+            <div class="event-date">
+              <span class="date-day">08</span>
+              <span class="date-month">AUG '26</span>
+            </div>
+
+            <h2 class="section-title">Khmer New Year Day</h2>
+
+            <p>
+              Celebrate one of Cambodia's most important holidays. Khmer New Year
+              marks the end of the harvest season and is filled with traditional
+              games, water blessings, and vibrant street festivals across the country.
+            </p>
+            <p>
+              Join locals in Phnom Penh and Siem Reap as they celebrate with
+              music, food, and ancient customs that have been passed down for
+              generations.
+            </p>
+
+          </div>
+
+          <a href="#booking" class="btn-booking my-3">
+            Book Now <span class="circle-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA BANNER — Full-width colored section with call to action -->
+  <section class="cta-section">
+    <div class="cta-bg-placeholder"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <h2>Get Ready Your Thrilling<br />Adventure to Cambodia Today</h2>
+      <p>Excited to plan your next adventure? Let's explore details<br />to make it an unforgettable experience!</p>
+      <a href="#" class="btn-cta">
+        Get Started Now
+        <span class="btn-cta-icon">
+          <i class="bi-arrow-up-right"></i>
+        </span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Footer Wrapper -->
+  <div id="footer-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="components/navbar/navbar.js"></script>
+  <script src="components/footer/footer.js"></script>
+  <script src="shared/main.js"></script>
+  <script src="features/home/home.js"></script>
+</body>
+
+</html>

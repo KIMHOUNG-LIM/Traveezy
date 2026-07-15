@@ -13,7 +13,7 @@ async function loadNavbar() {
 }
 
 function setActiveNavLink() {
-    const currentPage = window.location.pathname.split("/").pop() || "home.html";
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
     document.querySelectorAll("#navbar-container .nav-link").forEach(link => {
         const linkPage = link.getAttribute("href");

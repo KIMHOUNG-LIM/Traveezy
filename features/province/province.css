@@ -16,18 +16,14 @@
     font-size: 60px;
 }
 .mleft{
-    margin-left: 500px;
+    margin-left: 480px;
 }
 .section-2 .top{
     width: 100%;
     height: 300px;
 }
 
-/* .section-3 .bfood{
-    width: 350px;
-    height: 450px;
-    background-color: blue;
-} */
+
 
 /* best food scroll */
 .food-scroll {
@@ -58,7 +54,7 @@
 .hero-section{
     width: 100%;
     height: 800px;
-    background-image: url(/image/siem\ reap\ hero\ img.jpg);
+    background-image: url("../../image/siem reap hero img.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
@@ -89,26 +85,23 @@
      padding-top: 6px;
 }
 
-.bhotel-left img{
+/* .bhotel-left img{
     width: 100%;
     height: 900px;
 }
 
 .bhotel-right .col-6{
     width: 375px;
-}
+} */
 .img-frame{
     height: 250px;
 }
-.sub-title-bhotel{
-    font-size: 12px;
-}
+
 .btn-book{
     height: 35px;
-    margin-left: 130px;
-    font-size: 15px;
+    font-size: 13px;
 }
-.box-bhotel-img{
+/* .box-bhotel-img{
     width: 430px;
     height: 55px;
     margin-left: 45px;
@@ -117,4 +110,301 @@
 .box-bhotel-img1{
     width: 70px;
     height: 40px;
+} */
+
+.baccomedation{
+    min-height: 850px;
+    background-image: url("../../image/bhotel.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.fs-6{
+    font-size: 13px!important;
+}
+.font-size {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+.ps-6{
+    padding-left: 65px!important;
+  }
+
+/* Tablet */
+@media (max-width: 991.98px) {
+    .font-size {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .inter {
+        text-align: center;
+    }
+
+    .btn {
+        display: block;
+        margin-right: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .font-size {
+        font-size: 2.2rem;
+    }
+
+    .inter {
+        font-size: 0.95rem;
+    }
+    .btn {
+        display: block;
+        margin:auto;
+    }
+}
+
+@media(width:820px){
+    .btn-see-more{
+        margin-left: 175px;
+    }
+}
+@media(max-width:430px){
+  .ps-6{
+    padding-left: 100px!important;
+  }
+}
+@media(width:1440px){
+  .ps-6{
+    padding-left: 60px!important;
+  }
+}
+@media(width:1366px){
+  .ps-6{
+    padding-left: 40px!important;
+  }
+}
+@media(width:1024px){
+  .ps-6{
+    padding-left: 20px!important;
+  }
+}
+@media(width: 768px){
+  .ps-6{
+    padding-left: 75px!important;
+  }
+}
+@media(width: 820px){
+  .ps-6{
+    padding-left: 75px!important;
+  }
+}
+
+.mt-10{
+    margin-top: 150px;
+    font-size: 50px;
+}
+.section-thrilling{
+    height: 650px;
+    background-image: url("../../image/section-thrilling.jpg");
+    background-size: cover;
+    background-position: top;
+}
+.pt-10{
+    padding-top: 200px;
+    font-size: 50px;
+}
+
+
+/* hero */
+.hero{
+    height:100vh;
+    background:url("../../image/siem reap hero img.jpg") center/cover;
+    position:relative;
+    overflow:hidden;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    z-index: 1;
+}
+
+/* Ensure hero content and navbar sit above the overlay */
+.hero .container{
+    position: relative;
+    z-index: 2;
+}
+
+#navbar-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.hero h1{
+    font-size:6rem;
+}
+
+.hero-text{
+    max-width:550px;
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+/* Cards */
+
+/* Cards */
+.hero .col-lg-6:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-wrapper{
+    position: relative;
+    width: min(100%, 560px);
+    height: 420px; /* room for card1/card3 top offset + image height */
+    margin: 0 auto;
+}
+
+.destination-card{
+    width: 250px!important;
+    max-width: 70vw;
+    position: absolute;
+    z-index: 4;
+    transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .3s, opacity .25s;
+    transform-origin: center center;
+}
+
+.destination-card.active{
+    z-index: 6;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+
+.destination-card:not(.active){
+    filter: none;
+    opacity: 0.95;
+}
+
+.destination-card img{
+    height: 360px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px !important;
+}
+
+.card1{ right: 180px; top: -30px; }
+.card2{ right: 60px; top: -60px; }
+.card3{ right: -60px; top: -30px; }
+
+.bookmark{
+    position: absolute;
+    top: 50px;
+    right: 18px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bottom Buttons */
+.slider-btns{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 7;
+}
+
+.slider-btns .btn{
+    width: 45px;
+    height: 45px;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet and below: switch from overlapping cards to a smoother horizontal
+   slider so the hero remains readable from 1024px down to phone sizes. */
+@media (max-width: 1199.98px){
+    .hero{
+        height: auto;
+        padding: 100px 0 60px;
+    }
+
+    .hero .row{
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+
+    .hero .col-lg-6{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1{
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .hero-text{
+        text-align: center;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero .btn{
+        display: block;
+        margin: 1.5rem auto 0;
+    }
+
+    .cards-wrapper{
+        height: auto;
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 20px 16px 40px;
+        margin-top: 40px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cards-wrapper::-webkit-scrollbar{ display: none; }
+
+    .destination-card{
+        position: static;
+        flex: 0 0 220px;
+        width: 220px;
+        max-width: 78vw;
+        scroll-snap-align: start;
+    }
+
+    .destination-card img{ height: 280px; }
+
+    .card1, .card2, .card3{
+        right: auto;
+        top: auto;
+    }
+
+    .slider-btns{
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 575.98px){
+    .destination-card{
+        flex-basis: 82vw;
+        width: 82vw;
+    }
+
+    .destination-card img{ height: 240px; }
 }
