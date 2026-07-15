@@ -42,21 +42,18 @@
 
   <script>
     document.body.classList.add('loading');
-    window.addEventListener('load', function() {
-        const loader = document.getElementById('loader');
-        if (loader) {
-            loader.classList.add('fade-out');
-            setTimeout(() => {
-                loader.style.display = 'none';
-                document.body.classList.remove('loading');
-            }, 500);
-        }
+    window.addEventListener('load', function () {
+      const loader = document.getElementById('loader');
+      if (loader) {
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+          loader.style.display = 'none';
+          document.body.classList.remove('loading');
+        }, 500);
+      }
     });
   </script>
-
   <!-- Home page content -->
-
-
   <div class="hero">
     <div id="navbar-container"></div>
 
