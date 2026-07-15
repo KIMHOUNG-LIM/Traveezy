@@ -408,3 +408,19 @@
 
     .destination-card img{ height: 240px; }
 }
+
+/* Custom outline primary button styles for province.html */
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: transparent;
+    transition: background-color 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: var(--white) !important;
+}
