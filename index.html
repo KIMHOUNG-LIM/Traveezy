@@ -23,6 +23,37 @@
 </head>
 
 <body>
+  <!-- Preloader Screen -->
+  <div id="loader" class="loader-wrapper">
+    <div class="loader-content">
+      <div class="travel-icon-container">
+        <div class="globe-container">
+          <i class="fa-solid fa-earth-asia globe-animation"></i>
+        </div>
+        <i class="fa-solid fa-paper-plane plane-animation"></i>
+      </div>
+      <h2 class="loader-title">Traveezy</h2>
+      <p class="loader-text">Preparing your adventure to Cambodia...</p>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.body.classList.add('loading');
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('loader');
+        if (loader) {
+            loader.classList.add('fade-out');
+            setTimeout(() => {
+                loader.style.display = 'none';
+                document.body.classList.remove('loading');
+            }, 500);
+        }
+    });
+  </script>
+
   <!-- Home page content -->
 
 
