@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const heroSwiper = new Swiper('.hero-swiper .swiper', {
   slidesPerView: 3,
   spaceBetween: 24,
   loop: true,
@@ -23,4 +23,23 @@ const swiper = new Swiper('.swiper', {
       spaceBetween: 24
     }
   }
+});
+
+const exploreSwiper = new Swiper('.explore-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  speed: 800,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: '.explore-swiper .swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.explore-swiper .swiper-button-next',
+    prevEl: '.explore-swiper .swiper-button-prev',
+  },
 });
