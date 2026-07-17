@@ -1,35 +1,10 @@
-/* =========================================================================
-   TRAVEEZY — SCRIPT.JS
-   -------------------------------------------------------------------------
-   This file makes the page INTERACTIVE (filtering, sorting, the heart
-   button, the subscribe box, and the little popup message at the bottom).
-   It's linked into index.html with one line near the bottom of the page:
-
-        <script src="script.js"></script>
-
-   You do not need to understand JavaScript to use this site — just know
-   that this is where the "behavior" lives, while styles.css is where the
-   "looks" live, and index.html is where the "content" lives.
-   ========================================================================= */
-
-
-/* -------------------------------------------------------------------------
-   1) THE LISTINGS DATA
-   This is a simple list of the properties shown on the page. Want to add,
-   remove, or edit a listing? Just copy one of these lines and change the
-   values (name, location, price, image link, etc).
-   "type" must match one of the filter checkboxes: Hotels, Apartments,
-   Villas, or Vacation Homes.
-   If you ever connect this to a real hotel API, you'd replace this list
-   with the data that API sends back.
-   ------------------------------------------------------------------------- */
 const listings = [
-  { name:"Sunset Villa", location:"Beverly Hill, CA", size:"4,200 sq.ft.", beds:5, baths:5, rating:5, oldPrice:650, price:550, img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop", type:"Villas" },
-  { name:"Sunset Villa", location:"Beverly Hill, CA", size:"4,200 sq.ft.", beds:5, baths:5, rating:5, oldPrice:650, price:550, img:"https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop", type:"Hotels" },
-  { name:"Sunset Villa", location:"Beverly Hill, CA", size:"4,200 sq.ft.", beds:5, baths:5, rating:5, oldPrice:650, price:550, img:"https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800&auto=format&fit=crop", type:"Apartments" },
-  { name:"Sunset Villa", location:"Beverly Hill, CA", size:"4,200 sq.ft.", beds:5, baths:5, rating:5, oldPrice:650, price:550, img:"https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop", type:"Vacation Homes" },
-  { name:"Sunset Villa", location:"Beverly Hill, CA", size:"4,200 sq.ft.", beds:5, baths:5, rating:5, oldPrice:650, price:550, img:"https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop", type:"Villas" },
-  { name:"Sunset Villa", location:"Beverly Hill, CA", size:"4,200 sq.ft.", beds:5, baths:5, rating:5, oldPrice:650, price:550, img:"https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop", type:"Hotels" }
+  { name: "Sunset Villa", location: "Beverly Hill, CA", size: "4,200 sq.ft.", beds: 5, baths: 5, rating: 5, oldPrice: 650, price: 550, img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop", type: "Villas" },
+  { name: "Sunset Villa", location: "Beverly Hill, CA", size: "4,200 sq.ft.", beds: 5, baths: 5, rating: 5, oldPrice: 650, price: 550, img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop", type: "Hotels" },
+  { name: "Sunset Villa", location: "Beverly Hill, CA", size: "4,200 sq.ft.", beds: 5, baths: 5, rating: 5, oldPrice: 650, price: 550, img: "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800&auto=format&fit=crop", type: "Apartments" },
+  { name: "Sunset Villa", location: "Beverly Hill, CA", size: "4,200 sq.ft.", beds: 5, baths: 5, rating: 5, oldPrice: 650, price: 550, img: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop", type: "Vacation Homes" },
+  { name: "Sunset Villa", location: "Beverly Hill, CA", size: "4,200 sq.ft.", beds: 5, baths: 5, rating: 5, oldPrice: 650, price: 550, img: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop", type: "Villas" },
+  { name: "Sunset Villa", location: "Beverly Hill, CA", size: "4,200 sq.ft.", beds: 5, baths: 5, rating: 5, oldPrice: 650, price: 550, img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop", type: "Hotels" }
 ];
 
 // This grabs the empty <div id="listingContainer"> from index.html so we
@@ -44,7 +19,7 @@ const container = document.getElementById('listingContainer');
    and button. Think of it like a printable template that gets the details
    filled in each time.
    ------------------------------------------------------------------------- */
-function cardHtml(item, idx){
+function cardHtml(item, idx) {
   const stars = '★'.repeat(item.rating); // turns rating:5 into "★★★★★"
   return `
   <div class="listing-card" data-type="${item.type}">
@@ -90,7 +65,7 @@ function cardHtml(item, idx){
    - filterTypes: which checkboxes are ticked (e.g. ["Villas","Hotels"])
    - it also reads the sort dropdown's current choice
    ------------------------------------------------------------------------- */
-function render(filterTypes = []){
+function render(filterTypes = []) {
   // Step 1: keep only listings matching a checked filter (or show all
   // listings if no checkbox is ticked).
   let filtered = filterTypes.length
@@ -99,9 +74,9 @@ function render(filterTypes = []){
 
   // Step 2: reorder the results based on the sort dropdown.
   const sortBy = document.getElementById('sortSelect')?.value || 'default';
-  if(sortBy === 'low')    filtered.sort((a,b) => a.price - b.price);   // cheapest first
-  if(sortBy === 'high')   filtered.sort((a,b) => b.price - a.price);   // priciest first
-  if(sortBy === 'rating') filtered.sort((a,b) => b.rating - a.rating); // best rated first
+  if (sortBy === 'low') filtered.sort((a, b) => a.price - b.price);   // cheapest first
+  if (sortBy === 'high') filtered.sort((a, b) => b.price - a.price);   // priciest first
+  if (sortBy === 'rating') filtered.sort((a, b) => b.rating - a.rating); // best rated first
 
   // Step 3: turn every remaining listing into HTML and inject it into the page.
   container.innerHTML = filtered.map((item, i) => cardHtml(item, i)).join('');
@@ -120,7 +95,7 @@ function render(filterTypes = []){
    Clicking the heart on a card toggles it red/gray and shows a small
    confirmation message at the bottom of the screen.
    ------------------------------------------------------------------------- */
-function attachHeartHandlers(){
+function attachHeartHandlers() {
   document.querySelectorAll('.fav-heart').forEach(heart => {
     heart.addEventListener('click', () => {
       heart.classList.toggle('active');
@@ -156,7 +131,7 @@ document.getElementById('sortSelect').addEventListener('change', () => {
    ------------------------------------------------------------------------- */
 document.getElementById('subBtn').addEventListener('click', () => {
   const val = document.getElementById('subEmail').value.trim();
-  if(val && val.includes('@')){
+  if (val && val.includes('@')) {
     showToast('Subscribed! Welcome aboard.');
     document.getElementById('subEmail').value = '';
   } else {
@@ -180,7 +155,7 @@ document.getElementById('bookingBtn').addEventListener('click', () => {
    A small reusable function: give it any message, and it slides the black
    pill up from the bottom of the screen for about 2 seconds, then hides it.
    ------------------------------------------------------------------------- */
-function showToast(msg){
+function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.classList.add('show');
@@ -194,7 +169,3 @@ function showToast(msg){
    Draws the full, unfiltered list of stays the moment the page opens.
    ------------------------------------------------------------------------- */
 render();
-
-/* =========================================================================
-   END OF FILE
-   ========================================================================= */
