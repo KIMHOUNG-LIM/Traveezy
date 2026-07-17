@@ -23,9 +23,11 @@ function cardHtml(item, idx) {
   const stars = '★'.repeat(item.rating); // turns rating:5 into "★★★★★"
   return `
   <div class="listing-card" data-type="${item.type}">
-    <div class="listing-thumb" style="background-image:url('${item.img}')">
-      <div class="fav-heart" data-idx="${idx}"><i class="fa-solid fa-heart"></i></div>
-    </div>
+    <a href="../hotel-detail/hotel-detail.html" class="listing-thumb-link">
+      <div class="listing-thumb" style="background-image:url('${item.img}')">
+        <div class="fav-heart" data-idx="${idx}"><i class="fa-solid fa-heart"></i></div>
+      </div>
+    </a>
     <div class="listing-body">
       <div class="listing-top">
         <div>
@@ -48,10 +50,10 @@ function cardHtml(item, idx) {
           <span class="price-old">$${item.oldPrice}</span>
           <span class="price-new">$${item.price}<span>/day</span></span>
         </div>
-        <button class="btn-detail">
+        <a href="../hotel-detail/hotel-detail.html" class="btn-detail">
           View Detail
           <span class="circle"><i class="fa-solid fa-chevron-right"></i></span>
-        </button>
+        </a>
       </div>
     </div>
   </div>`;
@@ -97,7 +99,8 @@ function render(filterTypes = []) {
    ------------------------------------------------------------------------- */
 function attachHeartHandlers() {
   document.querySelectorAll('.fav-heart').forEach(heart => {
-    heart.addEventListener('click', () => {
+    heart.addEventListener('click', (event) => {
+      event.stopPropagation(); // prevent navigation when favoriting!
       heart.classList.toggle('active');
       showToast(heart.classList.contains('active') ? 'Added to favorites' : 'Removed from favorites');
     });
