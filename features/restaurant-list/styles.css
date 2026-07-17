@@ -1,0 +1,617 @@
+/* =========================================================================
+   TRAVEEZY — STYLES.CSS
+   -------------------------------------------------------------------------
+   Hi! This is the file that controls how the website LOOKS (colors, fonts,
+   spacing, rounded corners, hover effects, etc).
+   The index.html file controls the CONTENT/structure (text, buttons,
+   images) and just points to this file with one line in its <head>:
+
+        <link rel="stylesheet" href="styles.css">
+
+   That's the only thing connecting them. As long as both files sit in the
+   SAME folder, and that link line stays in index.html, everything works.
+
+   You don't need to understand all of this to use it! Below, every
+   section is labeled and explained in plain English. If you just want to
+   change a color, look for the ":root" section right below — that's your
+   "color palette" and changing one line there updates the whole site.
+   ========================================================================= */
+
+
+/* -------------------------------------------------------------------------
+   1) COLOR PALETTE (variables)
+   These are like "named colors" you can reuse everywhere. If you want to
+   change the whole site's main dark-blue color, you only need to edit it
+   ONCE here, instead of hunting through the whole file.
+   ------------------------------------------------------------------------- */
+:root{
+  --ink:#161616;      /* main text color (almost black) */
+  --navy:#173a63;      /* main brand color - buttons, active nav, icons */
+  --accent:#f4a300;    /* gold/orange accent - used for stars & the logo icon */
+  --muted:#6b7280;     /* soft gray - used for secondary text like addresses */
+  --line:#e8e8e8;      /* light gray - used for thin borders/dividers */
+  --strike:#e2483d;    /* red - used for the crossed-out "old price" */
+}
+
+/* Makes sizing math predictable: padding/border are included inside an
+   element's width instead of adding extra size. Best left alone. */
+*{ box-sizing:border-box; }
+
+/* Base site font + text color + background */
+body{
+  font-family:'Poppins', sans-serif;
+  color:var(--ink);
+  background:#fff;
+}
+
+/* Headings use the elegant serif font (like the "Traveezy" logo & hero title) */
+h1, h2, h3, .brand-font{
+  font-family:'Playfair Display', serif;
+}
+
+/* Removes the blue underline browsers put on links by default */
+a{ text-decoration:none; color:inherit; }
+
+
+/* -------------------------------------------------------------------------
+   2) TOP NAVIGATION BAR
+   The bar that floats over the hero photo: logo, menu pill, contact button.
+   ------------------------------------------------------------------------- */
+.site-nav{
+  position:absolute;   /* floats on top of the hero image */
+  top:0; left:0; right:0;
+  z-index:10;           /* keeps it above the photo */
+  padding:28px 40px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#fff;
+}
+.logo .fa-plane{
+  color:var(--accent);   /* the little plane icon is gold */
+  transform:rotate(45deg);
+}
+.logo-text{ line-height:1; }
+.logo-text .top{
+  font-family:'Playfair Display', serif;
+  font-weight:700;
+  font-size:22px;
+}
+.logo-text .tag{
+  font-size:9px;
+  letter-spacing:.5px;
+  opacity:.85;
+}
+
+/* The rounded "pill" container holding Home / Destination / Food / Hotel / About */
+.nav-pill{
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.35);
+  border-radius:50px;
+  padding:8px 10px;
+  backdrop-filter:blur(6px); /* frosted-glass look */
+}
+.nav-pill .nav-link{
+  color:#fff;
+  font-size:14.5px;
+  font-weight:500;
+  padding:10px 20px;
+  border-radius:50px;
+  transition:.25s;   /* smooth hover animation */
+}
+.nav-pill .nav-link:hover{
+  background:rgba(255,255,255,0.15);
+}
+/* The currently selected page (e.g. "Hotel") gets a white pill background */
+.nav-pill .nav-link.active{
+  background:#fff;
+  color:var(--ink);
+  font-weight:600;
+}
+
+/* The "Contact now" button on the far right */
+.contact-btn{
+  border:1px solid rgba(255,255,255,0.5);
+  border-radius:50px;
+  color:#fff;
+  padding:8px 8px 8px 22px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-size:14.5px;
+  font-weight:500;
+}
+.contact-btn .circle{
+  width:34px; height:34px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  display:flex; align-items:center; justify-content:center;
+}
+.contact-btn:hover .circle{ background:var(--accent); }
+
+
+/* -------------------------------------------------------------------------
+   3) HERO SECTION (the big photo + "Find Your Perfect Stay" headline)
+   ------------------------------------------------------------------------- */
+.hero{
+  position:relative;
+  min-height:640px;
+  /* A dark gradient is layered on top of the photo so the white text stays
+     readable. To swap the photo, just replace the URL after the comma. */
+  background:
+    linear-gradient(180deg, rgba(10,20,35,.35) 0%, rgba(10,20,35,.05) 35%, rgba(10,20,35,.15) 100%),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1740&auto=format&fit=crop') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+}
+.hero-inner{
+  padding:180px 50px 60px;
+  max-width:640px;
+}
+.hero h1{
+  color:#fff;
+  font-size:58px;
+  font-weight:800;
+  line-height:1.08;
+  margin-bottom:22px;
+  text-shadow:0 2px 18px rgba(0,0,0,.25); /* helps text pop off busy photos */
+}
+.hero p{
+  color:rgba(255,255,255,0.88);
+  font-size:15.5px;
+  max-width:420px;
+  margin-bottom:34px;
+  line-height:1.6;
+}
+
+/* The dark-blue "Booking Now" pill button */
+.btn-booking{
+  background:var(--navy);
+  color:#fff;
+  border:none;
+  border-radius:50px;
+  padding:16px 12px 16px 30px;
+  font-weight:600;
+  font-size:15px;
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  transition:.25s;
+}
+.btn-booking .circle{
+  width:32px;height:32px;
+  border-radius:50%;
+  background:rgba(255,255,255,.18);
+  display:flex;align-items:center;justify-content:center;
+}
+.btn-booking:hover{ background:#0f2c4c; } /* darkens slightly on hover */
+
+
+/* -------------------------------------------------------------------------
+   4) TRUST STRIP (the row of 4 small icon badges under the hero photo)
+   ------------------------------------------------------------------------- */
+.trust-strip{
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.trust-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:26px 20px;
+}
+.trust-item .icon-badge{
+  width:46px;height:46px;
+  min-width:46px;
+  border-radius:14px;
+  background:rgba(23,58,99,.08); /* a faint tint of the navy color */
+  color:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+}
+.trust-item h6{ font-size:14.5px; font-weight:600; margin:0 0 3px; }
+.trust-item p{ font-size:12.5px; color:var(--muted); margin:0; }
+
+
+/* -------------------------------------------------------------------------
+   5) MAIN CONTENT WRAPPER
+   Just controls the max width and side padding for the whole middle
+   section (filters + listings) and is reused by the footer too.
+   ------------------------------------------------------------------------- */
+.content-wrap{
+  max-width:1280px;
+  margin:0 auto;      /* centers the content on wide screens */
+  padding:60px 40px 90px;
+}
+
+
+/* -------------------------------------------------------------------------
+   6) SIDEBAR FILTERS ("Property Type" checkboxes on the left)
+   ------------------------------------------------------------------------- */
+.filter-title{
+  font-weight:600;
+  font-size:15px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.filter-title i{ color:var(--navy); }
+
+.filter-check{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+  font-size:15px;
+  color:#333;
+  cursor:pointer;
+  user-select:none;
+  padding:9px 12px;
+  border-radius:12px;
+  border:1px solid transparent;
+  transition:.2s;
+}
+.filter-check:hover{
+  background:#f8f8f8;
+  border-color:var(--line);
+}
+/* The little colored square icon next to each filter label */
+.filter-check .type-icon{
+  width:30px;height:30px;
+  border-radius:9px;
+  background:#f2f2f2;
+  color:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;
+  transition:.2s;
+}
+/* When the checkbox is ticked, its icon badge turns navy blue */
+.filter-check input:checked ~ .type-icon{
+  background:var(--navy);
+  color:#fff;
+}
+
+/* The custom checkbox square itself (we hide the default browser box and
+   draw our own so it matches the site's rounded style) */
+.filter-check input{
+  appearance:none;         /* hides the plain default checkbox */
+  width:18px;height:18px;
+  border:1.5px solid #b7b7b7;
+  border-radius:5px;
+  display:inline-block;
+  position:relative;
+  cursor:pointer;
+  flex-shrink:0;
+}
+.filter-check input:checked{
+  background:var(--navy);
+  border-color:var(--navy);
+}
+/* Draws a little checkmark icon inside the box once it's checked */
+.filter-check input:checked::after{
+  content:"\f00c";
+  font-family:"Font Awesome 6 Free";
+  font-weight:900;
+  color:#fff;
+  font-size:10px;
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+}
+
+
+/* -------------------------------------------------------------------------
+   7) RESULTS BAR (the "X stays found" + sort dropdown, above the listings)
+   ------------------------------------------------------------------------- */
+.results-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.results-count{
+  font-size:14px;
+  color:var(--muted);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.results-count i{ color:var(--navy); }
+
+.sort-select{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid var(--line);
+  border-radius:50px;
+  padding:9px 16px;
+  font-size:13.5px;
+  color:#333;
+  background:#fff;
+}
+.sort-select select{
+  border:none;
+  outline:none;
+  background:transparent;
+  font-size:13.5px;
+  color:#333;
+}
+.sort-select i{ color:var(--navy); }
+
+
+/* -------------------------------------------------------------------------
+   8) LISTING CARDS (each "Sunset Villa" row with photo, details, price)
+   ------------------------------------------------------------------------- */
+.listing-card{
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:18px;
+  display:flex;
+  gap:22px;
+  margin-bottom:22px;
+  transition:box-shadow .25s, transform .25s;  /* smooth hover lift */
+}
+.listing-card:hover{
+  box-shadow:0 14px 30px rgba(20,30,50,.08);
+  transform:translateY(-2px);  /* card lifts slightly on hover */
+}
+
+.listing-thumb{
+  width:200px;
+  min-width:200px;
+  height:200px;
+  border-radius:16px;
+  background:#e6e6e6 center/cover no-repeat; /* placeholder gray + photo */
+  position:relative;
+}
+
+/* The little white heart circle in the top-right of each photo */
+.fav-heart{
+  position:absolute;
+  top:14px; right:14px;
+  width:34px;height:34px;
+  background:#fff;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 3px 8px rgba(0,0,0,.12);
+  cursor:pointer;
+  color:#bbb;
+  font-size:14px;
+  transition:.2s;
+}
+.fav-heart.active{ color:#e2483d; } /* turns red once favorited (see script.js) */
+
+.listing-body{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+.listing-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+.listing-name{
+  font-family:'Playfair Display', serif;
+  font-weight:700;
+  font-size:22px;
+  margin-bottom:6px;
+}
+.listing-loc{
+  color:var(--muted);
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:10px;
+}
+.listing-stats{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#444;
+  font-size:14px;
+  margin-bottom:auto;
+}
+.listing-stats span{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.listing-stats .sep{
+  width:1px; height:14px;
+  background:var(--line);   /* the small vertical divider lines */
+}
+.stars{ color:var(--accent); font-size:14px; letter-spacing:2px; }
+
+.price-old{
+  color:var(--strike);
+  text-decoration:line-through;
+  font-size:14px;
+  margin-right:6px;
+}
+.price-new{ font-weight:700; font-size:20px; }
+.price-new span{ font-weight:400; font-size:13px; color:var(--muted); }
+
+.listing-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-top:14px;
+}
+
+/* The black "View Detail" pill button on each card */
+.btn-detail{
+  background:var(--ink);
+  color:#fff;
+  border:none;
+  border-radius:50px;
+  padding:10px 8px 10px 20px;
+  font-size:13.5px;
+  font-weight:500;
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  transition:.2s;
+  text-decoration:none;
+}
+.btn-detail .circle{
+  width:24px;height:24px;
+  border-radius:50%;
+  background:rgba(255,255,255,.18);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;
+}
+.btn-detail:hover{ background:var(--navy); color:#fff; }
+
+.listing-thumb-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* -------------------------------------------------------------------------
+   9) MOBILE / SMALL SCREEN ADJUSTMENTS
+   Anything inside here ONLY applies when the browser window is narrower
+   than 767px (phones/small tablets), so the layout stacks nicely.
+   ------------------------------------------------------------------------- */
+@media (max-width: 767px){
+  .listing-card{ flex-direction:column; }  /* photo stacks above text */
+  .listing-thumb{ width:100%; }
+  .hero h1{ font-size:38px; }              /* smaller headline on phones */
+  .site-nav{ padding:20px; }
+  .hero-inner{ padding:150px 24px 40px; }
+}
+
+
+/* -------------------------------------------------------------------------
+   10) FOOTER (bottom section: brand blurb, link columns, newsletter)
+   ------------------------------------------------------------------------- */
+footer{
+  background:#fafafa;
+  border-top:1px solid var(--line);
+  padding:60px 40px 20px;
+}
+footer .f-brand{
+  font-family:'Playfair Display', serif;
+  font-weight:700;
+  font-size:22px;
+  margin-bottom:14px;
+}
+footer p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+  max-width:320px;
+}
+footer h6{
+  font-weight:600;
+  margin-bottom:18px;
+  font-size:15px;
+}
+footer .flinks a{
+  display:block;
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:12px;
+  transition:.2s;
+}
+footer .flinks a:hover{ color:var(--navy); }
+
+/* The rounded email input + Subscribe button */
+.subscribe-box{
+  display:flex;
+  align-items:center;
+  border:1px solid var(--line);
+  border-radius:50px;
+  padding:5px 5px 5px 18px;
+  background:#fff;
+  max-width:340px;
+  gap:8px;
+}
+.subscribe-box i{ color:var(--muted); font-size:14px; }
+.subscribe-box input{
+  border:none;
+  outline:none;
+  padding:10px 4px;
+  font-size:14px;
+  flex:1;
+  background:transparent;
+}
+.subscribe-box button{
+  background:var(--ink);
+  color:#fff;
+  border:none;
+  border-radius:50px;
+  padding:10px 22px;
+  font-size:14px;
+  font-weight:500;
+  white-space:nowrap;
+}
+.subscribe-box button:hover{ background:var(--navy); }
+
+/* Round social icon buttons (Facebook, Instagram, X, LinkedIn) */
+.socials a{
+  width:36px;height:36px;
+  border:1px solid var(--line);
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#333;
+  margin-left:8px;
+  font-size:14px;
+  transition:.2s;
+}
+.socials a:hover{ background:var(--navy); color:#fff; border-color:var(--navy); }
+
+/* The very bottom line: "Copyright..." + "Privacy Policy / Terms" */
+.foot-bottom{
+  border-top:1px solid var(--line);
+  margin-top:40px;
+  padding-top:20px;
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  color:var(--muted);
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+
+/* -------------------------------------------------------------------------
+   11) TOAST (the small floating confirmation message, e.g. "Subscribed!")
+   It's hidden by default (opacity:0) and JS adds the "show" class to
+   reveal it with a smooth fade + slide animation.
+   ------------------------------------------------------------------------- */
+#toast{
+  position:fixed;
+  bottom:24px; left:50%;
+  transform:translateX(-50%) translateY(20px);
+  background:var(--ink);
+  color:#fff;
+  padding:12px 24px;
+  border-radius:50px;
+  font-size:14px;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s;
+  z-index:999;
+}
+#toast.show{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}
+
+/* =========================================================================
+   END OF FILE — that's everything! If you want to try changing something
+   small and safe: try changing the --navy or --accent color codes at the
+   very top and refresh the page to see the whole site update.
+   ========================================================================= */
