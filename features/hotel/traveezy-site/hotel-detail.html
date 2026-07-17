@@ -1,0 +1,398 @@
+<!--
+  ================================================================
+  TRAVEEZY — hotel-detail.html  (single hotel landing page)
+  ================================================================
+  This is the page shown in the "Choose Your Room" and
+  "What People Say About Us" screenshots. It shares the same
+  css/hotel.css and js/hotel.js files as hotel.html.
+  ================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Traveezy – Cute Hotel</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/hotel.css"/>
+</head>
+<body>
+
+<!-- =========================================================
+  NAVBAR (shared)
+========================================================= -->
+<nav id="mainNav">
+  <div class="container nav-inner">
+    <a href="hotel.html" class="nav-logo">
+      <i class="fa-solid fa-plane"></i> Traveezy
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-pill" id="navCollapse">
+      <a href="hotel.html">Home</a>
+      <a href="#">Destination</a>
+      <a href="#">Food</a>
+      <a href="hotel.html" class="active">Hotel</a>
+      <a href="#">About us</a>
+    </div>
+
+    <a href="#" class="btn-contact-nav">
+      Contact now <i class="fa-solid fa-chevron-right"></i>
+    </a>
+  </div>
+</nav>
+
+<!-- =========================================================
+  HERO
+========================================================= -->
+<section class="hero-detail">
+  <div class="container hero-box">
+    <!-- Beginner note: this is the button that was missing — it's just a
+         plain link back to hotel.html (the listing page), styled as a
+         small translucent pill so it's easy to spot sitting on top of
+         the photo, without competing with the big heading below it. -->
+    <a href="hotel.html" class="back-link">
+      <i class="fa-solid fa-chevron-left"></i> Back to results
+    </a>
+    <h1>Find Your<br>Perfect Stay.</h1>
+    <p>Book Boutique hotels, priva villas,...<br>Tailored for thoes who travel with taste.</p>
+    <a href="#rooms" class="btn-booking">
+      <span class="btn-text">Booking Now</span>
+      <span class="circle"><i class="fa-solid fa-chevron-right"></i></span>
+    </a>
+  </div>
+</section>
+
+<!-- =========================================================
+  ABOUT CUTE HOTEL
+========================================================= -->
+<section class="about">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-3">
+        <h2>About Cute<br>Hotel</h2>
+      </div>
+
+      <div class="col-lg-4">
+        <p>Welcome to <strong>Cute hotel</strong>. Welcome to Cute hotel.
+        Welcome to Cute hotel. Welcome to Cute hotel.
+        Welcome to Cute hotel. Welcome to Cute hotel.</p>
+        <!-- Same base class ("btn-booking") as the hero buttons, so the
+             overall SIZE and SPACING stay consistent site-wide. The second
+             class ("btn-booking-outline") makes this one look different:
+             a white pill with a thin black border, with the words wrapped
+             in their own <span class="btn-text"> so CSS can turn JUST that
+             part into a solid black capsule — matching the reference
+             picture exactly. The hero buttons don't use this wrapper, so
+             they're unaffected and stay solid navy. -->
+        <a href="#rooms" class="btn-booking btn-booking-outline">
+          <span class="btn-text">Booking Now</span>
+          <span class="circle"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="trio-grid">
+          <div class="trio-img">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=400&fit=crop" alt="Spa relaxation"/>
+          </div>
+          <div class="trio-img">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=400&fit=crop" alt="Gourmet breakfast"/>
+          </div>
+          <div class="trio-img">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&h=400&fit=crop" alt="Pool relax"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+  VIDEO BANNER
+========================================================= -->
+<section class="video-banner">
+  <div class="vb-content">
+    <p class="vb-label brand-font">L U X U R Y &nbsp; H O T E L &nbsp; V I D E O</p>
+    <!-- Beginner note: this is a plain link, not a video player embedded
+         on the page — clicking it just opens the video on YouTube in a
+         new browser tab (target="_blank"). That's the simplest, most
+         beginner-friendly way to do this with no extra JavaScript.
+         👉 Swap the href below for YOUR real YouTube video link. -->
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" class="play-btn" aria-label="Watch the luxury hotel video on YouTube">
+      <i class="fa-solid fa-play"></i>
+    </a>
+  </div>
+</section>
+
+<!-- =========================================================
+  SERVICES
+========================================================= -->
+<section class="services">
+  <div class="container">
+    <h2 class="title">Your Stay, Our Service</h2>
+    <p class="sub">We provide everything you need for a smooth and stress free stay. From easy booking to personalized services, your comfort is our top priority.</p>
+
+    <!-- Beginner note: each card below is an <a> link (not just a <div>),
+         so the WHOLE card is clickable, not just the text. Each one goes
+         to its own separate page — service-1.html, service-2.html, and
+         service-3.html — which you can find in this same folder. -->
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <a href="service-1.html" class="svc-card" style="background-image:url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=600&h=500&fit=crop')">
+          <div class="svc-body">
+            <h3>Service 1</h3>
+            <p>Call out a feature, benefit, or value of your site, then link to a page where people can learn more about it.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <a href="service-2.html" class="svc-card" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=500&fit=crop')">
+          <div class="svc-body">
+            <h3>Service 2</h3>
+            <p>Call out a feature, benefit, or value of your site, then link to a page where people can learn more about it.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <a href="service-3.html" class="svc-card" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&h=500&fit=crop')">
+          <div class="svc-body">
+            <h3>Service 3</h3>
+            <p>Call out a feature, benefit, or value of your site, then link to a page where people can learn more about it.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+  ROOMS — Choose Your Room
+  This section has 2 parts stacked on top of each other:
+    1) ".room-head"  → the orange band with the title + subtitle
+    2) ".room-body"  → a white area holding the photo row + the
+                        arrow/dot controls. It uses a NEGATIVE
+                        margin-top so the photos slightly overlap
+                        UP into the orange band above them.
+  The photos slide using plain JavaScript (see js/hotel.js) —
+  no Bootstrap carousel component is used here, just simple code
+  that moves a "track" of images left/right, the same technique
+  used for the review cards further down the page.
+========================================================= -->
+<section class="rooms" id="rooms">
+
+  <div class="room-head">
+    <div class="container">
+      <h2 class="title brand-font">Choose Your Room</h2>
+      <p class="sub">Explore a variety of rooms tailored to your comfort and style. Whether you're traveling solo or with family, find the perfect spae to unwind</p>
+    </div>
+  </div>
+
+  <div class="container room-body">
+
+    <!-- "room-window" hides the overflow so only 3 photos show at once -->
+    <div class="room-window">
+      <div class="room-track" id="roomTrack">
+        <div class="room-card"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&h=320&fit=crop" alt="Pool Villa"/></div>
+        <div class="room-card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=320&fit=crop" alt="Breakfast Included"/></div>
+        <div class="room-card"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=320&fit=crop" alt="Spa Relaxation"/></div>
+        <div class="room-card"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=320&fit=crop" alt="Deluxe Suite"/></div>
+        <div class="room-card"><img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&h=320&fit=crop" alt="Ocean View"/></div>
+        <div class="room-card"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=320&fit=crop" alt="Garden Room"/></div>
+        <div class="room-card"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=500&h=320&fit=crop" alt="Family Suite"/></div>
+      </div>
+    </div>
+
+    <!-- Left arrow / dots / right arrow, all in one row.
+         The dots are added automatically by js/hotel.js — you don't
+         need to count photos or add dots by hand. -->
+    <div class="room-carousel-nav">
+      <button class="room-nav-btn" id="roomPrevBtn" type="button" aria-label="Previous rooms">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="room-dots" id="roomDots"></div>
+
+      <button class="room-nav-btn" id="roomNextBtn" type="button" aria-label="Next rooms">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+  TESTIMONIALS
+========================================================= -->
+<section class="testimonials">
+  <div class="testi-bg">
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80" alt="mountain background"/>
+  </div>
+
+  <div class="container testi-wrap">
+
+    <div class="testi-top">
+      <h2 class="testi-heading brand-font">What People Say<br>About Us</h2>
+      <div class="testi-rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke"></i>
+        <span>4.5/ 2k reviews</span>
+      </div>
+    </div>
+
+    <p class="testi-desc">
+      Explore hidden gems, local experiences, travel hacks, and
+      destination stories all designed to elevate your journey
+      before it even begins.
+    </p>
+
+    <div class="testi-bottom-left">
+      <div class="big-quote">&#8221;</div>
+      <p class="client-label">Client Testimonial</p>
+      <div class="testi-nav">
+        <button class="tnav-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="tnav-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="card-zone">
+      <div class="row justify-content-end">
+        <div class="col-lg-10">
+          <div class="card-wrapper">
+            <div class="card-track" id="cardTrack">
+
+              <div class="rev-card">
+                <div class="rev-top">
+                  <img src="https://i.pravatar.cc/40?img=47" alt="Esther Hills"/>
+                  <div>
+                    <div class="rev-name">Esther Hills</div>
+                    <div class="rev-role">Traveller</div>
+                  </div>
+                  <div class="ms-auto rev-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <p class="rev-text">"The villa we stayed in was straight out of a movie. Private beach access, gourmet meals, and a sunset massage — it was everything we hoped for."</p>
+              </div>
+
+              <div class="rev-card">
+                <div class="rev-top">
+                  <img src="https://i.pravatar.cc/40?img=12" alt="Gary L. Hopper"/>
+                  <div>
+                    <div class="rev-name">Gary L. Hopper</div>
+                    <div class="rev-role">Traveller</div>
+                  </div>
+                  <div class="ms-auto rev-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <p class="rev-text">"Our kids loved the play area and pool while we enjoyed the hot tub suite. Plus, the complimentary breakfast had amazing variety!"</p>
+              </div>
+
+              <div class="rev-card">
+                <div class="rev-top">
+                  <img src="https://i.pravatar.cc/40?img=32" alt="Julia s.Lackey"/>
+                  <div>
+                    <div class="rev-name">Julia s.Lackey</div>
+                    <div class="rev-role">Traveller</div>
+                  </div>
+                  <div class="ms-auto rev-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <p class="rev-text">"From booking to checkout, everything was seamless. The ocean-view room was breathtaking. It felt like having a personal concierge 24/7."</p>
+              </div>
+
+              <div class="rev-card">
+                <div class="rev-top">
+                  <img src="https://i.pravatar.cc/40?img=21" alt="Marcus Bell"/>
+                  <div>
+                    <div class="rev-name">Marcus Bell</div>
+                    <div class="rev-role">Traveller</div>
+                  </div>
+                  <div class="ms-auto rev-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <p class="rev-text">"A hidden gem! The staff remembered my name and even surprised me with a birthday cake. Truly world-class hospitality."</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+  FOOTER (shared)
+========================================================= -->
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <span class="f-brand">Traveezy</span>
+        <p><strong>TravelEezy</strong> helps people discover Cambodia's best destinations, local culture, and hidden gems. We make travel planning easy for both local and international travelers.</p>
+      </div>
+
+      <div class="col-lg-2 col-6">
+        <h6>Features</h6>
+        <div class="flinks">
+          <a href="#">Explore Destinations</a>
+          <a href="#">Discover Local Food</a>
+          <a href="hotel.html">Find Hotels</a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-6">
+        <h6>Content</h6>
+        <div class="flinks">
+          <a href="hotel.html">Home</a>
+          <a href="#">Destinations</a>
+          <a href="#">Food</a>
+          <a href="hotel.html">Hotels</a>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <h6><i class="fa-solid fa-paper-plane" style="color:var(--navy);"></i> Stay in the loop</h6>
+        <div class="subscribe-box mb-3">
+          <input type="email" id="subEmail" placeholder="Type your email address">
+          <button id="subBtn">Subscribe</button>
+        </div>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div>Copyright &copy; Traveezy 2026</div>
+      <div>Private Policy &nbsp;•&nbsp; Terms of Use</div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/hotel.js"></script>
+</body>
+</html>

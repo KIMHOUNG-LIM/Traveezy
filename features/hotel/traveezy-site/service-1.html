@@ -1,0 +1,136 @@
+<!--
+  ================================================================
+  TRAVEEZY — service-1.html  (Service 1 detail page)
+  ================================================================
+  This page is what people land on when they click the "Service 1"
+  card on hotel-detail.html. It shares the same css/hotel.css and
+  js/hotel.js files as the rest of the site, and reuses the same
+  navbar + footer, so it feels like part of the same site.
+
+  This is just a simple starting template — replace the heading,
+  photo, and paragraph text below with your own real content.
+  ================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Service 1 – Traveezy</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/hotel.css"/>
+</head>
+<body>
+
+<!-- =========================================================
+  NAVBAR (shared — same as every other page)
+========================================================= -->
+<nav id="mainNav">
+  <div class="container nav-inner">
+    <a href="hotel.html" class="nav-logo">
+      <i class="fa-solid fa-plane"></i> Traveezy
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-pill" id="navCollapse">
+      <a href="hotel.html">Home</a>
+      <a href="#">Destination</a>
+      <a href="#">Food</a>
+      <a href="hotel.html" class="active">Hotel</a>
+      <a href="#">About us</a>
+    </div>
+
+    <a href="#" class="btn-contact-nav">
+      Contact now <i class="fa-solid fa-chevron-right"></i>
+    </a>
+  </div>
+</nav>
+
+<!-- =========================================================
+  PHOTO BANNER + TITLE
+  Swap the image URL below for your own Service 1 photo.
+========================================================= -->
+<section class="svc-hero" style="background-image:url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1600&q=80')">
+  <a href="hotel-detail.html" class="back-link">
+    <i class="fa-solid fa-chevron-left"></i> Back to detail hotel
+  </a>
+  <h1>Service 1</h1>
+</section>
+
+<!-- =========================================================
+  SIMPLE TEXT CONTENT
+  Replace this paragraph with real details about this service.
+========================================================= -->
+<section class="svc-text">
+  <p>
+    This is where you describe Service 1 in more detail — what it is,
+    why it matters, and how guests can take advantage of it during
+    their stay. Replace this placeholder paragraph with your own
+    real content.
+  </p>
+</section>
+
+<!-- =========================================================
+  FOOTER (shared — same as every other page)
+========================================================= -->
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <span class="f-brand">Traveezy</span>
+        <p><strong>TravelEezy</strong> helps people discover Cambodia's best destinations, local culture, and hidden gems. We make travel planning easy for both local and international travelers.</p>
+      </div>
+
+      <div class="col-lg-2 col-6">
+        <h6>Features</h6>
+        <div class="flinks">
+          <a href="#">Explore Destinations</a>
+          <a href="#">Discover Local Food</a>
+          <a href="hotel.html">Find Hotels</a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-6">
+        <h6>Content</h6>
+        <div class="flinks">
+          <a href="hotel.html">Home</a>
+          <a href="#">Destinations</a>
+          <a href="#">Food</a>
+          <a href="hotel.html">Hotels</a>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <h6><i class="fa-solid fa-paper-plane" style="color:var(--navy);"></i> Stay in the loop</h6>
+        <div class="subscribe-box mb-3">
+          <input type="email" id="subEmail" placeholder="Type your email address">
+          <button id="subBtn">Subscribe</button>
+        </div>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div>Copyright &copy; Traveezy 2026</div>
+      <div>Private Policy &nbsp;•&nbsp; Terms of Use</div>
+    </div>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/hotel.js"></script>
+</body>
+</html>
