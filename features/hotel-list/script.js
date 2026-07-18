@@ -80,11 +80,12 @@ function render(filterTypes = []) {
   if (sortBy === 'high') filtered.sort((a, b) => b.price - a.price);   // priciest first
   if (sortBy === 'rating') filtered.sort((a, b) => b.rating - a.rating); // best rated first
 
-  // Step 3: turn every remaining listing into HTML and inject it into the page.
-  container.innerHTML = filtered.map((item, i) => cardHtml(item, i)).join('');
+  // Step 3: turn every remaining listing into HTML and inject it into the page (limit to max 30 per view).
+  const displayed = filtered.slice(0, 30);
+  container.innerHTML = displayed.map((item, i) => cardHtml(item, i)).join('');
 
   // Step 4: update the little "X stays found" counter text.
-  document.getElementById('resultsCount').textContent = filtered.length;
+  document.getElementById('resultsCount').textContent = displayed.length;
 
   // Step 5: re-attach the heart click behavior (needed every time we
   // redraw the cards, since the old heart icons were just replaced).
@@ -132,13 +133,17 @@ document.getElementById('sortSelect').addEventListener('change', () => {
    confirmation message. (This is just a visual demo — to actually collect
    emails you'd need to connect this to an email service or backend.)
    ------------------------------------------------------------------------- */
-document.getElementById('subBtn').addEventListener('click', () => {
-  const val = document.getElementById('subEmail').value.trim();
-  if (val && val.includes('@')) {
-    showToast('Subscribed! Welcome aboard.');
-    document.getElementById('subEmail').value = '';
-  } else {
-    showToast('Please enter a valid email.');
+// Use event delegation for Subscribe button since footer is loaded dynamically
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'subBtn') {
+    const emailInput = document.getElementById('subEmail');
+    const val = emailInput ? emailInput.value.trim() : '';
+    if (val && val.includes('@')) {
+      showToast('Subscribed! Welcome aboard.');
+      if (emailInput) emailInput.value = '';
+    } else {
+      showToast('Please enter a valid email.');
+    }
   }
 });
 
