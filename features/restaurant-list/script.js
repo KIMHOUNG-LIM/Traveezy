@@ -1,8 +1,8 @@
 const listings = [
-  { name: "Mesa Restaurant", location: "Wat Bo Road, Siem Reap", rating: 5, oldPrice: 45, price: 35, img: "../../assets/images/hotel-details/Mesa Restaurant.jpg", type: "Fine Dining" },
-  { name: "Golden Pumpkin", location: "Sok San Road, Siem Reap", rating: 5, oldPrice: 15, price: 10, img: "../../assets/images/hotel-details/Golden Pumpkin.jpg", type: "Traditional Khmer" },
-  { name: "Mealea Restaurant", location: "Oum Chhay Street, Wat Bo", rating: 4, oldPrice: 50, price: 40, img: "../../assets/images/hotel-details/Mealea.jpeg", type: "Fine Dining" },
-  { name: "Krousa Lotchea", location: "Pub Street, Siem Reap", rating: 4, oldPrice: 8, price: 5, img: "../../assets/images/hotel-details/Krousa lotchea.jpg", type: "Street Food" },
+  { name: "Mesa Restaurant", location: "Wat Bo Road, Siem Reap", rating: 5, oldPrice: 45, price: 35, img: "../../assets/images/province/Mesa Restaurant.jpg", type: "Fine Dining" },
+  { name: "Golden Pumpkin", location: "Sok San Road, Siem Reap", rating: 5, oldPrice: 15, price: 10, img: "../../assets/images/province/Golden Pumpkin.jpg", type: "Traditional Khmer" },
+  { name: "Mealea Restaurant", location: "Oum Chhay Street, Wat Bo", rating: 4, oldPrice: 50, price: 40, img: "../../assets/images/province/Mealea.jpeg", type: "Fine Dining" },
+  { name: "Krousa Lotchea", location: "Pub Street, Siem Reap", rating: 4, oldPrice: 8, price: 5, img: "../../assets/images/province/Krousa lotchea.jpg", type: "Street Food" },
   { name: "Wat Bo Cafe", location: "Wat Bo Village, Siem Reap", rating: 5, oldPrice: 12, price: 8, img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop", type: "Cafes & Bars" },
   { name: "Siem Reap Food Hub", location: "Night Market, Siem Reap", rating: 5, oldPrice: 6, price: 4, img: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop", type: "Street Food" }
 ];
@@ -127,10 +127,8 @@ document.getElementById('subBtn').addEventListener('click', () => {
 
 /* -------------------------------------------------------------------------
    7) "BOOKING NOW" BUTTON (hero section)
+   Handled globally by the booking-modal component via data-booking-trigger.
    ------------------------------------------------------------------------- */
-document.getElementById('bookingBtn').addEventListener('click', () => {
-  showToast("Let's reserve your table!");
-});
 
 
 /* -------------------------------------------------------------------------

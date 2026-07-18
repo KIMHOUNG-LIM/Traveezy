@@ -1,0 +1,87 @@
+<!-- Booking Modal Component — clean & minimal -->
+<div id="booking-modal" class="bm-overlay" role="dialog" aria-modal="true" aria-labelledby="bm-title" hidden>
+    <div class="bm-card">
+
+        <!-- Close -->
+        <button class="bm-close" id="bm-close-btn" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- ── FORM STEP ── -->
+        <div id="bm-form-step" class="bm-step">
+
+            <div class="bm-icon-wrap">✈️</div>
+            <h2 class="bm-title" id="bm-title">Book Your Trip</h2>
+            <p class="bm-subtitle">Fill in your details and our team will reach out within 24 hours.</p>
+
+            <form id="bm-form" novalidate>
+
+                <!-- Name -->
+                <div class="bm-field">
+                    <label class="bm-label" for="bm-name">
+                        <i class="fa-solid fa-user bm-label-icon"></i> Full Name
+                    </label>
+                    <input type="text" id="bm-name" class="bm-input"
+                        placeholder="e.g. Sokha Chan" autocomplete="name" required />
+                    <div class="bm-feedback-row bm-hidden" id="bm-name-fb">
+                        <i class="fa-solid bm-feedback-icon" id="bm-name-fb-icon"></i>
+                        <span id="bm-name-fb-text"></span>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="bm-field">
+                    <label class="bm-label" for="bm-email">
+                        <i class="fa-solid fa-envelope bm-label-icon"></i> Email Address
+                    </label>
+                    <input type="email" id="bm-email" class="bm-input"
+                        placeholder="e.g. sokha@email.com" autocomplete="email" required />
+                    <div class="bm-feedback-row bm-hidden" id="bm-email-fb">
+                        <i class="fa-solid bm-feedback-icon" id="bm-email-fb-icon"></i>
+                        <span id="bm-email-fb-text"></span>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="bm-field">
+                    <label class="bm-label" for="bm-phone">
+                        <i class="fa-solid fa-phone bm-label-icon"></i> Phone Number
+                    </label>
+                    <input type="tel" id="bm-phone" class="bm-input"
+                        placeholder="e.g. +855 012 345 678 or +1 415 000 0000"
+                        autocomplete="tel" required />
+                    <span class="bm-hint">Include your country code, e.g. +855, +1, +44…</span>
+                    <div class="bm-feedback-row bm-hidden" id="bm-phone-fb">
+                        <i class="fa-solid bm-feedback-icon" id="bm-phone-fb-icon"></i>
+                        <span id="bm-phone-fb-text"></span>
+                    </div>
+                </div>
+
+                <hr class="bm-divider">
+
+                <button type="submit" class="bm-submit-btn" id="bm-submit-btn">
+                    Send My Request
+                    <span class="bm-btn-icon"><i class="fa-solid fa-chevron-right"></i></span>
+                </button>
+
+            </form>
+        </div>
+
+        <!-- ── SUCCESS STEP ── -->
+        <div id="bm-success-step" class="bm-step bm-hidden">
+            <div class="bm-success-ring">
+                <i class="fa-solid fa-check bm-check-icon"></i>
+            </div>
+            <div class="bm-emoji-row">✈️ 🌏 🗺️</div>
+            <h2 class="bm-success-title">You're All Set!</h2>
+            <p class="bm-success-msg">
+                Our team will reach out soon to plan your perfect Cambodia adventure.
+            </p>
+            <p class="bm-success-sub">We'll email <strong id="bm-confirm-email"></strong> shortly 📬</p>
+            <button class="bm-explore-btn" id="bm-explore-btn">
+                <i class="fa-solid fa-compass"></i> Keep Exploring
+            </button>
+        </div>
+
+    </div>
+</div>

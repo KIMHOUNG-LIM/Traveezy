@@ -145,12 +145,8 @@ document.getElementById('subBtn').addEventListener('click', () => {
 
 /* -------------------------------------------------------------------------
    7) "BOOKING NOW" BUTTON (hero section)
-   Currently just shows a friendly message. Swap this out later to scroll
-   to a booking form, or open a booking page, once you build one.
+   Handled globally by the booking-modal component via data-booking-trigger.
    ------------------------------------------------------------------------- */
-document.getElementById('bookingBtn').addEventListener('click', () => {
-  showToast("Let's find your perfect stay!");
-});
 
 
 /* -------------------------------------------------------------------------

@@ -78,9 +78,53 @@ async function loadFooter() {
     adjustRelativeLinks(footerContainer, prefix);
 }
 
+async function loadBookingModal() {
+    const prefix = getPathPrefix();
+    try {
+        const response = await fetch(prefix + "components/booking-modal/booking-modal.html");
+        const html = await response.text();
+
+        // Inject modal markup right before </body>
+        const wrapper = document.createElement("div");
+        wrapper.id = "booking-modal-container";
+        wrapper.innerHTML = html;
+        document.body.appendChild(wrapper);
+
+        // Inject CSS link if not already present
+        const cssHref = prefix + "components/booking-modal/booking-modal.css";
+        if (!document.querySelector(`link[href="${cssHref}"]`)) {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = cssHref;
+            document.head.appendChild(link);
+        }
+
+        // Inject JS if not already loaded
+        const jsHref = prefix + "components/booking-modal/booking-modal.js";
+        if (!document.querySelector(`script[src="${jsHref}"]`)) {
+            await new Promise((resolve, reject) => {
+                const script = document.createElement("script");
+                script.src = jsHref;
+                script.onload = resolve;
+                script.onerror = reject;
+                document.body.appendChild(script);
+            });
+        }
+
+        // Initialise modal logic now that HTML + JS are both in the DOM
+        if (typeof window._initBookingModal === "function") {
+            window._initBookingModal();
+        }
+    } catch (err) {
+        console.warn("Booking modal could not be loaded:", err);
+    }
+}
+
 async function init() {
     await loadNavbar();
     await loadFooter();
+    await loadBookingModal();
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
