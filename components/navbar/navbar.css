@@ -56,13 +56,12 @@
 /* Logo */
 
 .navbar-logo {
-    height: 80px;
-    /* Scaled down slightly to fit the premium look */
+    height: 110px;
     transition: height 0.35s ease;
 }
 
 #mainNav.scrolled .navbar-logo {
-    height: 60px;
+    height: 85px;
 }
 
 /* Navigation Menu */
