@@ -109,7 +109,20 @@
 .btn-book {
     height: 35px;
     font-size: 13px;
+    white-space: nowrap; /* keep "Book Now" on one line at all screen sizes */
 }
+
+/* Each hotel card stacks its children vertically.
+   The price + Book Now row is pushed to the bottom with margin-top: auto */
+.hotel-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-card .d-flex {
+    margin-top: auto;
+}
+
 
 /* .box-bhotel-img{
     width: 430px;
@@ -153,11 +166,16 @@
         text-align: center;
     }
 
-    /* Make the Explore button block-level on tablets.
-       :not(.contact-btn) makes sure the navbar button is NOT affected. */
-    .btn:not(.contact-btn) {
-        display: block;
-        margin-right: auto;
+    /* Reduce the "Best Local Food" / "Best Accommodation" heading size so it
+       fits on one line next to the See More button at tablet width */
+    .fs-md-1 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Give the price + Book Now row a small top gap and space between items */
+    .hotel-card .d-flex {
+        gap: 10px;
+        padding-top: 6px;
     }
 }
 
@@ -169,13 +187,6 @@
 
     .inter {
         font-size: 0.95rem;
-    }
-
-    /* Same as above but for mobile.
-       :not(.contact-btn) makes sure the navbar button is NOT affected. */
-    .btn:not(.contact-btn) {
-        display: block;
-        margin: auto;
     }
 }
 
