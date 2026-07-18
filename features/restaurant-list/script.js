@@ -114,13 +114,17 @@ document.getElementById('sortSelect').addEventListener('change', () => {
 /* -------------------------------------------------------------------------
    6) NEWSLETTER SUBSCRIBE BUTTON
    ------------------------------------------------------------------------- */
-document.getElementById('subBtn').addEventListener('click', () => {
-  const val = document.getElementById('subEmail').value.trim();
-  if (val && val.includes('@')) {
-    showToast('Subscribed! Welcome aboard.');
-    document.getElementById('subEmail').value = '';
-  } else {
-    showToast('Please enter a valid email.');
+/* Footer loads async, so subBtn may not exist yet — use event delegation */
+document.addEventListener('click', e => {
+  if (e.target && e.target.id === 'subBtn') {
+    const emailEl = document.getElementById('subEmail');
+    const val = emailEl ? emailEl.value.trim() : '';
+    if (val && val.includes('@')) {
+      showToast('Subscribed! Welcome aboard.');
+      if (emailEl) emailEl.value = '';
+    } else {
+      showToast('Please enter a valid email.');
+    }
   }
 });
 
