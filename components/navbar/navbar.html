@@ -9,8 +9,8 @@
         </div>
 
         <!-- Menu Wrapper (Center) -->
-        <div class="navbar-menu-container">
-            <div class="nav nav-pills p-1 small rounded-5 navbar-menu">
+        <div class="navbar-menu-container" id="navbarMenuContainer">
+            <div class="nav nav-pills p-1 small rounded-5 navbar-menu" id="navbarMenu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link rounded-5">Home</a>
                 </li>
@@ -40,5 +40,11 @@
                 </span>
             </a>
         </div>
+
+        <!-- Mobile Toggle Button (only visible on small screens, ≤576px) -->
+        <button class="navbar-toggler" id="navbarToggler" type="button" aria-controls="navbarMenuContainer"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </div>
 </nav>

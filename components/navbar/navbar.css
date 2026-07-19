@@ -25,9 +25,10 @@
     align-items: center;
     justify-content: space-between;
     transition: padding 0.35s ease;
+    position: relative;
 }
 
-/* left and right coumn equal but the middle get longer Flex Layout and Symmetric Centering */
+/* left and right column equal but the middle gets longer - Flex Layout and Symmetric Centering */
 
 .navbar-brand-wrapper {
     flex: 1 1 0%;
@@ -179,24 +180,75 @@
     color: var(--white) !important;
 }
 
-/* Tablet and Mobile */
-/* 
-@media (max-width:950px) {
+/* ============================================
+   Mobile toggler (hamburger) — hidden by default,
+   only shown at the mobile breakpoint below.
+   ============================================ */
 
-    .navbar-contact-container {
-        display: none;
-    }
+.navbar-toggler {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1000001;
+}
 
-    .nav-container {
-        padding: 0 20px;
-    }
+.navbar-toggler-icon {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    transition: background 0.2s ease;
+}
 
-    .navbar-menu {
-        flex-wrap: wrap;
-    }
-} */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    transition: transform 0.2s ease;
+}
 
-@media (max-width: 1250px) {
+.navbar-toggler-icon::before {
+    top: -7px;
+}
+
+.navbar-toggler-icon::after {
+    top: 7px;
+}
+
+#mainNav.scrolled .navbar-toggler-icon,
+#mainNav.scrolled .navbar-toggler-icon::before,
+#mainNav.scrolled .navbar-toggler-icon::after {
+    background: var(--primary);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: translateY(7px) rotate(45deg);
+    background: #fff;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: translateY(-7px) rotate(-45deg);
+    background: #fff;
+}
+
+/* ============================================
+   TABLET (577px – 1250px)
+   Logo + nav links stay visible. Only the
+   Contact now button hides. No hamburger.
+   ============================================ */
+
+@media (min-width: 577px) and (max-width: 1250px) {
 
     #mainNav {
         padding: 10px 0;
@@ -207,7 +259,6 @@
         padding: 8px 0;
     }
 
-    /* Main container: Row layout with logo on left and menu on right */
     .nav-container {
         width: 100%;
         max-width: none;
@@ -220,12 +271,11 @@
         gap: 1rem;
     }
 
-    /* Hide contact button */
+    /* Hide contact button only */
     .navbar-contact-container {
         display: none;
     }
 
-    /* Logo section: aligned left */
     .navbar-brand-wrapper {
         width: auto;
         flex: none;
@@ -239,7 +289,6 @@
         transition: height 0.35s ease;
     }
 
-    /* Menu section: aligned right */
     .navbar-menu-container {
         width: auto;
         flex: none;
@@ -264,9 +313,6 @@
         border-radius: 999px !important;
     }
 
-    /* ---------- Scrolled State ---------- */
-
-    /* Ensure logo remains visible on scroll */
     #mainNav.scrolled .navbar-brand-wrapper {
         display: flex;
         justify-content: flex-start;
@@ -276,7 +322,6 @@
         height: 56px;
     }
 
-    /* Keep side-by-side row layout when scrolled */
     #mainNav.scrolled .nav-container {
         flex-direction: row;
         justify-content: space-between;
@@ -294,41 +339,78 @@
     #mainNav.scrolled .navbar-menu {
         margin: 0;
     }
-
 }
 
-@media (max-width: 550px) {
+/* ============================================
+   MOBILE (≤576px)
+   Hamburger appears. Nav links collapse into a
+   dropdown. Contact button stays hidden.
+   ============================================ */
+
+@media (max-width: 576px) {
+
+    #mainNav {
+        padding: 12px 0;
+        --nav-font-size: 1.05rem;
+    }
+
+    #mainNav.scrolled {
+        padding: 10px 0;
+    }
+
     .nav-container {
-        padding: 0 10px;
+        padding: 0 16px;
         gap: 0.5rem;
     }
 
     .navbar-logo {
-        height: 56px;
+        height: 52px;
     }
 
     #mainNav.scrolled .navbar-logo {
-        height: 46px;
+        height: 44px;
+    }
+
+    .navbar-contact-container {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+        order: 3;
+    }
+
+    .navbar-menu-container {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: 16px;
+        right: 16px;
+        justify-content: stretch;
+        background: var(--primary);
+        border-radius: 16px;
+        padding: 10px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .navbar-menu-container.show {
+        display: flex;
     }
 
     .navbar-menu {
-        gap: 0.15rem;
-        padding: 4px 8px !important;
-        border-radius: 999px !important;
-    }
-
-    #mainNav {
-        --nav-font-size: 1.05rem;
+        flex-direction: column;
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 0 !important;
+        gap: 2px;
     }
 
     .navbar-menu .nav-link {
-        padding: 4px 8px !important;
-        border-radius: 999px !important;
+        padding: 13px 16px !important;
     }
 
-    /* Keep padding and spacing small when scrolled in mobile view */
-    #mainNav.scrolled .nav-container {
-        padding: 0 10px;
-        gap: 0.5rem;
+    #mainNav.scrolled .navbar-menu-container {
+        background: var(--primary);
     }
 }
