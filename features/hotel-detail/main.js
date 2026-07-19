@@ -5,6 +5,21 @@ if (nav) {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
 }
+
+/* Back button: go to the previous page in browser history.
+   If the user arrived directly (no history), fall back to the hotel list. */
+const backBtn = document.getElementById('backBtn');
+if (backBtn) {
+  backBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (document.referrer && document.referrer !== window.location.href) {
+      history.back();
+    } else {
+      /* Fallback: no referrer means the page was opened directly */
+      window.location.href = '../hotel-list/hotel-list.html';
+    }
+  });
+}
 const navToggle = document.getElementById('navToggle');
 if (navToggle) {
   navToggle.addEventListener('click', () => {

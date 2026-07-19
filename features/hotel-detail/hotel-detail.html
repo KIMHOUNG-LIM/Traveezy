@@ -66,12 +66,11 @@
 ========================================================= -->
   <section class="hero-detail">
     <div class="container hero-box">
-      <!-- Beginner note: this is the button that was missing — it's just a
-         plain link back to hotel.html (the listing page), styled as a
-         small translucent pill so it's easy to spot sitting on top of
-         the photo, without competing with the big heading below it. -->
-      <a href="../features/hotel-list/hotel-list.html" class="back-link">
-        <i class="fa-solid fa-chevron-left"></i> Back to hotels
+      <!-- Back button: returns to whichever page the user came from
+         (hotel list, province accommodation, etc.). Falls back to the
+         hotel list if this page was opened directly with no history. -->
+      <a href="#" id="backBtn" class="back-link">
+        <i class="fa-solid fa-chevron-left"></i> Back
       </a>
       <h1>Find Your<br>Perfect Stay.</h1>
       <p>Book Boutique hotels, priva villas,...<br>Tailored for thoes who travel with taste.</p>
