@@ -6,7 +6,7 @@ const heroSwiper = new Swiper('.hero-swiper .swiper', {
   centeredSlides: false,
 
   autoplay: {
-    delay: 2000,
+    delay: 3000,
     disableOnInteraction: false,
     reverseDirection: true, // Make autoplay scroll to the right
   },
