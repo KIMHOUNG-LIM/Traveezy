@@ -24,7 +24,6 @@
     background-image: url("../../assets/images/home/relaxing2.png");
     background-size: cover;
     background-position: center;
-    filter: blur(1px);
     transform: scale(1.03);
     /* Prevents white/blurry borders at the edge of the screen */
     z-index: -1;
