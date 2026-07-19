@@ -7,6 +7,7 @@
     background: transparent;
     padding: 22px 0;
     transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+    --nav-font-size: 1.25rem;
 }
 
 #mainNav.scrolled {
@@ -56,12 +57,12 @@
 /* Logo */
 
 .navbar-logo {
-    height: 110px;
+    height: 145px;
     transition: height 0.35s ease;
 }
 
 #mainNav.scrolled .navbar-logo {
-    height: 85px;
+    height: 110px;
 }
 
 /* Navigation Menu */
@@ -70,6 +71,8 @@
     border: 1px solid var(--grey);
     background: rgba(0, 0, 0, 0.1);
     transition: border-color 0.35s ease, background-color 0.35s ease;
+    padding: 8px 12px !important;
+    border-radius: 999px !important;
 
     --bs-nav-link-color: #fff;
     --bs-nav-pills-link-active-color: var(--black);
@@ -77,6 +80,9 @@
 }
 
 .navbar-menu .nav-link {
+    font-size: var(--nav-font-size);
+    padding: 10px 20px !important;
+    border-radius: 999px !important;
     transition: color 0.35s ease, background-color 0.35s ease;
 }
 
@@ -108,13 +114,15 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-size: var(--nav-font-size);
     color: var(--white);
     border: 1px solid var(--grey);
-    border-radius: 999px;
+    border-radius: 999px !important;
     background: rgba(0, 0, 0, 0.1);
     transition: color 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
     white-space: nowrap;
     flex-shrink: 0;
+    padding: 8px 8px 8px 24px !important;
 }
 
 .contact-btn:hover {
@@ -151,8 +159,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     background: var(--white);
     border-radius: 50%;
     transition: background-color 0.35s ease;
@@ -192,6 +200,7 @@
 
     #mainNav {
         padding: 10px 0;
+        --nav-font-size: 1.15rem;
     }
 
     #mainNav.scrolled {
@@ -226,7 +235,7 @@
     }
 
     .navbar-logo {
-        height: 52px;
+        height: 70px;
         transition: height 0.35s ease;
     }
 
@@ -246,11 +255,13 @@
         flex-wrap: nowrap;
         gap: 0.35rem;
         margin: 0;
+        padding: 6px 10px !important;
+        border-radius: 999px !important;
     }
 
     .navbar-menu .nav-link {
-        padding: 6px 12px;
-        font-size: 0.85rem;
+        padding: 6px 12px !important;
+        border-radius: 999px !important;
     }
 
     /* ---------- Scrolled State ---------- */
@@ -262,7 +273,7 @@
     }
 
     #mainNav.scrolled .navbar-logo {
-        height: 42px;
+        height: 56px;
     }
 
     /* Keep side-by-side row layout when scrolled */
@@ -293,20 +304,26 @@
     }
 
     .navbar-logo {
-        height: 42px;
+        height: 56px;
     }
 
     #mainNav.scrolled .navbar-logo {
-        height: 34px;
+        height: 46px;
     }
 
     .navbar-menu {
         gap: 0.15rem;
+        padding: 4px 8px !important;
+        border-radius: 999px !important;
+    }
+
+    #mainNav {
+        --nav-font-size: 1.05rem;
     }
 
     .navbar-menu .nav-link {
-        padding: 4px 8px;
-        font-size: 0.75rem;
+        padding: 4px 8px !important;
+        border-radius: 999px !important;
     }
 
     /* Keep padding and spacing small when scrolled in mobile view */
