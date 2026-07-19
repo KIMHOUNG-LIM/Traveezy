@@ -1,18 +1,42 @@
-/* =================================================================
-   style.css — Traveezy Hotel Page Styles
-   -----------------------------------------------------------------
-   Linked in index.html via: <link rel="stylesheet" href="css/style.css" />
+/* =========================================================================
+   TRAVEEZY — hotel.css
+   -------------------------------------------------------------------------
+   ONE shared stylesheet for the whole mini-site:
+     - hotel.html         → "Hotel" search / listing page (cards + filters)
+     - hotel-detail.html  → single hotel landing page (about/rooms/reviews)
 
-   FONT NOTE: This design mixes TWO fonts on purpose, to match the
-   sample images given by the client:
-     - 'Poppins'          → body text, nav, "About/Services" headings
-     - 'Playfair Display' → big decorative headings like
-                             "Choose Your Room" and "What People Say"
-================================================================= */
+   Both pages share the SAME navbar, buttons, footer and color palette so
+   the site feels like one product instead of two different pages glued
+   together. Section numbers below match the order things appear on the
+   page — use your browser's search (Ctrl/Cmd+F) to jump around.
 
-/* =========================================================
-   RESET
-========================================================= */
+   FONTS: 'Poppins' = body text / nav / UI, 'Playfair Display' = big serif
+   headings ("Find Your Perfect Stay", "Choose Your Room", etc).
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1) COLOR PALETTE (variables) — the single source of truth for colors.
+   Change a value here and it updates everywhere on both pages.
+   ------------------------------------------------------------------------- */
+:root {
+  --ink: #161616;
+  /* near-black body text */
+  --navy: #15294b;
+  /* brand navy — buttons, active states, headings */
+  --navy-dark: #0f1e38;
+  /* pressed/hover shade of navy */
+  --accent: #f4a261;
+  /* gold/orange accent — stars, highlights, hovers */
+  --muted: #6b7280;
+  /* soft gray — secondary text */
+  --line: #e8e8e8;
+  /* light gray — borders/dividers */
+  --strike: #e2483d;
+  /* red — crossed-out old price */
+  --paper: #fafafa;
+  /* off-white section background */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,16 +49,772 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  color: var(--ink);
+  background: #fff;
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.brand-font {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* -------------------------------------------------------------------------
+   2) NAVBAR (shared on both pages)
+   Fixed to the top, transparent over the hero photo, turns solid white
+   with a shadow once the page is scrolled. Collapses to a hamburger menu
+   on tablets/phones.
+   ------------------------------------------------------------------------- */
+#mainNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 22px 0;
+  background: transparent;
+  transition: background .35s ease, box-shadow .35s ease, padding .35s ease;
+}
+
+#mainNav.scrolled {
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, .08);
+  padding: 14px 0;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+
+.nav-logo i {
+  color: var(--accent);
+  transform: rotate(45deg);
+}
+
+#mainNav.scrolled .nav-logo {
+  color: var(--navy);
+}
+
+.nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 50px;
+  padding: 6px;
+  backdrop-filter: blur(6px);
+}
+
+#mainNav.scrolled .nav-pill {
+  background: transparent;
+  border-color: #eee;
+}
+
+.nav-pill a {
+  color: rgba(255, 255, 255, .92);
+  font-size: .9rem;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 50px;
+  transition: .25s;
+  white-space: nowrap;
+}
+
+.nav-pill a:hover {
+  background: rgba(255, 255, 255, .15);
+}
+
+#mainNav.scrolled .nav-pill a {
+  color: #444;
+}
+
+#mainNav.scrolled .nav-pill a:hover {
+  background: #f4f4f4;
+}
+
+.nav-pill a.active {
+  background: #fff;
+  color: var(--navy) !important;
+  font-weight: 600;
+}
+
+#mainNav.scrolled .nav-pill a.active {
+  background: var(--accent);
+  color: #fff !important;
+}
+
+.btn-contact-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, .7);
+  border-radius: 50px;
+  padding: 8px 8px 8px 22px;
+  font-size: .88rem;
+  font-weight: 500;
+  transition: .25s;
+  white-space: nowrap;
+}
+
+.btn-contact-nav i {
+  /* This circle automatically swaps colors between the see-through top
+     of the page and the solid white "scrolled" nav bar — see the two
+     ".scrolled" rules further down. The icon itself is a small chevron
+     arrow (same one used on the Booking Now buttons). */
+  background: #fff;
+  color: var(--navy);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+}
+
+.btn-contact-nav:hover {
+  border-color: #fff;
+}
+
+#mainNav.scrolled .btn-contact-nav {
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+#mainNav.scrolled .btn-contact-nav i {
+  background: var(--navy);
+  color: #fff;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+  transition: .2s;
+}
+
+#mainNav.scrolled .nav-toggle span {
+  background: var(--navy);
+}
+
+@media(max-width:991px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-pill,
+  .btn-contact-nav {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-inner.open .nav-pill,
+  .nav-inner.open .btn-contact-nav {
+    display: flex;
+  }
+
+  .nav-inner.open {
+    flex-wrap: wrap;
+  }
+
+  #navCollapse {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    border-color: #eee;
+    margin-top: 10px;
+  }
+
+  #navCollapse a {
+    color: #444 !important;
+    width: 100%;
+  }
+
+  .btn-contact-nav {
+    justify-content: center;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   3) SHARED "BOOKING NOW" BUTTON
+   Every Booking Now button on the whole site (hero, About section, etc.)
+   uses this ONE class, so they all look and behave identically. Looking
+   closely at the reference picture, every one of these buttons is built
+   the same way — TWO pieces sitting inside a rounded white outer pill:
+     1) ".btn-text" → a solid colored inner capsule that hugs the words
+                       "Booking Now" (needs its own <span> in the HTML)
+     2) ".circle"    → just the plain arrow icon sitting in the white
+                        gap next to it — no circle background this time,
+                        despite the class name (kept the name so we don't
+                        have to touch every HTML file)
+   The hero buttons use navy for the inner capsule/arrow; the About
+   button (via .btn-booking-outline below) swaps that to black instead.
+   ------------------------------------------------------------------------- */
+.btn-booking {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 6px;
+  transition: .25s;
+  cursor: pointer;
+}
+
+.btn-booking .btn-text {
+  display: inline-flex;
+  align-items: center;
+  background: var(--navy);
+  color: #fff;
+  border-radius: 50px;
+  padding: 14px 28px;
+  font-size: .95rem;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.btn-booking .circle {
+  width: auto;
+  height: auto;
+  background: transparent;
+  color: var(--navy);
+  font-size: 1rem;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-booking:hover .btn-text {
+  background: var(--navy-dark);
+}
+
+/* -------------------------------------------------------------------------
+   3b) "BOOKING NOW" BUTTON — BLACK VARIANT (About Cute Hotel only)
+   Same nested structure as .btn-booking above — this just swaps the
+   accent color from navy to black, and adds a thin black border around
+   the outer white pill (needed here since the button sits on a plain
+   white section background, unlike the hero buttons which sit on a
+   photo and don't need a border to stand out).
+   ------------------------------------------------------------------------- */
+.btn-booking-outline {
+  border: 1.5px solid var(--ink);
+}
+
+.btn-booking-outline .btn-text {
+  background: var(--ink);
+}
+
+.btn-booking-outline .circle {
+  color: var(--ink);
+}
+
+.btn-booking-outline:hover .btn-text {
+  background: var(--navy);
+}
+
+/* =========================================================================
+   =====================   LISTING / SEARCH PAGE   ========================
+   (hotel.html — hero, trust strip, filters + hotel cards)
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   4) LISTING HERO
+   ------------------------------------------------------------------------- */
+.hero-listing {
+  position: relative;
+  min-height: 620px;
+  background:
+    linear-gradient(180deg, rgba(10, 20, 35, .45) 0%, rgba(10, 20, 35, .1) 40%, rgba(10, 20, 35, .2) 100%),
+    url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1740&auto=format&fit=crop') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+/* text-align:left keeps this text box on the left side (not centered),
+   and margin-left gives it a small nudge away from the very edge of the
+   photo — still clearly "left", just not glued to the border. */
+.hero-listing .hero-inner {
+  padding: 170px 40px 60px;
+  max-width: 640px;
+  text-align: left;
+  margin-left: 48px;
+  margin-right: auto;
+}
+
+.hero-listing h1 {
+  color: #fff;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .25);
+}
+
+.hero-listing p {
+  color: rgba(255, 255, 255, .88);
+  font-size: .95rem;
+  max-width: 420px;
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+
+/* the "Booking Now" button is inline-flex (not full width), so once the
+   text box above is left-aligned, the button sits on the left too */
+
+/* -------------------------------------------------------------------------
+   5) TRUST STRIP (4 icon badges under the hero photo)
+   ------------------------------------------------------------------------- */
+.trust-strip {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 26px 20px;
+}
+
+.trust-item .icon-badge {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 14px;
+  background: rgba(21, 41, 75, .08);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.trust-item h6 {
+  font-size: 14.5px;
+  font-weight: 600;
+  margin: 0 0 3px;
+}
+
+.trust-item p {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------
+   6) MAIN LAYOUT WRAPPER (filters + listings)
+   ------------------------------------------------------------------------- */
+.content-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 40px 90px;
+}
+
+/* -------------------------------------------------------------------------
+   7) SIDEBAR FILTERS
+   ------------------------------------------------------------------------- */
+.filter-panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.filter-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-title i {
+  color: var(--navy);
+}
+
+.filter-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+  padding: 9px 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: .2s;
+}
+
+.filter-check:hover {
+  background: #f8f8f8;
+  border-color: var(--line);
+}
+
+.filter-check .type-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: #f2f2f2;
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: .2s;
+}
+
+.filter-check input:checked~.type-icon {
+  background: var(--navy);
+  color: #fff;
+}
+
+.filter-check input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #b7b7b7;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.filter-check input:checked {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.filter-check input:checked::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* mobile "Filters" toggle button (hidden on desktop) */
+.filter-toggle-btn {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--navy);
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+@media(max-width:991px) {
+  .filter-toggle-btn {
+    display: flex;
+  }
+
+  .filter-panel {
+    display: none;
+  }
+
+  .filter-panel.open {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   8) RESULTS BAR ("X stays found" + sort dropdown)
+   ------------------------------------------------------------------------- */
+.results-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.results-count {
+  font-size: 14px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.results-count i {
+  color: var(--navy);
+}
+
+.sort-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  padding: 9px 16px;
+  font-size: 13.5px;
+  color: #333;
+  background: #fff;
+}
+
+.sort-select select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13.5px;
   color: #333;
 }
 
-/* NAVBAR STYLES REMOVED TO PREVENT CONFLICTS WITH GLOBAL NAVBAR */
+.sort-select i {
+  color: var(--navy);
+}
 
-/* =========================================================
-   HERO
-========================================================= */
-.hero {
+/* -------------------------------------------------------------------------
+   9) LISTING (HOTEL) CARDS
+   ------------------------------------------------------------------------- */
+.listing-card {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 18px;
+  display: flex;
+  gap: 22px;
+  margin-bottom: 22px;
+  transition: box-shadow .25s, transform .25s;
+}
+
+.listing-card:hover {
+  box-shadow: 0 14px 30px rgba(20, 30, 50, .08);
+  transform: translateY(-2px);
+}
+
+.listing-thumb {
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  background: #e6e6e6 center/cover no-repeat;
+  position: relative;
+}
+
+.fav-heart {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .12);
+  cursor: pointer;
+  color: #bbb;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.fav-heart.active {
+  color: var(--strike);
+}
+
+.listing-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.listing-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.listing-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.listing-loc {
+  color: var(--muted);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.listing-stats {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #444;
+  font-size: 14px;
+  margin-bottom: auto;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.listing-stats span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.listing-stats .sep {
+  width: 1px;
+  height: 14px;
+  background: var(--line);
+}
+
+.stars {
+  color: var(--accent);
+  font-size: 14px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.price-old {
+  color: var(--strike);
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.price-new {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.price-new span {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.listing-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 14px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-detail {
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 8px 10px 20px;
+  font-size: 13.5px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  transition: .2s;
+  white-space: nowrap;
+}
+
+.btn-detail .circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+
+.btn-detail:hover {
+  background: var(--navy);
+}
+
+@media(max-width:767px) {
+  .listing-card {
+    flex-direction: column;
+  }
+
+  .listing-thumb {
+    width: 100%;
+  }
+}
+
+/* =========================================================================
+   =====================   HOTEL DETAIL PAGE   ============================
+   (hotel-detail.html — about / video / services / rooms / testimonials)
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   10) DETAIL HERO
+   ------------------------------------------------------------------------- */
+.hero-detail {
   position: relative;
   height: 100vh;
   min-height: 640px;
@@ -43,21 +823,66 @@ body {
   align-items: center;
 }
 
-.hero::before {
+.hero-detail::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(100deg, rgba(0, 0, 0, .55) 10%, rgba(0, 0, 0, .05) 60%);
 }
 
+/* text-align:left keeps this text box on the left side (not centered),
+   and margin-left gives it a small nudge away from the very edge of the
+   photo — still clearly "left", just not glued to the border. */
 .hero-box {
   position: relative;
   z-index: 2;
   max-width: 540px;
+  text-align: left;
+  margin-left: 48px;
+  margin-right: auto;
+}
+
+/* "Back to results" pill — sits above the big heading, translucent so
+   it doesn't fight with the photo behind it for attention.
+   - "backdrop-filter: blur()" gives it a frosted-glass look, so it stays
+     readable no matter what part of the photo is behind it.
+   - the arrow icon nudges left on hover — a small detail that makes it
+     feel more "alive" without needing any JavaScript. */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  padding: 9px 20px 9px 16px;
+  border-radius: 50px;
+  font-size: .82rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 22px;
+  transition: .25s;
+}
+
+.back-link i {
+  font-size: .72rem;
+  transition: transform .25s;
+}
+
+.back-link:hover {
+  background: rgba(255, 255, 255, .26);
+  border-color: rgba(255, 255, 255, .7);
+  color: #fff;
+  transform: translateX(-2px);
+}
+
+.back-link:hover i {
+  transform: translateX(-3px);
 }
 
 .hero-box h1 {
-  font-family: 'Playfair Display', serif;
   font-size: 3.6rem;
   font-weight: 800;
   color: #fff;
@@ -72,43 +897,9 @@ body {
   margin-bottom: 26px;
 }
 
-/* Booking Now button with circular arrow chip, like the sample */
-.btn-booking {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  background: #1d4ed8;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 8px 8px 8px 28px;
-  font-size: .92rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: .25s;
-}
-
-.btn-booking:hover {
-  background: #1e40af;
-  color: #fff;
-}
-
-.circle-arrow {
-  background: #fff;
-  color: #1d4ed8;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .75rem;
-}
-
-/* =========================================================
-   ABOUT — heading / paragraph / 3 equal photos in a row
-   (matches sample: NOT a tall+stacked collage)
-========================================================= */
+/* -------------------------------------------------------------------------
+   11) ABOUT — heading / paragraph / 3 photos in a row
+   ------------------------------------------------------------------------- */
 .about {
   padding: 80px 0;
   background: #fff;
@@ -117,7 +908,7 @@ body {
 .about h2 {
   font-size: 2.1rem;
   font-weight: 800;
-  color: #15294b;
+  color: var(--navy);
   line-height: 1.25;
 }
 
@@ -128,40 +919,6 @@ body {
   margin-bottom: 26px;
 }
 
-/* dark pill button with circular arrow chip (About section version) */
-.btn-dark-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: #15294b;
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  padding: 7px 7px 7px 24px;
-  font-size: .86rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: .25s;
-}
-
-.btn-dark-pill:hover {
-  background: #f4a261;
-  color: #fff;
-}
-
-.circle-arrow-dark {
-  background: #fff;
-  color: #15294b;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .7rem;
-}
-
-/* 3 equal-width square-ish photos in a row */
 .trio-grid {
   display: flex;
   gap: 10px;
@@ -192,9 +949,9 @@ body {
   }
 }
 
-/* =========================================================
-   VIDEO BANNER
-========================================================= */
+/* -------------------------------------------------------------------------
+   12) VIDEO BANNER
+   ------------------------------------------------------------------------- */
 .video-banner {
   position: relative;
   height: 380px;
@@ -221,14 +978,12 @@ body {
 }
 
 .vb-label {
-  font-family: 'Playfair Display', serif;
   color: rgba(255, 255, 255, .85);
   letter-spacing: 3px;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-/* red ROUNDED-RECTANGLE play button (YouTube-style, matches sample) */
 .play-btn {
   width: 96px;
   height: 64px;
@@ -250,10 +1005,9 @@ body {
   transform: scale(1.05);
 }
 
-/* =========================================================
-   SERVICES
-   Heavy bold heading, matches "Your Stay, Our Service" sample
-========================================================= */
+/* -------------------------------------------------------------------------
+   13) SERVICES
+   ------------------------------------------------------------------------- */
 .services {
   padding: 80px 0;
   background: #fff;
@@ -262,7 +1016,7 @@ body {
 .services .title {
   font-size: 2.4rem;
   font-weight: 800;
-  color: #15294b;
+  color: var(--navy);
   text-align: center;
   margin-bottom: 14px;
 }
@@ -277,6 +1031,8 @@ body {
 }
 
 .svc-card {
+  display: block;
+  /* <a> tags are inline by default — this makes it act like the div it replaced */
   position: relative;
   height: 330px;
   border-radius: 10px;
@@ -285,6 +1041,8 @@ body {
   background-size: cover;
   background-position: center;
   transition: transform .3s;
+  text-decoration: none;
+  /* removes the underline links normally get */
 }
 
 .svc-card:hover {
@@ -312,6 +1070,7 @@ body {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 6px;
+  color: #fff;
 }
 
 .svc-card .svc-body p {
@@ -320,23 +1079,94 @@ body {
   opacity: .88;
 }
 
-/* =========================================================
-   ROOMS — Choose Your Room
-   Custom slider layout matching member-work/css/hotel.css
-   ========================================================= */
+/* -------------------------------------------------------------------------
+   13b) SERVICE DETAIL PAGES (service-1.html, service-2.html, service-3.html)
+   A small photo banner with a title on top, plus a simple readable text
+   block underneath. Re-uses ".content-wrap" (already defined above) for
+   the text area so the page width/padding matches the rest of the site.
+   ------------------------------------------------------------------------- */
+.svc-hero {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.svc-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 15, 25, .45);
+}
+
+.svc-hero h1 {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 2.4rem;
+}
+
+/* The banner centers its <h1> by default (see ".svc-hero" above), so we
+   pull the back button out of that centered flow and pin it to the
+   top-left corner instead — same reused ".back-link" style as the
+   hotel-detail.html page, just repositioned for this smaller banner.
+   Beginner note: "top:96px" (not 24px) is on purpose — the navbar itself
+   is "position:fixed" and floats OVER the top of every page (see
+   "#mainNav" near the top of this file), so the button needs to sit
+   below it, not right at the very top, or the two would overlap. */
+.svc-hero .back-link {
+  position: absolute;
+  top: 96px;
+  left: 24px;
+  z-index: 3;
+  margin-bottom: 0;
+}
+
+@media(max-width:576px) {
+  .svc-hero .back-link {
+    top: 86px;
+    left: 16px;
+    font-size: .75rem;
+    padding: 7px 16px 7px 12px;
+  }
+}
+
+.svc-text {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 24px;
+  color: #444;
+  line-height: 1.9;
+}
+
+.svc-text a {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------
+   14) ROOMS — orange title band + overlapping photo row (white area below)
+   ------------------------------------------------------------------------- */
+
 /* the orange band that only wraps the title + subtitle */
 .room-head {
-  background: var(--secondary);
+  background: var(--accent);
   padding: 65px 0 90px;
 }
+
 .room-head .title {
   color: #fff;
-  font-family: 'Playfair Display', serif;
   font-size: 2.6rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 14px;
 }
+
 .room-head .sub {
   color: rgba(255, 255, 255, .9);
   font-size: .92rem;
@@ -346,9 +1176,10 @@ body {
   line-height: 1.6;
 }
 
-/* the area below — now fully orange */
+/* the white area below — pulled UP with a negative margin so the photos
+   sit half on the orange band, half on the white background */
 .rooms {
-  background: var(--secondary);
+  background: #fff;
   padding-bottom: 60px;
 }
 
@@ -359,7 +1190,8 @@ body {
 }
 
 /* "room-window" only shows 3 photos at a time; the rest are hidden until
-   you click the arrows. "room-track" is the strip of ALL photos. */
+   you click the arrows. "room-track" is the strip of ALL photos, which
+   js/hotel.js slides left/right using transform:translateX(). */
 .room-window {
   overflow: hidden;
 }
@@ -370,9 +1202,16 @@ body {
   transition: transform .4s ease;
 }
 
-/* Each card has a fixed pixel width so the browser fits as many complete
-   cards as it can into the row and shows a little "peek" of the next photo
-   instead of leaving a blank space at intermediate screen widths. */
+/* Beginner note: we used to divide the row into "exactly 3" or "exactly
+   2" cards using percentages (e.g. 33.33% each). The problem with that
+   is at in-between screen widths, the math doesn't always divide evenly,
+   which is what left that empty gap on the right in your screenshot.
+
+   The fix: give each card a FIXED pixel width instead of a percentage.
+   Now the browser just fits as many complete cards as it can into the
+   row, and shows a little "peek" of the next photo at the edge instead
+   of leaving blank space — the same trick we used for the testimonial
+   cards. The row is always fully covered with real photos. */
 .room-card {
   position: relative;
   border-radius: 10px;
@@ -392,6 +1231,24 @@ body {
   transform: scale(1.06);
 }
 
+@media(max-width:767px) {
+  .room-card {
+    flex: 0 0 300px;
+    height: 210px;
+  }
+
+  /* smaller cards on tablets/phones */
+}
+
+@media(max-width:480px) {
+  .room-card {
+    flex: 0 0 calc(100% - 50px);
+    height: 220px;
+  }
+
+  /* ~1 photo + a peek, on phones */
+}
+
 /* ---- arrow buttons + dots, in one row under the photos --------------- */
 .room-carousel-nav {
   display: flex;
@@ -405,9 +1262,9 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: #fff;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: #333;
   font-size: .85rem;
   cursor: pointer;
   display: flex;
@@ -417,16 +1274,11 @@ body {
 }
 
 .room-nav-btn:hover {
-  background: #fff;
-  color: var(--secondary);
-  border-color: #fff;
+  background: #f4f4f4;
 }
 
 .room-nav-btn:disabled {
-  opacity: .35;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.2);
+  opacity: .4;
   cursor: default;
 }
 
@@ -442,23 +1294,19 @@ body {
   border-radius: 50%;
   padding: 0;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.4);
-  border: none;
+  background: #fff;
+  border: 1.5px solid var(--line);
   transition: .2s;
 }
 
-.room-dot:hover {
-  background: rgba(255, 255, 255, 0.8);
-}
-
 .room-dot.active {
-  background: #fff;
-  transform: scale(1.3);
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
-/* =========================================================
-   TESTIMONIALS — matches image_32.jpg precisely
-========================================================= */
+/* -------------------------------------------------------------------------
+   15) TESTIMONIALS
+   ------------------------------------------------------------------------- */
 .testimonials {
   position: relative;
   padding: 64px 0 0;
@@ -490,7 +1338,6 @@ body {
   z-index: 2;
 }
 
-/* top row: serif heading (left) + rating box (right) */
 .testi-top {
   display: flex;
   justify-content: space-between;
@@ -501,7 +1348,6 @@ body {
 }
 
 .testi-heading {
-  font-family: 'Playfair Display', serif;
   font-size: 2.6rem;
   font-weight: 700;
   color: #fff;
@@ -516,7 +1362,7 @@ body {
 }
 
 .testi-rating i {
-  color: #f4a261;
+  color: var(--accent);
   font-size: 1.1rem;
 }
 
@@ -538,6 +1384,8 @@ body {
 
 .testi-bottom-left {
   margin-top: 20px;
+  position: relative;
+  z-index: 4;
 }
 
 .big-quote {
@@ -573,13 +1421,19 @@ body {
   align-items: center;
   justify-content: center;
   transition: .25s;
+  -webkit-tap-highlight-color: transparent;
+  /* removes the gray "flash" some phones show on tap */
 }
 
 .tnav-btn:hover {
   background: rgba(255, 255, 255, .28);
 }
 
-/* cards float lower-right, overlapping the quote, like the sample */
+.tnav-btn:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
 .card-zone {
   margin-top: -70px;
   padding-bottom: 54px;
@@ -597,12 +1451,27 @@ body {
   transition: transform .42s ease;
 }
 
+/* Beginner note: this card used to only have a "min-width", which lets
+   each card size itself to fit its own message — so a longer review
+   made a WIDER card than a shorter one. Because the slider always moves
+   by the width of the very first card, that size mismatch is exactly
+   what caused later cards to drift out of place and look "cut off".
+   Giving every card the SAME fixed width + height fixes that: all 4
+   cards are now identical, so every slide move lines up perfectly. */
+/* Beginner note: "width:calc(100% - 70px)" makes the card almost fill
+   the whole row, leaving just a 70px sliver on the right so you can see
+   a hint of the next card peeking in — matching the wide "one big card"
+   look. It's still a FIXED size (not based on the text length), so the
+   slider math still lines up perfectly and nothing gets cut off. */
 .rev-card {
-  min-width: 270px;
+  width: calc(100% - 70px);
+  min-height: 190px;
   flex-shrink: 0;
   background: rgba(225, 224, 219, .93);
   border-radius: 10px;
   padding: 18px;
+  display: flex;
+  flex-direction: column;
 }
 
 .rev-top {
@@ -622,7 +1491,7 @@ body {
 .rev-name {
   font-size: .88rem;
   font-weight: 700;
-  color: #15294b;
+  color: var(--navy);
   line-height: 1.2;
 }
 
@@ -632,15 +1501,23 @@ body {
 }
 
 .rev-stars i {
-  color: #f4a261;
+  color: var(--accent);
   font-size: .78rem;
 }
 
+/* "-webkit-line-clamp" trims the message to 4 lines max and adds an
+   ellipsis ("...") if it's longer — this is what keeps every card's
+   text block the same height, even though the review messages
+   themselves are different lengths. */
 .rev-text {
   font-size: .79rem;
   color: #444;
   line-height: 1.6;
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @media(max-width:991px) {
@@ -657,12 +1534,173 @@ body {
   }
 }
 
-/* FOOTER STYLES REMOVED TO PREVENT CONFLICTS WITH GLOBAL FOOTER */
+/* =========================================================================
+   =========================   SHARED FOOTER   ============================
+   ========================================================================= */
+footer {
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  padding: 64px 0 22px;
+  color: #555;
+}
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+footer .f-brand {
+  font-family: 'Playfair Display', serif;
+  color: var(--navy);
+  font-size: 1.3rem;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 14px;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.75;
+  max-width: 320px;
+}
+
+footer h6 {
+  color: var(--navy);
+  font-weight: 700;
+  font-size: .92rem;
+  margin-bottom: 16px;
+}
+
+footer .flinks a {
+  display: block;
+  color: var(--muted);
+  font-size: .83rem;
+  margin-bottom: 12px;
+  transition: .2s;
+}
+
+footer .flinks a:hover {
+  color: var(--accent);
+}
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #d6d6d6;
+  border-radius: 50px;
+  padding: 5px 5px 5px 20px;
+  background: #fff;
+  max-width: 340px;
+  gap: 8px;
+}
+
+.subscribe-box input {
+  border: none;
+  outline: none;
+  padding: 10px 4px;
+  font-size: 14px;
+  flex: 1;
+  background: transparent;
+}
+
+.subscribe-box button {
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.subscribe-box button:hover {
+  background: var(--navy);
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.socials a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.socials a:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.foot-bottom {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--muted);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* -------------------------------------------------------------------------
+   TOAST (small floating confirmation, e.g. "Subscribed!")
+   ------------------------------------------------------------------------- */
+#toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--ink);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+  z-index: 1200;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* =========================================================================
+   16) GLOBAL RESPONSIVE ADJUSTMENTS
+   Fine-tunes typography and spacing for tablets/phones across both pages.
+   ========================================================================= */
+@media(max-width:991px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
 @media(max-width:768px) {
+  .hero-listing h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-listing .hero-inner {
+    padding: 150px 24px 40px;
+    margin-left: 0;
+  }
+
+  .hero-box {
+    margin-left: 0;
+  }
+
   .hero-box h1 {
     font-size: 2.3rem;
   }
@@ -675,12 +1713,68 @@ body {
     font-size: 4.5rem;
   }
 
-  /* removed footer responsive styles */
+  .sub-row,
+  .subscribe-box {
+    max-width: 100%;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+
   .services .title {
     font-size: 1.8rem;
   }
 
-  .rooms .title {
+  .room-head {
+    padding: 48px 0 64px;
+  }
+
+  .room-head .title {
     font-size: 2rem;
   }
+
+  .room-body {
+    margin-top: -50px;
+  }
+
+  .content-wrap {
+    padding: 40px 20px 60px;
+  }
+
+  footer {
+    padding: 48px 0 20px;
+  }
+
+  /* Bigger, easier-to-tap arrow buttons on phones (44px meets the
+     recommended minimum touch-target size for fingers/thumbs). */
+  .tnav-btn {
+    width: 44px;
+    height: 44px;
+    font-size: .9rem;
+  }
 }
+
+@media(max-width:480px) {
+  .listing-name {
+    font-size: 19px;
+  }
+
+  .price-new {
+    font-size: 18px;
+  }
+
+  .btn-booking .btn-text {
+    padding: 12px 20px;
+    font-size: .85rem;
+  }
+
+  .rev-card {
+    width: calc(100% - 40px);
+    min-height: 210px;
+  }
+}
+
+/* =========================================================================
+   END OF FILE
+   ========================================================================= */
