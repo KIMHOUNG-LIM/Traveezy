@@ -520,3 +520,27 @@ body {
     font-size: 2rem;
   }
 }
+
+.kimhoung-img {
+  background-image: url(../../assets/images/aboutUs/KimHoung.jpeg);
+}
+.henghong-img {
+  background-image: url(../../assets/images/aboutUs/Henghong.jpg);
+}
+
+.henghong-img::before, .chakriya-img::before, .tepny-img::before, .kimhoung-img::before, .mara-img::before {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.chakriya-img {
+  background-image: url(../../assets/images/aboutUs/chakriya.jpg);
+}
+
+.tepny-img {
+  background-image: url(../../assets/images/aboutUs/Tepny.jpg);
+  background-size: cover;
+}
+.mara-img {
+  background-image: url(../../assets/images/aboutUs/mara.jpg);
+  background-size: cover;
+}
