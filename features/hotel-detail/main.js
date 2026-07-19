@@ -1,15 +1,4 @@
-/* =========================================================================
-   TRAVEEZY — hotel.js
-   -------------------------------------------------------------------------
-   ONE shared script for both pages (hotel.html + hotel-detail.html).
-   Every block below checks that its elements actually exist on the current
-   page before running, so it's safe to load this same file everywhere.
-   ========================================================================= */
 
-/* -------------------------------------------------------------------------
-   1) NAVBAR — turns white on scroll + mobile hamburger toggle
-   (runs on both pages)
-   ------------------------------------------------------------------------- */
 const nav = document.getElementById('mainNav');
 if (nav) {
   window.addEventListener('scroll', () => {
