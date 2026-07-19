@@ -180,7 +180,7 @@
 }
 
 /* Tablet and Mobile */
-
+/* 
 @media (max-width:950px) {
 
     .navbar-contact-container {
@@ -194,9 +194,9 @@
     .navbar-menu {
         flex-wrap: wrap;
     }
-}
+} */
 
-@media (max-width: 800px) {
+@media (max-width: 1250px) {
 
     #mainNav {
         padding: 10px 0;
