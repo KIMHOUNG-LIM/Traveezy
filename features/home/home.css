@@ -430,6 +430,11 @@
     .destination-description {
         font-size: 0.8rem;
         line-height: 1.3;
+        /* Clamp to 2 lines on tablet so the card stays tidy */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
 
@@ -457,6 +462,11 @@
     .destination-description {
         font-size: 0.75rem;
         line-height: 1.2;
+        /* Clamp to 1 line on phone — just a short teaser */
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
 
