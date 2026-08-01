@@ -1,416 +1,386 @@
-#mainNav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999999;
-    background: transparent;
-    padding: 22px 0;
-    transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
-    --nav-font-size: 1.25rem;
+:root {
+  --accent: #F4A261;
+  --ink: #161616;
 }
 
+/* =========================================================================
+   TRAVEEZY — NAVBAR CSS
+   ========================================================================= */
+
+.site-nav,
+#mainNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999999;
+  padding: 24px 40px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.25) 70%, transparent 100%);
+  transition: background 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrolled header state */
+.site-nav.scrolled,
 #mainNav.scrolled {
-    background: #ffffff;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
-    padding: 14px 0;
+  background: rgba(15, 76, 129, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 14px 40px;
 }
 
 .nav-container {
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: padding 0.35s ease;
-    position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
-/* left and right column equal but the middle gets longer - Flex Layout and Symmetric Centering */
-
+/* Logo & Brand Wrapper */
 .navbar-brand-wrapper {
-    flex: 1 1 0%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-shrink: 0;
-    min-width: max-content;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50px;
+  padding: 8px 18px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
 }
 
-.navbar-menu-container {
-    flex: 2 1 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar-brand-wrapper:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
-.navbar-contact-container {
-    flex: 1 1 0%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
-    min-width: max-content;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
 }
 
-/* Logo */
+.logo:hover {
+  color: #fff;
+  opacity: 0.9;
+}
 
+.logo .fa-plane {
+  color: var(--accent);
+  /* gold/orange accent plane icon */
+  transform: rotate(45deg);
+  font-size: 20px;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+}
+
+.logo-text {
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text .top {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.logo-text .tag {
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  opacity: 0.95;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Support for image logo as fallback */
 .navbar-logo {
-    height: 145px;
-    transition: height 0.35s ease;
+  height: 48px;
+  width: auto;
+  transition: height 0.35s ease, filter 0.25s ease;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
 }
 
 #mainNav.scrolled .navbar-logo {
-    height: 110px;
+  height: 40px;
 }
 
-/* Navigation Menu */
-
-.navbar-menu {
-    border: 1px solid var(--grey);
-    background: rgba(0, 0, 0, 0.1);
-    transition: border-color 0.35s ease, background-color 0.35s ease;
-    padding: 8px 12px !important;
-    border-radius: 999px !important;
-
-    --bs-nav-link-color: #fff;
-    --bs-nav-pills-link-active-color: var(--black);
-    --bs-nav-pills-link-active-bg: #fff;
+/* Navigation Pill Container holding Home / Destination / Food / Hotel / About */
+.nav-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50px;
+  padding: 8px 10px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.navbar-menu .nav-link {
-    font-size: var(--nav-font-size);
-    padding: 10px 20px !important;
-    border-radius: 999px !important;
-    transition: color 0.35s ease, background-color 0.35s ease;
+.nav-pill .nav-link {
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
 }
 
-.navbar-menu .nav-link:hover {
-    color: var(--secondary);
+.nav-pill .nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
 }
 
-#mainNav.scrolled .navbar-menu {
-    border-color: rgba(0, 0, 0, 0.15);
-    background: rgba(0, 0, 0, 0.05);
+/* Active Nav Link */
+.nav-pill .nav-link.active {
+  background: #fff;
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-#mainNav.scrolled .navbar-menu .nav-link {
-    color: #444;
-}
-
-#mainNav.scrolled .navbar-menu .nav-link:hover {
-    color: var(--secondary);
-}
-
-#mainNav.scrolled .navbar-menu .nav-link.active {
-    color: #ffffff !important;
-    background-color: var(--secondary) !important;
-}
-
-/* Contact Button */
-
+/* Contact Button on the far right */
 .contact-btn {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: var(--nav-font-size);
-    color: var(--white);
-    border: 1px solid var(--grey);
-    border-radius: 999px !important;
-    background: rgba(0, 0, 0, 0.1);
-    transition: color 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
-    white-space: nowrap;
-    flex-shrink: 0;
-    padding: 8px 8px 8px 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  color: #fff;
+  padding: 8px 8px 8px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14.5px;
+  font-weight: 500;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .contact-btn:hover {
-    color: var(--white);
-    background: var(--secondary);
-    border-color: var(--secondary);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.12);
 }
 
+.contact-btn .circle,
+.contact-btn .contact-btn-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.contact-btn .circle i,
+.contact-btn .contact-btn-icon i {
+  color: #fff;
+  font-size: 12px;
+}
+
+.contact-btn:hover .circle,
+.contact-btn:hover .contact-btn-icon {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+.contact-btn:hover .circle i,
 .contact-btn:hover .contact-btn-icon i {
-    color: var(--secondary) !important;
+  color: #fff;
 }
 
-#mainNav.scrolled .contact-btn {
-    color: var(--primary);
-    border-color: var(--primary);
-    background: transparent;
-}
-
-#mainNav.scrolled .contact-btn:hover {
-    color: var(--white);
-    background: var(--secondary);
-    border-color: var(--secondary);
-}
-
-#mainNav.scrolled .contact-btn:hover .contact-btn-icon {
-    background: var(--white);
-}
-
-#mainNav.scrolled .contact-btn:hover .contact-btn-icon i {
-    color: var(--secondary) !important;
-}
-
-.contact-btn-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: var(--white);
-    border-radius: 50%;
-    transition: background-color 0.35s ease;
-}
-
-.contact-btn-icon i {
-    color: var(--black) !important;
-    transition: color 0.35s ease;
-}
-
-#mainNav.scrolled .contact-btn-icon {
-    background: var(--primary);
-}
-
-#mainNav.scrolled .contact-btn-icon i {
-    color: var(--white) !important;
-}
-
-/* ============================================
-   Mobile toggler (hamburger) — hidden by default,
-   only shown at the mobile breakpoint below.
-   ============================================ */
-
+/* Mobile Toggler (hamburger) */
 .navbar-toggler {
-    display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    z-index: 1000001;
+  display: none;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 1001;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.25s ease;
+}
+
+.navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .navbar-toggler-icon {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: #fff;
-    position: relative;
-    transition: background 0.2s ease;
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  transition: background 0.2s ease;
 }
 
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 24px;
-    height: 2px;
-    background: #fff;
-    transition: transform 0.2s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.25s ease, top 0.25s ease;
 }
 
 .navbar-toggler-icon::before {
-    top: -7px;
+  top: -7px;
 }
 
 .navbar-toggler-icon::after {
-    top: 7px;
-}
-
-#mainNav.scrolled .navbar-toggler-icon,
-#mainNav.scrolled .navbar-toggler-icon::before,
-#mainNav.scrolled .navbar-toggler-icon::after {
-    background: var(--primary);
+  top: 7px;
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    background: transparent;
+  background: transparent;
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
-    transform: translateY(7px) rotate(45deg);
-    background: #fff;
+  top: 0;
+  transform: rotate(45deg);
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
-    transform: translateY(-7px) rotate(-45deg);
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* =========================================================================
+   RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
+   ========================================================================= */
+
+@media (max-width: 991px) {
+
+  .site-nav,
+  #mainNav {
+    padding: 16px 24px;
+  }
+
+  .site-nav.scrolled,
+  #mainNav.scrolled {
+    padding: 12px 24px;
+  }
+
+  .navbar-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobile menu dropdown panel */
+  .navbar-menu-container {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 20px;
+    right: 20px;
+    background: rgba(15, 76, 129, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    animation: navFadeIn 0.3s ease forwards;
+  }
+
+  .navbar-menu-container.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-pill {
+    flex-direction: column;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    gap: 6px;
+  }
+
+  .nav-pill .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+
+  .nav-pill .nav-link.active {
     background: #fff;
+    color: var(--ink);
+  }
 }
-
-/* ============================================
-   TABLET (577px – 1250px)
-   Logo + nav links stay visible. Only the
-   Contact now button hides. No hamburger.
-   ============================================ */
-
-@media (min-width: 577px) and (max-width: 1250px) {
-
-    #mainNav {
-        padding: 10px 0;
-        --nav-font-size: 1.15rem;
-    }
-
-    #mainNav.scrolled {
-        padding: 8px 0;
-    }
-
-    .nav-container {
-        width: 100%;
-        max-width: none;
-        padding: 0 20px;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-    }
-
-    /* Hide contact button only */
-    .navbar-contact-container {
-        display: none;
-    }
-
-    .navbar-brand-wrapper {
-        width: auto;
-        flex: none;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .navbar-logo {
-        height: 70px;
-        transition: height 0.35s ease;
-    }
-
-    .navbar-menu-container {
-        width: auto;
-        flex: none;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .navbar-menu {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: 0.35rem;
-        margin: 0;
-        padding: 6px 10px !important;
-        border-radius: 999px !important;
-    }
-
-    .navbar-menu .nav-link {
-        padding: 6px 12px !important;
-        border-radius: 999px !important;
-    }
-
-    #mainNav.scrolled .navbar-brand-wrapper {
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    #mainNav.scrolled .navbar-logo {
-        height: 56px;
-    }
-
-    #mainNav.scrolled .nav-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    #mainNav.scrolled .navbar-menu-container {
-        width: auto;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    #mainNav.scrolled .navbar-menu {
-        margin: 0;
-    }
-}
-
-/* ============================================
-   MOBILE (≤576px)
-   Hamburger appears. Nav links collapse into a
-   dropdown. Contact button stays hidden.
-   ============================================ */
 
 @media (max-width: 576px) {
 
-    #mainNav {
-        padding: 12px 0;
-        --nav-font-size: 1.05rem;
-    }
+  .site-nav,
+  #mainNav {
+    padding: 14px 16px;
+  }
 
-    #mainNav.scrolled {
-        padding: 10px 0;
-    }
+  .site-nav.scrolled,
+  #mainNav.scrolled {
+    padding: 10px 16px;
+  }
 
-    .nav-container {
-        padding: 0 16px;
-        gap: 0.5rem;
-    }
+  .navbar-brand-wrapper {
+    padding: 4px 12px;
+  }
 
-    .navbar-logo {
-        height: 52px;
-    }
+  .logo-text .top {
+    font-size: 19px;
+  }
 
-    #mainNav.scrolled .navbar-logo {
-        height: 44px;
-    }
+  .logo-text .tag {
+    font-size: 8px;
+  }
 
-    .navbar-contact-container {
-        display: none;
-    }
+  .navbar-menu-container {
+    left: 12px;
+    right: 12px;
+    padding: 12px;
+  }
+}
 
-    .navbar-toggler {
-        display: block;
-        order: 3;
-    }
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 
-    .navbar-menu-container {
-        display: none;
-        position: absolute;
-        top: 62px;
-        left: 16px;
-        right: 16px;
-        justify-content: stretch;
-        background: var(--primary);
-        border-radius: 16px;
-        padding: 10px;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    }
-
-    .navbar-menu-container.show {
-        display: flex;
-    }
-
-    .navbar-menu {
-        flex-direction: column;
-        width: 100%;
-        background: none;
-        border: none;
-        padding: 0 !important;
-        gap: 2px;
-    }
-
-    .navbar-menu .nav-link {
-        padding: 13px 16px !important;
-    }
-
-    #mainNav.scrolled .navbar-menu-container {
-        background: var(--primary);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

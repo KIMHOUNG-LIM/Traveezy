@@ -29,7 +29,7 @@
     z-index: -2;
 }
 
-/* Dark overlay so the hero text is clearly visible over the photo */
+/* Modern gradient overlay on hero photo */
 .hero::after {
     content: "";
     position: absolute;
@@ -37,11 +37,26 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.45) 0%,
-            rgba(0, 0, 0, 0.30) 50%,
-            rgba(0, 0, 0, 0.50) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.3) 100%);
     z-index: -1;
+}
+
+.hero-content {
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 5.5vw, 60px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.15;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Booking Now button with circular arrow chip, like the sample */
@@ -82,12 +97,7 @@
     transition: color 0.25s ease;
 }
 
-.hero-title {
-    font-family: var(--font-heading);
-    font-size: 54px;
-    font-weight: 700;
-    text-shadow: var(--shadow-lg);
-}
+
 
 .hero-swiper {
     margin-top: 3.5rem;
@@ -109,43 +119,61 @@
     margin-bottom: 2rem;
     width: 100%;
     max-width: 360px;
-    border-radius: var(--radius-lg);
+    border-radius: 20px;
     overflow: hidden;
     transform: translateY(10rem);
-    /* pushes card down by default */
-    transition: transform 1.0s ease;
+    transition: transform 1.0s ease, box-shadow 0.35s ease;
+
+    /* Single unified frosted glass card structure */
+    background: rgba(255, 255, 255, 0.16) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-slide-active .destination-card {
     transform: translateY(0);
-    /* moves card up when active */
+}
+
+.card-pic {
+    display: block;
+    width: 100%;
 }
 
 .destination-image {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    display: block;
 }
 
 .destination-content {
     display: none;
+    padding: 16px 20px;
+    margin-top: 0;
+    /* Connected directly below image with zero gap */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .swiper-slide-active .destination-content {
     display: block;
-    margin-top: 1rem;
 }
 
 .destination-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .destination-description {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.4;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.45;
+    margin-bottom: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* section 1 and 3 design */

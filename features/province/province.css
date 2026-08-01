@@ -109,7 +109,8 @@
 .btn-book {
     height: 35px;
     font-size: 13px;
-    white-space: nowrap; /* keep "Book Now" on one line at all screen sizes */
+    white-space: nowrap;
+    /* keep "Book Now" on one line at all screen sizes */
 }
 
 /* Each hotel card stacks its children vertically.
@@ -265,7 +266,7 @@
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, .35);
+    background: linear-gradient(180deg, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .1) 40%, rgba(0, 0, 0, .3) 100%);
     z-index: 1;
 }
 
@@ -283,14 +284,27 @@
     z-index: 3;
 }
 
+.hero .col-lg-6:first-of-type {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
 .hero h1 {
-    font-size: 6rem;
+    font-size: 5.5rem;
+    color: #ffffff;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, .5), 0 2px 4px rgba(0, 0, 0, .3);
 }
 
 .hero-text {
     max-width: 550px;
-    font-size: 1.2rem;
-    line-height: 1.8;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, .4);
 }
 
 /* Cards */
@@ -382,7 +396,7 @@
 
 /* Tablet and below: switch from overlapping cards to a smoother horizontal
    slider so the hero remains readable from 1024px down to phone sizes. */
-@media (max-width: 1199.98px) {
+@media (max-width: 1280px) {
     .hero {
         height: auto;
         padding: 100px 0 60px;
@@ -396,6 +410,14 @@
     .hero .col-lg-6 {
         width: 100%;
         max-width: 100%;
+    }
+
+    .hero .col-lg-6:last-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 
     .hero h1 {
@@ -421,24 +443,34 @@
     .cards-wrapper {
         height: auto;
         display: flex;
-        gap: 16px;
+        gap: 20px;
         overflow-x: auto;
+        overflow-y: visible;
         scroll-snap-type: x mandatory;
-        padding: 20px 16px 40px;
-        margin-top: 40px;
+        scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
+        padding: 30px 20px 20px;
+        margin-top: 20px;
     }
 
     .cards-wrapper::-webkit-scrollbar {
         display: none;
     }
 
+    .cards-wrapper {
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
     .destination-card {
-        position: static;
-        flex: 0 0 220px;
-        width: 220px;
+        position: relative !important;
+        flex: 0 0 240px;
+        width: 240px !important;
         max-width: 78vw;
-        scroll-snap-align: start;
+        scroll-snap-align: center;
+        transform: none !important;
+        opacity: 1 !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .destination-card img {
@@ -448,24 +480,47 @@
     .card1,
     .card2,
     .card3 {
-        right: auto;
-        top: auto;
+        right: auto !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    .bookmark {
+        position: absolute;
+        top: 50px;
+        right: 18px;
+        width: 45px;
+        height: 45px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
     }
 
     .slider-btns {
-        position: static;
-        transform: none;
+        position: static !important;
+        transform: none !important;
         display: flex;
         justify-content: center;
-        gap: 12px;
-        margin-top: 8px;
+        gap: 16px;
+        margin-top: 24px;
+        width: 100%;
     }
 }
 
 @media (max-width: 575.98px) {
+    .cards-wrapper {
+        padding-left: 24px;
+        padding-right: 24px;
+        gap: 16px;
+    }
+
     .destination-card {
-        flex-basis: 82vw;
-        width: 82vw;
+        flex: 0 0 80vw !important;
+        width: 80vw !important;
+        max-width: 80vw;
     }
 
     .destination-card img {

@@ -1,47 +1,38 @@
-<nav id="mainNav" class="navbar">
-    <div class="nav-container">
+<nav id="mainNav" class="site-nav">
+    <div class="nav-container d-flex align-items-center justify-content-between">
         <!-- Logo Wrapper (Left) -->
         <div class="navbar-brand-wrapper">
-            <a href="index.html" class="navbar-brand d-flex align-items-center text-white">
-                <img src="assets/logo/logo.webp" data-default-src="assets/logo/logo.webp"
-                    data-scroll-src="assets/logo/logo-scroll.png" alt="Traveezy logo" class="navbar-logo">
+            <a href="index.html" class="logo text-decoration-none">
+                <i class="fa-solid fa-plane fa-lg"></i>
+                <div class="logo-text">
+                    <div class="top">Traveezy</div>
+                    <div class="tag">MADE TRIP EASY</div>
+                </div>
             </a>
         </div>
 
-        <!-- Menu Wrapper (Center) -->
+        <!-- Navigation Menu Pill (Center) -->
         <div class="navbar-menu-container" id="navbarMenuContainer">
-            <div class="nav nav-pills p-1 small rounded-5 navbar-menu" id="navbarMenu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link rounded-5">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="features/province/province.html" class="nav-link rounded-5">Destination</a>
-                </li>
-                <li class="nav-item">
-                    <a href="features/restaurant-list/restaurant-list.html" class="nav-link rounded-5">Food</a>
-                </li>
-                <li class="nav-item">
-                    <a href="features/hotel-list/hotel-list.html" class="nav-link rounded-5">Hotel</a>
-                </li>
-                <li class="nav-item">
-                    <a href="features/about-us/about.html" class="nav-link rounded-5">About Us</a>
-                </li>
-
+            <div class="nav-pill d-flex align-items-center gap-1" id="navbarMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="features/province/province.html" class="nav-link">Destination</a>
+                <a href="features/restaurant-list/restaurant-list.html" class="nav-link">Food</a>
+                <a href="features/hotel-list/hotel-list.html" class="nav-link">Hotel</a>
+                <a href="features/about-us/about.html" class="nav-link">About us</a>
             </div>
         </div>
 
         <!-- Contact Button Wrapper (Right) -->
-        <div class="navbar-contact-container">
-            <!-- href="#" + data-booking-trigger → opens the booking modal instead of navigating -->
-            <a href="#" class="btn contact-btn" data-booking-trigger>
+        <div class="navbar-contact-container d-none d-md-flex">
+            <a href="#" class="contact-btn text-decoration-none" data-booking-trigger>
                 Contact now
-                <span class="contact-btn-icon">
-                    <i class="bi-arrow-up-right text-dark"></i>
+                <span class="circle">
+                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:12px;"></i>
                 </span>
             </a>
         </div>
 
-        <!-- Mobile Toggle Button (only visible on small screens, ≤576px) -->
+        <!-- Mobile Toggle Button -->
         <button class="navbar-toggler" id="navbarToggler" type="button" aria-controls="navbarMenuContainer"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

@@ -10,7 +10,7 @@ slider.addEventListener("mousedown", (e) => {
     scrollLeft = slider.scrollLeft;
 });
 
-// Destination cards slider (rotate positions on click)
+// Destination cards slider (rotate positions on desktop, scroll on mobile/tablet)
 (() => {
     const cardSelector = '.hero .destination-card';
     const cards = Array.from(document.querySelectorAll(cardSelector));
@@ -19,11 +19,29 @@ slider.addEventListener("mousedown", (e) => {
     const btns = document.querySelectorAll('.slider-btns .btn');
     if (!btns || btns.length < 2) return;
 
+    const wrapper = document.querySelector('.cards-wrapper');
     const positionClasses = ['card1', 'card2', 'card3', 'card4', 'card5', 'card6'];
     // initialize a current mapping with as many positions as cards present
     let current = positionClasses.slice(0, cards.length);
 
+    function isMobileOrTablet() {
+        return window.innerWidth < 1200;
+    }
+
+    function resetStyles() {
+        cards.forEach((el) => {
+            el.style.transform = '';
+            el.style.opacity = '';
+            el.classList.remove('active');
+        });
+    }
+
     function apply() {
+        if (isMobileOrTablet()) {
+            resetStyles();
+            return;
+        }
+
         cards.forEach((el, i) => {
             el.classList.remove('card1', 'card2', 'card3', 'active');
             const cls = current[i] || positionClasses[i % positionClasses.length];
@@ -50,22 +68,39 @@ slider.addEventListener("mousedown", (e) => {
         });
     }
 
-    // Next (right) button - rotate positions forward
+    // Next (right) button - rotate positions forward or scroll right
     btns[1].addEventListener('click', () => {
-        current.unshift(current.pop());
-        apply();
+        if (isMobileOrTablet()) {
+            if (wrapper) {
+                const card = wrapper.querySelector('.destination-card');
+                const cardWidth = card ? card.offsetWidth + 20 : 260;
+                wrapper.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            }
+        } else {
+            current.unshift(current.pop());
+            apply();
+        }
     });
 
-    // Prev (left) button - rotate positions backward
+    // Prev (left) button - rotate positions backward or scroll left
     btns[0].addEventListener('click', () => {
-        current.push(current.shift());
-        apply();
+        if (isMobileOrTablet()) {
+            if (wrapper) {
+                const card = wrapper.querySelector('.destination-card');
+                const cardWidth = card ? card.offsetWidth + 20 : 260;
+                wrapper.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            }
+        } else {
+            current.push(current.shift());
+            apply();
+        }
     });
 
-    // Click a card to bring it to center and enlarge
+    // Click a card to bring it to center and enlarge (desktop only)
     cards.forEach((el, idx) => {
         el.style.cursor = 'pointer';
         el.addEventListener('click', () => {
+            if (isMobileOrTablet()) return;
             // rotate until this card has the 'card2' class
             let safety = 0;
             while (current[idx] !== 'card2' && safety < cards.length) {
@@ -74,6 +109,11 @@ slider.addEventListener("mousedown", (e) => {
             }
             apply();
         });
+    });
+
+    // Handle screen size resize event
+    window.addEventListener('resize', () => {
+        apply();
     });
 
     // ensure initial positions are set

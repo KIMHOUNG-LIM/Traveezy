@@ -375,21 +375,21 @@ ul {
   position: relative;
   min-height: 620px;
   background:
-    linear-gradient(180deg, rgba(10, 20, 35, .45) 0%, rgba(10, 20, 35, .1) 40%, rgba(10, 20, 35, .2) 100%),
+    linear-gradient(180deg, rgba(10, 20, 35, .4) 0%, rgba(10, 20, 35, .1) 40%, rgba(10, 20, 35, .3) 100%),
     url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1740&auto=format&fit=crop') center/cover no-repeat;
   display: flex;
   align-items: center;
 }
 
-/* text-align:left keeps this text box on the left side (not centered),
-   and margin-left gives it a small nudge away from the very edge of the
-   photo — still clearly "left", just not glued to the border. */
 .hero-listing .hero-inner {
   padding: 170px 40px 60px;
   max-width: 640px;
   text-align: left;
   margin-left: 48px;
   margin-right: auto;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .hero-listing h1 {
@@ -398,15 +398,16 @@ ul {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 20px;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, .25);
+  text-shadow: 0 4px 18px rgba(0, 0, 0, .5), 0 2px 4px rgba(0, 0, 0, .3);
 }
 
 .hero-listing p {
-  color: rgba(255, 255, 255, .88);
+  color: rgba(255, 255, 255, .92);
   font-size: .95rem;
   max-width: 420px;
   margin-bottom: 32px;
   line-height: 1.65;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .4);
 }
 
 /* the "Booking Now" button is inline-flex (not full width), so once the
@@ -827,12 +828,9 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(100deg, rgba(0, 0, 0, .55) 10%, rgba(0, 0, 0, .05) 60%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, .4) 0%, rgba(0, 0, 0, .1) 40%, rgba(0, 0, 0, .3) 100%);
 }
 
-/* text-align:left keeps this text box on the left side (not centered),
-   and margin-left gives it a small nudge away from the very edge of the
-   photo — still clearly "left", just not glued to the border. */
 .hero-box {
   position: relative;
   z-index: 2;
@@ -840,6 +838,9 @@ ul {
   text-align: left;
   margin-left: 48px;
   margin-right: auto;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 /* "Back to results" pill — sits above the big heading, translucent so
@@ -888,13 +889,15 @@ ul {
   color: #fff;
   line-height: 1.15;
   margin-bottom: 16px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, .6), 0 2px 6px rgba(0, 0, 0, .4);
 }
 
 .hero-box p {
-  color: rgba(255, 255, 255, .85);
+  color: rgba(255, 255, 255, .95);
   font-size: .92rem;
   line-height: 1.6;
   margin-bottom: 26px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
 }
 
 /* -------------------------------------------------------------------------
