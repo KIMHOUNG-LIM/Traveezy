@@ -1,40 +1,12 @@
-/* =========================================================================
-   TRAVEEZY — hotel.css
-   -------------------------------------------------------------------------
-   ONE shared stylesheet for the whole mini-site:
-     - hotel.html         → "Hotel" search / listing page (cards + filters)
-     - hotel-detail.html  → single hotel landing page (about/rooms/reviews)
-
-   Both pages share the SAME navbar, buttons, footer and color palette so
-   the site feels like one product instead of two different pages glued
-   together. Section numbers below match the order things appear on the
-   page — use your browser's search (Ctrl/Cmd+F) to jump around.
-
-   FONTS: 'Poppins' = body text / nav / UI, 'Playfair Display' = big serif
-   headings ("Find Your Perfect Stay", "Choose Your Room", etc).
-   ========================================================================= */
-
-/* -------------------------------------------------------------------------
-   1) COLOR PALETTE (variables) — the single source of truth for colors.
-   Change a value here and it updates everywhere on both pages.
-   ------------------------------------------------------------------------- */
 :root {
-  --ink: #161616;
-  /* near-black body text */
-  --navy: #15294b;
-  /* brand navy — buttons, active states, headings */
-  --navy-dark: #0f1e38;
-  /* pressed/hover shade of navy */
-  --accent: #f4a261;
-  /* gold/orange accent — stars, highlights, hovers */
-  --muted: #6b7280;
-  /* soft gray — secondary text */
-  --line: #e8e8e8;
-  /* light gray — borders/dividers */
-  --strike: #e2483d;
-  /* red — crossed-out old price */
+  --ink: var(--ink, #161616);
+  --navy: var(--primary, #0F4C81);
+  --navy-dark: var(--navy-dark, #0A355C);
+  --accent: var(--secondary, #F4A261);
+  --muted: var(--muted, #6b7280);
+  --line: var(--line, #e8e8e8);
+  --strike: var(--danger, #E63946);
   --paper: #fafafa;
-  /* off-white section background */
 }
 
 * {
@@ -48,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-body, 'Poppins', sans-serif);
   color: var(--ink);
   background: #fff;
   overflow-x: hidden;
@@ -58,7 +30,7 @@ h1,
 h2,
 h3,
 .brand-font {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading, 'Playfair Display', serif);
 }
 
 a {
@@ -82,223 +54,6 @@ ul {
   padding: 0 40px;
 }
 
-/* -------------------------------------------------------------------------
-   2) NAVBAR (shared on both pages)
-   Fixed to the top, transparent over the hero photo, turns solid white
-   with a shadow once the page is scrolled. Collapses to a hamburger menu
-   on tablets/phones.
-   ------------------------------------------------------------------------- */
-#mainNav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  padding: 22px 0;
-  background: transparent;
-  transition: background .35s ease, box-shadow .35s ease, padding .35s ease;
-}
-
-#mainNav.scrolled {
-  background: #fff;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, .08);
-  padding: 14px 0;
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.25rem;
-  white-space: nowrap;
-}
-
-.nav-logo i {
-  color: var(--accent);
-  transform: rotate(45deg);
-}
-
-#mainNav.scrolled .nav-logo {
-  color: var(--navy);
-}
-
-.nav-pill {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: rgba(255, 255, 255, .12);
-  border: 1px solid rgba(255, 255, 255, .35);
-  border-radius: 50px;
-  padding: 6px;
-  backdrop-filter: blur(6px);
-}
-
-#mainNav.scrolled .nav-pill {
-  background: transparent;
-  border-color: #eee;
-}
-
-.nav-pill a {
-  color: rgba(255, 255, 255, .92);
-  font-size: .9rem;
-  font-weight: 500;
-  padding: 9px 20px;
-  border-radius: 50px;
-  transition: .25s;
-  white-space: nowrap;
-}
-
-.nav-pill a:hover {
-  background: rgba(255, 255, 255, .15);
-}
-
-#mainNav.scrolled .nav-pill a {
-  color: #444;
-}
-
-#mainNav.scrolled .nav-pill a:hover {
-  background: #f4f4f4;
-}
-
-.nav-pill a.active {
-  background: #fff;
-  color: var(--navy) !important;
-  font-weight: 600;
-}
-
-#mainNav.scrolled .nav-pill a.active {
-  background: var(--accent);
-  color: #fff !important;
-}
-
-.btn-contact-nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: transparent;
-  color: #fff;
-  border: 1.5px solid rgba(255, 255, 255, .7);
-  border-radius: 50px;
-  padding: 8px 8px 8px 22px;
-  font-size: .88rem;
-  font-weight: 500;
-  transition: .25s;
-  white-space: nowrap;
-}
-
-.btn-contact-nav i {
-  /* This circle automatically swaps colors between the see-through top
-     of the page and the solid white "scrolled" nav bar — see the two
-     ".scrolled" rules further down. The icon itself is a small chevron
-     arrow (same one used on the Booking Now buttons). */
-  background: #fff;
-  color: var(--navy);
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .75rem;
-}
-
-.btn-contact-nav:hover {
-  border-color: #fff;
-}
-
-#mainNav.scrolled .btn-contact-nav {
-  border-color: var(--navy);
-  color: var(--navy);
-}
-
-#mainNav.scrolled .btn-contact-nav i {
-  background: var(--navy);
-  color: #fff;
-}
-
-.nav-toggle {
-  display: none;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.nav-toggle span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: #fff;
-  margin: 5px 0;
-  transition: .2s;
-}
-
-#mainNav.scrolled .nav-toggle span {
-  background: var(--navy);
-}
-
-@media(max-width:991px) {
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-pill,
-  .btn-contact-nav {
-    display: none;
-    width: 100%;
-  }
-
-  .nav-inner.open .nav-pill,
-  .nav-inner.open .btn-contact-nav {
-    display: flex;
-  }
-
-  .nav-inner.open {
-    flex-wrap: wrap;
-  }
-
-  #navCollapse {
-    flex-direction: column;
-    align-items: flex-start;
-    background: #fff;
-    border-color: #eee;
-    margin-top: 10px;
-  }
-
-  #navCollapse a {
-    color: #444 !important;
-    width: 100%;
-  }
-
-  .btn-contact-nav {
-    justify-content: center;
-  }
-}
-
-/* -------------------------------------------------------------------------
-   3) SHARED "BOOKING NOW" BUTTON
-   Every Booking Now button on the whole site (hero, About section, etc.)
-   uses this ONE class, so they all look and behave identically. Looking
-   closely at the reference picture, every one of these buttons is built
-   the same way — TWO pieces sitting inside a rounded white outer pill:
-     1) ".btn-text" → a solid colored inner capsule that hugs the words
-                       "Booking Now" (needs its own <span> in the HTML)
-     2) ".circle"    → just the plain arrow icon sitting in the white
-                        gap next to it — no circle background this time,
-                        despite the class name (kept the name so we don't
-                        have to touch every HTML file)
-   The hero buttons use navy for the inner capsule/arrow; the About
-   button (via .btn-booking-outline below) swaps that to black instead.
-   ------------------------------------------------------------------------- */
 .btn-booking {
   display: inline-flex;
   align-items: center;
@@ -1777,7 +1532,3 @@ footer .flinks a:hover {
     min-height: 210px;
   }
 }
-
-/* =========================================================================
-   END OF FILE
-   ========================================================================= */

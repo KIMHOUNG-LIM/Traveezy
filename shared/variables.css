@@ -1,17 +1,27 @@
 :root {
-  /* Color (instead of color: #0F4C81; Use color: var(--primary); */
+  /* Brand Colors */
     --primary: #0F4C81;
+    --navy: var(--primary);
+    --navy-dark: #0A355C;
+
     --secondary: #F4A261;
+    --accent: var(--secondary);
 
     --success: #2A9D8F;
     --danger: #E63946;
+    --strike: var(--danger);
 
     --white: #FFFFFF;
     --black: #000000;
-    --grey: rgba(255,255,255,0.6);
+    --ink: #161616;
+    --grey: rgba(255, 255, 255, 0.6);
+    --muted: #6b7280;
+    --line: #e8e8e8;
 
     --text: #333333;
+    --text-color: var(--text);
     --background: #FFFFFF;
+    --background-color: var(--background);
 
     /* Typography  */
     --font-body: "Inter", sans-serif;
@@ -31,7 +41,7 @@
     /* White glow */
     --text-shadow-light: 0 2px 8px rgba(255, 255, 255, 0.25);
 
-  /* Spacing  */
+    /* Spacing  */
     --space-1: 4px;
     --space-2: 8px;
     --space-3: 12px;
@@ -50,5 +60,4 @@
     --radius-md: 8px;
     --radius-lg: 12px;
     --radius-xl: 20px;
-
 }

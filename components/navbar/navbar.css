@@ -135,6 +135,7 @@
 }
 
 .nav-pill .nav-link {
+  font-family: var(--font-body);
   color: #fff;
   font-size: 14.5px;
   font-weight: 500;

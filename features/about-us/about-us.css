@@ -15,7 +15,7 @@
    place instead of hunting through the whole file.
 ------------------------------ */
 :root {
-  --navy-dark: #2e2a47;      /* header / hero background */
+  --navy-dark: var(--primary, #0F4C81);      /* header / hero background */
   --maroon: #5c1010;         /* about us image background */
   --purple-block: #35116b;   /* mission image background */
   --green-block: #04613f;    /* vision image background */
@@ -26,11 +26,11 @@
   --card-purple: #b25be0;
   --card-olive: #c3cf3f;
 
-  --text-dark: #1c1c1c;
-  --text-muted: #6b6b6b;
+  --text-dark: var(--ink, #1c1c1c);
+  --text-muted: var(--muted, #6b6b6b);
 
-  --font-heading: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", Arial, sans-serif;
+  --font-heading: var(--font-heading, "Playfair Display", Georgia, serif);
+  --font-body: var(--font-body, "Inter", Arial, sans-serif);
 }
 
 /* -----------------------------
