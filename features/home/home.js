@@ -15,7 +15,11 @@ const heroSwiper = new Swiper('.hero-swiper .swiper', {
     // When window width is >= 320px (mobile / tablet)
     320: {
       slidesPerView: 2,
-      spaceBetween: 8
+      spaceBetween: 12
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 12
     },
     // When window width is >= 1024px (desktop)
     1024: {

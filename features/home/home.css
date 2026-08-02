@@ -3,13 +3,13 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
 
     display: flex;
     flex-direction: column;
-    /*make the children go horizontal */
     color: var(--white);
     margin: 0px;
-    padding-top: 10%;
+    padding-top: 140px;
     padding-bottom: 1%;
     overflow: hidden;
 }
@@ -47,9 +47,11 @@
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     box-shadow: none;
-    padding: 0;
+    padding: 12px;
     max-width: 840px;
-    margin: 0 auto 2.5rem auto;
+    /* margin: 0 auto 2.5rem auto; */
+
+    margin: auto;
 }
 
 .hero-badge {
@@ -138,14 +140,14 @@
 
 
 .hero-swiper {
-    margin-top: 3.5rem;
+    margin-top: auto;
     z-index: 1;
     display: flex;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
-.swiper {
+.hero-swiper .swiper {
     width: 50%;
     margin-left: auto;
     /* pushes it to the right*/
@@ -171,7 +173,7 @@
 }
 
 .swiper-slide-active .destination-card {
-    transform: translateY(0);
+    transform: translateY(0) !important;
 }
 
 .card-pic {
@@ -464,9 +466,12 @@
 }
 
 /* Responsive adjustment for swiper container */
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
     .hero {
+        padding-top: 130px;
         padding-bottom: 0;
+        min-height: 100vh;
+        min-height: 100dvh;
     }
 
     .hero-swiper {
@@ -474,19 +479,19 @@
     }
 
     .hero-swiper .swiper {
-        width: 50%;
+        width: 70%;
         margin-left: auto;
-        /* margin-right: 0; */
+        margin-right: 0;
     }
 
     .destination-card {
-        max-width: 150px;
-        margin-bottom: 1rem;
-        transform: translateY(5rem);
+        max-width: 220px;
+        margin-bottom: 2rem;
+        transform: translateY(3.5rem);
     }
 
     .destination-image {
-        height: 220px;
+        height: 260px;
     }
 
     .destination-title {
@@ -507,18 +512,32 @@
 /* For Phones (Width <= 600px) */
 @media (max-width: 600px) {
 
+    .hero {
+        padding-top: 110px;
+    }
+
+    .hero-swiper {
+        margin-top: auto;
+    }
 
     .hero-title {
-        font-size: 2.5rem !important;
+        font-size: 2.2rem !important;
+    }
+
+    .hero-swiper .swiper {
+        width: 75%;
+        margin-left: auto;
+        margin-right: 0;
     }
 
     .destination-card {
-        max-width: 100px;
-        transform: translateY(3.5rem);
+        max-width: 170px;
+        margin-bottom: 1.5rem;
+        transform: translateY(3rem);
     }
 
     .destination-image {
-        height: 160px;
+        height: 220px;
     }
 
     .destination-title {
@@ -526,13 +545,7 @@
     }
 
     .destination-description {
-        font-size: 0.75rem;
-        line-height: 1.2;
-        /* Clamp to 1 line on phone — just a short teaser */
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        display: none !important;
     }
 }
 
