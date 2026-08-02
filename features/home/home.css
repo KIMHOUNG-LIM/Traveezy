@@ -189,15 +189,17 @@
 }
 
 .destination-content {
-    display: none;
+    display: block;
     padding: 16px 20px;
     margin-top: 0;
     /* Connected directly below image with zero gap */
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.35;
+    transition: opacity 0.5s ease;
 }
 
 .swiper-slide-active .destination-content {
-    display: block;
+    opacity: 1;
 }
 
 .destination-title {

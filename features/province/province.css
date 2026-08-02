@@ -253,27 +253,37 @@
 
 /* hero */
 .hero {
-    height: 100vh;
     position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    padding-top: 140px;
+    padding-bottom: 1%;
     overflow: hidden;
 }
 
 .hero::before {
-    background-image: url("../../assets/images/province/siem%20reap%20hero%20img.jpg") !important;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/images/province/siem%20reap%20hero%20img.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.03);
+    z-index: -2;
 }
-
 
 .overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, .35) 0%, rgba(0, 0, 0, .1) 40%, rgba(0, 0, 0, .3) 100%);
-    z-index: 1;
-}
-
-/* Ensure hero content and navbar sit above the overlay */
-.hero .container {
-    position: relative;
-    z-index: 2;
+    z-index: -1;
 }
 
 #navbar-container {
@@ -281,16 +291,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 10;
 }
 
-.hero .col-lg-6:first-of-type {
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
+.hero-content {
+    padding: 0 max(48px, 6vw);
+    max-width: 720px;
+    z-index: 2;
 }
 
 .hero-badge {
@@ -316,21 +323,26 @@
     font-size: 0.85rem;
 }
 
-.hero h1 {
-    font-size: clamp(42px, 6vw, 76px);
+.hero-title {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: clamp(38px, 6vw, 68px);
     font-weight: 700;
     color: #ffffff;
-    line-height: 1.1;
+    line-height: 1.12;
     letter-spacing: -0.5px;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.8rem;
 }
 
-.hero-text {
-    max-width: 550px;
+.hero-subtitle {
+    font-family: var(--font-body, 'Inter', sans-serif);
     font-size: clamp(15px, 1.8vw, 19px);
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.92);
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    max-width: 580px;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 .btn-booking {
@@ -372,62 +384,345 @@
     color: var(--secondary, #F4A261);
 }
 
-/* Cards */
-
-/* Cards */
-.hero .col-lg-6:last-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cards-wrapper {
+/* Desktop 3D Overlapping Card Stack with Modern Glassmorphism */
+.desktop-cards-wrapper {
     position: relative;
-    width: min(100%, 560px);
+    width: min(100%, 540px);
     height: 420px;
-    /* room for card1/card3 top offset + image height */
     margin: 0 auto;
 }
 
-.destination-card {
+.desktop-cards-wrapper .destination-card {
     width: 250px !important;
     max-width: 70vw;
     position: absolute;
+    top: 20px;
+    left: 20%;
     z-index: 4;
-    transition: transform .45s cubic-bezier(.2, .8, .2, 1), box-shadow .3s, opacity .25s;
+    will-change: transform, opacity, backdrop-filter;
+    transition: transform 1.0s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease, backdrop-filter 0.8s ease, box-shadow 0.35s ease;
     transform-origin: center center;
+    background: rgba(255, 255, 255, 0.14) !important;
+    backdrop-filter: blur(14px) saturate(170%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(170%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25) !important;
+    margin: 0;
+    overflow: hidden;
 }
 
-.destination-card.active {
+.desktop-cards-wrapper .destination-card:not(.active) {
+    opacity: 0.72;
+}
+
+.desktop-cards-wrapper .destination-card.active {
     z-index: 6;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    opacity: 1 !important;
+    background: rgba(255, 255, 255, 0.24) !important;
+    backdrop-filter: blur(20px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45) !important;
 }
 
-.destination-card:not(.active) {
-    filter: none;
-    opacity: 0.95;
-}
-
-.destination-card img {
-    height: 360px;
+.desktop-cards-wrapper .destination-card img {
+    height: 350px;
     width: 100%;
     object-fit: cover;
-    border-radius: 15px !important;
+    display: block;
 }
 
-.card1 {
-    right: 180px;
-    top: -30px;
+.desktop-slider-btns {
+    position: relative;
+    z-index: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.card2 {
-    right: 60px;
-    top: -60px;
+.desktop-slider-btns .btn {
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: var(--primary, #0F4C81);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease;
 }
 
-.card3 {
-    right: -60px;
-    top: -30px;
+.desktop-slider-btns .btn:hover {
+    background: var(--secondary, #F4A261);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Swiper Hero Layout & Card Elevation (Mobile/Tablet) */
+.hero-swiper {
+    margin-top: auto;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.hero-swiper .swiper {
+    width: 50%;
+    margin-left: auto;
+    margin-right: 0;
+    padding-bottom: 1rem;
+}
+
+.destination-card {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: translateY(3rem);
+    will-change: transform;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
+    background: rgba(255, 255, 255, 0.16) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide-active .destination-card {
+    transform: translateY(0) !important;
+}
+
+.card-pic {
+    display: block;
+    width: 100%;
+}
+
+.destination-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-content {
+    display: block;
+    padding: 16px 20px;
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.35;
+    transition: opacity 0.5s ease;
+}
+
+.swiper-slide-active .destination-content {
+    opacity: 1;
+}
+
+.destination-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.destination-description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.45;
+    margin-bottom: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Swiper Navigation Buttons */
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-next {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    transition: background-color 0.25s, transform 0.2s;
+}
+
+.hero-swiper .swiper-button-prev:hover,
+.hero-swiper .swiper-button-next:hover {
+    background: var(--secondary, #F4A261);
+    transform: scale(1.08);
+}
+
+.hero-swiper .swiper-button-prev::after,
+.hero-swiper .swiper-button-next::after {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Mobile & Tablet 3D Overlapping Card Stack */
+.mobile-cards-wrapper {
+    position: relative;
+    width: min(92%, 460px);
+    height: 330px;
+    margin: 20px auto 10px auto;
+}
+
+.mobile-cards-wrapper .destination-card {
+    width: 220px !important;
+    max-width: 68vw;
+    position: absolute;
+    top: 10px;
+    left: 22%;
+    z-index: 4;
+    will-change: transform, opacity, backdrop-filter;
+    transition: transform 1.0s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease, backdrop-filter 0.8s ease, box-shadow 0.35s ease;
+    transform-origin: center center;
+    background: rgba(255, 255, 255, 0.14) !important;
+    backdrop-filter: blur(14px) saturate(170%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(170%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25) !important;
+    margin: 0;
+    overflow: hidden;
+}
+
+.mobile-cards-wrapper .destination-card:not(.active) {
+    opacity: 0.72;
+}
+
+.mobile-cards-wrapper .destination-card.active {
+    z-index: 6;
+    opacity: 1 !important;
+    background: rgba(255, 255, 255, 0.24) !important;
+    backdrop-filter: blur(20px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45) !important;
+}
+
+.mobile-cards-wrapper .destination-card img {
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mobile-slider-btns {
+    position: relative;
+    z-index: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.mobile-slider-btns .btn {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s ease;
+}
+
+.mobile-slider-btns .btn:hover {
+    background: var(--secondary, #F4A261);
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Responsive Breakpoints for Tablet & Mobile */
+@media (max-width: 991.98px) {
+    .hero {
+        padding-top: 130px !important;
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
+    .hero-content {
+        padding: 0 max(20px, 4vw) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 10px !important;
+        margin-bottom: 70px !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .hero-title {
+        text-align: center !important;
+    }
+
+    .hero-subtitle {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+        max-width: 540px !important;
+    }
+
+    .mobile-cards-wrapper {
+        margin-top: 30px !important;
+        margin-bottom: 24px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .mobile-slider-btns {
+        margin-top: 20px !important;
+        margin-bottom: 25px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding-top: 110px !important;
+    }
+
+    .hero-content {
+        padding: 0 16px !important;
+        margin-top: 5px !important;
+        margin-bottom: 28px !important;
+    }
+
+    .hero-subtitle {
+        max-width: 100% !important;
+        font-size: 0.92rem;
+    }
+
+    .mobile-cards-wrapper {
+        width: 100% !important;
+        height: 290px !important;
+        left: 0 !important;
+        margin-top: 25px !important;
+        margin-bottom: 20px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .mobile-cards-wrapper .destination-card {
+        width: 190px !important;
+        left: 15% !important;
+    }
+
+    .mobile-cards-wrapper .destination-card img {
+        height: 240px !important;
+    }
 }
 
 .bookmark {
@@ -441,139 +736,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 
-/* Bottom Buttons */
 .slider-btns {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 7;
+    position: static !important;
+    transform: none !important;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+    width: 100%;
 }
 
-.slider-btns .btn {
-    width: 45px;
-    height: 45px;
-}
-
-/* ===== Responsive ===== */
-
-/* Tablet and below: switch from overlapping cards to a smoother horizontal
-   slider so the hero remains readable from 1024px down to phone sizes. */
-@media (max-width: 1280px) {
-    .hero {
-        height: auto;
-        padding: 100px 0 60px;
-    }
-
-    .hero .row {
-        flex-direction: column-reverse;
-        gap: 1.5rem;
-    }
-
-    .hero .col-lg-6 {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .hero .col-lg-6:last-child {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 4rem;
-        text-align: center;
-    }
-
-    .hero-text {
-        text-align: center;
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Center the Explore button when the hero stacks vertically.
-       :not(.contact-btn) makes sure the navbar button is NOT affected.
-       Note: the navbar sits inside .hero on this page, so we must exclude it. */
-    .hero .btn:not(.contact-btn) {
-        display: block;
-        margin: 1.5rem auto 0;
-    }
-
-    .cards-wrapper {
-        height: auto;
-        display: flex;
-        gap: 20px;
-        overflow-x: auto;
-        overflow-y: visible;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        padding: 30px 20px 20px;
-        margin-top: 20px;
-    }
-
-    .cards-wrapper::-webkit-scrollbar {
-        display: none;
-    }
-
-    .cards-wrapper {
-        scrollbar-width: none;
-        /* Firefox */
-    }
-
-    .destination-card {
-        position: relative !important;
-        flex: 0 0 240px;
-        width: 240px !important;
-        max-width: 78vw;
-        scroll-snap-align: center;
-        transform: none !important;
-        opacity: 1 !important;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .destination-card img {
-        height: 280px;
-    }
-
-    .card1,
-    .card2,
-    .card3 {
-        right: auto !important;
-        top: auto !important;
-        left: auto !important;
-    }
-
-    .bookmark {
-        position: absolute;
-        top: 50px;
-        right: 18px;
-        width: 45px;
-        height: 45px;
-        background: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 5;
-    }
-
-    .slider-btns {
-        position: static !important;
-        transform: none !important;
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 24px;
-        width: 100%;
-    }
-}
 
 @media (max-width: 575.98px) {
     .cards-wrapper {

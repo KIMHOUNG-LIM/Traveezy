@@ -43,11 +43,9 @@
     <link rel="stylesheet" href="../../shared/global.css">
     <link rel="stylesheet" href="../../shared/theme.css">
     <link rel="stylesheet" href="../../shared/fonts.css">
-    <link rel="stylesheet" href="../../features/home/home.css">
     <link rel="stylesheet" href="province.css">
     <link rel="stylesheet" href="../../components/navbar/navbar.css">
     <link rel="stylesheet" href="../../components/footer/footer.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -55,7 +53,8 @@
         <div id="navbar-container"></div>
         <div class="overlay"></div>
 
-        <div class="container h-100">
+        <!-- Desktop Hero Layout (Large Screens >= 992px) -->
+        <div class="container h-100 d-none d-lg-block">
             <div class="row h-100 align-items-center">
 
                 <!-- Left Content -->
@@ -63,72 +62,122 @@
                     <div class="hero-badge mb-3">
                         <i class="fa-solid fa-location-dot"></i> PROVINCE EXPLORER
                     </div>
-                    <h1 class="display-1 fw-light playfair-display">
+                    <h1 class="display-1 fw-light playfair-display hero-title">
                         Siem Reap
                     </h1>
 
-                    <p class="hero-text mt-3">
-                        Siem Reap is a vibrant blend of culture, history, and
-                        natural beauty, offering something for every traveller.
-                        Whether wandering through Angkor Wat or exploring local
-                        markets, this city promises unforgettable experiences.
+                    <p class="hero-subtitle mt-3">
+                        Siem Reap is a vibrant blend of culture, history, and natural beauty, offering something for
+                        every traveller.
+                        Whether wandering through Angkor Wat or exploring local markets, this city promises
+                        unforgettable experiences.
                     </p>
 
-                    <a href="../destinations-details/destination-details.html"
-                        class="btn-booking mt-4">
+                    <a href="../destinations-details/destination-details.html" class="btn-booking mt-4">
                         Explore Destination
                         <span class="circle"><i class="fa-solid fa-chevron-right"></i></span>
                     </a>
                 </div>
 
-                <!-- Right Cards -->
+                <!-- Right 3D Stack Cards (Desktop Visual) -->
                 <div class="col-lg-6 col-md-12">
-                    <div class="cards-wrapper">
+                    <div class="cards-wrapper desktop-cards-wrapper">
 
                         <div class="destination-card card1">
-                            <p class="small text-white mb-2">Angkor Wat</p>
+                            <p class="small text-white mb-2 fw-semibold ms-1">Angkor Wat</p>
                             <img src="../../assets/images/province/siem%20reap%20hero%20img.jpg"
-                                class="w-100 rounded-5">
-                            <!-- 
-                            <div class="bookmark">
-                                <i class="fa-solid fa-bookmark text-secondary fs-4"></i>
-                            </div> -->
+                                class="w-100 rounded-4">
                         </div>
 
                         <div class="destination-card card2">
-                            <p class="small text-white mb-2">Angkor Wildlife & Aquarium</p>
+                            <p class="small text-white mb-2 fw-semibold ms-1">Angkor Wildlife & Aquarium</p>
                             <img src="../../assets/images/province/angkor%20wildlife%20%26%20aquarium.webp"
-                                class="w-100 rounded-5">
-                            <!-- <div class="bookmark">
-                                <i class="fa-solid fa-bookmark text-secondary fs-4"></i>
-                            </div> -->
+                                class="w-100 rounded-4">
                         </div>
 
                         <div class="destination-card card3">
-                            <p class="small text-white mb-2">Tonlé Sap Floating Village</p>
+                            <p class="small text-white mb-2 fw-semibold ms-1">Tonlé Sap Floating Village</p>
                             <img src="../../assets/images/province/Tonl%C3%A9%20Sap%20Floating%20Village.avif"
-                                class="w-100 rounded-5">
-                            <!-- <div class="bookmark">
-                                <i class="fa-solid fa-bookmark text-secondary fs-4"></i>
-                            </div> -->
+                                class="w-100 rounded-4">
+                        </div>
+
+                        <div class="destination-card card4">
+                            <p class="small text-white mb-2 fw-semibold ms-1">Phare Cambodian Circus</p>
+                            <img src="../../assets/images/province/Phare.webp" class="w-100 rounded-4">
                         </div>
 
                     </div>
 
-
-
-                    <!-- Slider Buttons -->
-                    <div class="slider-btns">
-                        <button class="btn btn-light rounded-circle">
-                            <i class="bi bi-chevron-left"></i>
+                    <!-- Slider Buttons for 3D Stack -->
+                    <div class="slider-btns desktop-slider-btns">
+                        <button class="btn btn-light rounded-circle me-2" aria-label="Previous">
+                            <i class="fa-solid fa-chevron-left"></i>
                         </button>
-
-                        <button class="btn btn-light rounded-circle">
-                            <i class="bi bi-chevron-right"></i>
+                        <button class="btn btn-light rounded-circle" aria-label="Next">
+                            <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
-
                 </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile & Tablet Hero Layout (Screens < 992px) -->
+        <div class="d-block d-lg-none w-100 px-2">
+            <!-- Hero Content Centered in Middle -->
+            <div class="hero-content text-center">
+                <div class="hero-badge mb-3 mx-auto">
+                    <i class="fa-solid fa-location-dot"></i> PROVINCE EXPLORER
+                </div>
+                <h1 class="hero-title text-center">
+                    Siem Reap
+                </h1>
+
+                <p class="hero-subtitle text-center">
+                    Siem Reap is a vibrant blend of culture, history, and natural beauty, offering something for every traveller.
+                </p>
+
+                <a href="../destinations-details/destination-details.html" class="btn-booking mt-3">
+                    Explore Destination
+                    <span class="circle"><i class="fa-solid fa-chevron-right"></i></span>
+                </a>
+            </div>
+
+            <!-- 3D Rotating Stack Cards Next Below Content -->
+            <div class="cards-wrapper mobile-cards-wrapper">
+
+                <div class="destination-card card1">
+                    <p class="small text-white mb-2 fw-semibold ms-1">Angkor Wat</p>
+                    <img src="../../assets/images/province/siem%20reap%20hero%20img.jpg" class="w-100 rounded-4">
+                </div>
+
+                <div class="destination-card card2">
+                    <p class="small text-white mb-2 fw-semibold ms-1">Angkor Wildlife & Aquarium</p>
+                    <img src="../../assets/images/province/angkor%20wildlife%20%26%20aquarium.webp" class="w-100 rounded-4">
+                </div>
+
+                <div class="destination-card card3">
+                    <p class="small text-white mb-2 fw-semibold ms-1">Tonlé Sap Floating Village</p>
+                    <img src="../../assets/images/province/Tonl%C3%A9%20Sap%20Floating%20Village.avif" class="w-100 rounded-4">
+                </div>
+
+                <div class="destination-card card4">
+                    <p class="small text-white mb-2 fw-semibold ms-1">Phare Cambodian Circus</p>
+                    <img src="../../assets/images/province/Phare.webp" class="w-100 rounded-4">
+                </div>
+
+            </div>
+
+            <!-- Slider Navigation Control Buttons for Mobile 3D Stack -->
+            <div class="slider-btns mobile-slider-btns">
+                <button class="btn btn-light rounded-circle me-2" aria-label="Previous">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="btn btn-light rounded-circle" aria-label="Next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
     </section>
 
     <section class="py-2 my-5">
