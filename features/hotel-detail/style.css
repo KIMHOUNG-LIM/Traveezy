@@ -638,21 +638,45 @@ ul {
   transform: translateX(-3px);
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-badge i {
+  color: var(--accent, #F4A261);
+  font-size: 0.85rem;
+}
+
 .hero-box h1 {
-  font-size: 3.6rem;
-  font-weight: 800;
+  font-size: clamp(36px, 5.5vw, 60px);
+  font-weight: 700;
   color: #fff;
   line-height: 1.15;
   margin-bottom: 16px;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, .6), 0 2px 6px rgba(0, 0, 0, .4);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero-box p {
-  color: rgba(255, 255, 255, .95);
-  font-size: .92rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(15px, 1.8vw, 18px);
   line-height: 1.6;
   margin-bottom: 26px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* -------------------------------------------------------------------------

@@ -37,12 +37,35 @@
     padding: 0;
 }
 
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    padding: 7px 20px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero-badge i {
+    color: var(--secondary, #F4A261);
+    font-size: 0.85rem;
+}
+
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.35rem, 7vw, 54px);
+    font-size: clamp(2.35rem, 7vw, 58px);
     font-weight: 700;
     color: #ffffff;
-    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
     line-height: 1.15;
 }
 
