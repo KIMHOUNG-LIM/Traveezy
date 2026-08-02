@@ -17,32 +17,6 @@
    "color palette" and changing one line there updates the whole site.
    ========================================================================= */
 
-
-
-
-
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-body, 'Poppins', sans-serif);
-  color: var(--ink);
-  background: #fff;
-}
-
-h1,
-h2,
-h3,
-.brand-font {
-  font-family: var(--font-heading, 'Playfair Display', serif);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
 .hero {
   position: relative;
   min-height: 640px;

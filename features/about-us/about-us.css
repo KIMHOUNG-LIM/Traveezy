@@ -1,69 +1,3 @@
-/* =========================================================
-   STYLE.CSS
-   Shared stylesheet for the About Us page AND all 5 team
-   portfolio pages. Keeping ONE shared file means the navbar,
-   footer, fonts, and colors always look identical everywhere.
-
-   TIP FOR BEGINNERS: CSS is read top to bottom. If two rules
-   fight over the same element, the one written LOWER in this
-   file (or the more specific selector) usually wins.
-========================================================= */
-
-/* -----------------------------
-   1. COLOR VARIABLES
-   Stored once here so you only ever change a color in ONE
-   place instead of hunting through the whole file.
------------------------------- */
-:root {
-  --navy-dark: var(--primary, #0F4C81);      /* header / hero background */
-  --maroon: #5c1010;         /* about us image background */
-  --purple-block: #35116b;   /* mission image background */
-  --green-block: #04613f;    /* vision image background */
-
-  --card-coral: #e08977;
-  --card-blue: #3a7bdb;
-  --card-teal: #3fdcb2;
-  --card-purple: #b25be0;
-  --card-olive: #c3cf3f;
-
-  --text-dark: var(--ink, #1c1c1c);
-  --text-muted: var(--muted, #6b6b6b);
-
-  --font-heading: var(--font-heading, "Playfair Display", Georgia, serif);
-  --font-body: var(--font-body, "Inter", Arial, sans-serif);
-}
-
-/* -----------------------------
-   2. GLOBAL / BASE STYLES
------------------------------- */
-body {
-  font-family: var(--font-body);
-  color: var(--text-dark);
-  overflow-x: hidden; /* stops any accidental horizontal scroll bar */
-}
-
-.section-heading {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 2.75rem;
-  margin-bottom: 1.25rem;
-}
-
-.section-text {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--text-dark);
-  max-width: 42rem;
-}
-
-.section-padding {
-  padding: 5rem 0;
-}
-
-/* -----------------------------
-   3. GLOBAL NAVBAR REPLACED site-header
------------------------------- */
-
 /* -----------------------------
    4. HERO SECTION (About page)
 ------------------------------ */
@@ -115,11 +49,13 @@ body {
   border-radius: 4px;
   background-size: cover;
   background-position: center;
-  transition: background-size 0.5s ease; /* powers the hover zoom below */
+  transition: background-size 0.5s ease;
+  /* powers the hover zoom below */
 }
 
 .img-placeholder:hover {
-  background-size: 112%; /* subtle "zoom in" effect on hover */
+  background-size: 112%;
+  /* subtle "zoom in" effect on hover */
 }
 
 .placeholder-maroon {
@@ -152,7 +88,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem; /* space between cards, left-right and top-bottom */
+  gap: 1.5rem;
+  /* space between cards, left-right and top-bottom */
 }
 
 /* Every card is the exact same fixed size: 320px wide, 350px tall.
@@ -168,7 +105,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   color: #ffffff;
-  position: relative;   /* needed so the glass overlay below can sit on top */
+  position: relative;
+  /* needed so the glass overlay below can sit on top */
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -176,7 +114,8 @@ body {
 }
 
 .team-card:hover {
-  background-size: 118%;      /* photo "zoom in" on hover */
+  background-size: 118%;
+  /* photo "zoom in" on hover */
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
   transform: translateY(-4px);
 }
@@ -190,12 +129,10 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.15) 0%,
-    rgba(255, 255, 255, 0.38) 55%,
-    rgba(255, 255, 255, 0.55) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.38) 55%,
+      rgba(255, 255, 255, 0.55) 100%);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   z-index: 0;
@@ -280,20 +217,53 @@ body {
 /* Fallback background colors behind each member's photo.
    Same rule as section 5: real photo shows once it exists,
    until then this color shows through. */
-.card-coral  { background-color: var(--card-coral);  background-image: url("../images/team/lim.jpg"); }
-.card-blue   { background-color: var(--card-blue);   background-image: url("../images/team/mov.jpg"); }
-.card-teal   { background-color: var(--card-teal);   background-image: url("../images/team/yen.jpg"); }
-.card-purple { background-color: var(--card-purple); background-image: url("../images/team/sim.jpg"); }
-.card-olive  { background-color: var(--card-olive);  background-image: url("../images/team/kouch.jpg"); }
+.card-coral {
+  background-color: var(--card-coral);
+  background-image: url("../images/team/lim.jpg");
+}
+
+.card-blue {
+  background-color: var(--card-blue);
+  background-image: url("../images/team/mov.jpg");
+}
+
+.card-teal {
+  background-color: var(--card-teal);
+  background-image: url("../images/team/yen.jpg");
+}
+
+.card-purple {
+  background-color: var(--card-purple);
+  background-image: url("../images/team/sim.jpg");
+}
+
+.card-olive {
+  background-color: var(--card-olive);
+  background-image: url("../images/team/kouch.jpg");
+}
 
 /* Give each card a tiny staggered delay so they don't all fade in
    at exactly the same instant. Just add "delay-1", "delay-2", etc.
    (in order) next to the "reveal" class on each card - that's it. */
-.delay-1 { transition-delay: 0s; }
-.delay-2 { transition-delay: 0.1s; }
-.delay-3 { transition-delay: 0.2s; }
-.delay-4 { transition-delay: 0.3s; }
-.delay-5 { transition-delay: 0.4s; }
+.delay-1 {
+  transition-delay: 0s;
+}
+
+.delay-2 {
+  transition-delay: 0.1s;
+}
+
+.delay-3 {
+  transition-delay: 0.2s;
+}
+
+.delay-4 {
+  transition-delay: 0.3s;
+}
+
+.delay-5 {
+  transition-delay: 0.4s;
+}
 
 /* -----------------------------
    7. GLOBAL FOOTER REPLACED site-footer
