@@ -25,20 +25,18 @@
   <meta name="twitter:title" content="About Traveezy | Cambodia Travel Experts">
   <meta name="twitter:description" content="Meet the Traveezy team — passionate Cambodians making travel easy for every tourist in Cambodia. Your journey starts here.">
 
-  <!-- BOOTSTRAP CSS (grid system, buttons, and other ready-made styles) -->
+  <!-- BOOTSTRAP CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- FONT AWESOME (icons: Instagram, LinkedIn, arrow, etc.) -->
+  <!-- FONT AWESOME & BOOTSTRAP ICONS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-  <!-- GOOGLE FONTS: Playfair Display for headings, Inter for body text -->
+  <!-- GOOGLE FONTS: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- OUR SHARED STYLESHEET - always load this AFTER bootstrap -->
+  <!-- SHARED STYLES -->
   <link rel="stylesheet" href="../../shared/variables.css" />
   <link rel="stylesheet" href="../../shared/global.css" />
   <link rel="stylesheet" href="../../shared/theme.css" />
@@ -50,90 +48,193 @@
 
 <body>
 
-  <!-- HERO SECTION -->
+  <!-- =========================================================
+       HERO SECTION
+  ========================================================== -->
   <header class="hero-section">
     <div id="navbar-container"></div>
     <div class="container my-5 px-4 px-lg-5">
-      <div class="hero-badge mb-3">
-        <i class="fa-solid fa-users"></i> OUR STORY & VISION
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="hero-badge mb-3 reveal">
+            <i class="fa-solid fa-compass"></i> DISCOVER OUR STORY & VISION
+          </div>
+          <h1 class="hero-title reveal delay-1">
+            Crafting Unforgettable<br />
+            <span class="accent-text">Cambodian Journeys</span>
+          </h1>
+          <p class="hero-subtitle reveal delay-2">
+            We are local Cambodian creators, developers, and travel enthusiasts dedicated to making exploration effortless, authentic, and unforgettable.
+          </p>
+          <div class="hero-cta-group reveal delay-3">
+            <a href="../destinations/destinations.html" class="btn btn-hero-primary btn-hover-lift">
+              <i class="fa-solid fa-paper-plane me-2"></i>Explore Destinations
+            </a>
+            <a href="#team-section" class="btn btn-hero-secondary btn-hover-lift">
+              <i class="fa-solid fa-users me-2"></i>Meet Our Team
+            </a>
+          </div>
+        </div>
       </div>
-      <h1 class="hero-title">
-        Uncover<br />
-        Cambodia's<br />
-        Hidden Gems
-      </h1>
     </div>
   </header>
 
   <!-- =========================================================
-       ABOUT US SECTION
+       STATS COUNTER BAR
   ========================================================== -->
-  <section class="section-padding">
+  <div class="container px-4 px-lg-5 stats-bar-wrapper">
+    <div class="stats-card-container reveal">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">50<span class="plus">+</span></div>
+            <div class="stat-label">Destinations</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">10K<span class="plus">+</span></div>
+            <div class="stat-label">Happy Travelers</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">100<span class="plus">%</span></div>
+            <div class="stat-label">Local & Authentic</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">24/7<span class="plus"></span></div>
+            <div class="stat-label">Trip Assistance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       ABOUT US / OUR STORY SECTION
+  ========================================================== -->
+  <section class="section-padding py-5 my-5">
     <div class="container px-4 px-lg-5">
-      <div class="row align-items-center gy-4 reveal">
+      <div class="row align-items-center gy-5 reveal">
         <div class="col-lg-6">
-          <h2 class="section-heading">About Us</h2>
-          <p class="section-text">
-            <strong>TravelEezy</strong> is a travel platform dedicated to
-            helping people discover the best places to relax, explore, and
-            create unforgettable memories. We connect travelers with
-            Cambodia's beautiful destinations, unique culture, and hidden
-            gems while making trip planning simple and enjoyable. Whether
-            you're a local looking for a weekend getaway or an international
-            visitor exploring Cambodia for the first time, TravelEezy is
-            here to make your journey easier and more meaningful.
+          <span class="badge-pill"><i class="fa-solid fa-heart me-1"></i> WHO WE ARE</span>
+          <h2 class="section-heading">Connecting You to the Heart of Cambodia</h2>
+          <p class="section-text mb-4">
+            <strong>Traveezy</strong> is a modern Cambodian travel platform created to simplify how you explore our country's rich history, stunning natural landscapes, and vibrant food culture.
           </p>
+          <p class="section-text">
+            Whether you are a local seeking a refreshing weekend getaway in Kampot, or an international adventurer discovering the magnificent temples of Angkor for the first time, Traveezy provides curated guides, verified hotels, and local insight every step of the way.
+          </p>
+          <ul class="feature-check-list">
+            <li><i class="fa-solid fa-circle-check me-2"></i> Handpicked destinations & hidden local gems</li>
+            <li><i class="fa-solid fa-circle-check me-2"></i> Verified hotel listings & authentic restaurant guides</li>
+            <li><i class="fa-solid fa-circle-check me-2"></i> Built with pride by local Cambodian developers</li>
+          </ul>
         </div>
         <div class="col-lg-6">
-          <!-- To use a real photo: save it as images/about.jpg -->
-          <div class="img-placeholder placeholder-maroon"></div>
+          <div class="about-img-frame">
+            <img src="../../assets/images/about-us/about.jpg" alt="About Traveezy Cambodia Travel" />
+            <div class="floating-experience-badge">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <div class="badge-text-main">Rated #1 Travel Guide</div>
+                <div class="badge-text-sub">Trusted by locals & visitors</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OUR MISSION SECTION -->
-  <section class="section-padding">
+  <!-- =========================================================
+       MISSION & VISION CARDS SECTION
+  ========================================================== -->
+  <section class="section-padding py-5 bg-light">
     <div class="container px-4 px-lg-5">
-      <div class="row align-items-center gy-4 reveal">
+      <div class="row g-4 reveal">
         <div class="col-lg-6">
-          <!-- To use a real photo: save it as images/mission.jpg -->
-          <div class="img-placeholder placeholder-purple"></div>
+          <div class="mv-card">
+            <div class="mv-icon-circle">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3 class="section-heading fs-3">Our Mission</h3>
+            <p class="section-text mb-0">
+              To make travel across Cambodia accessible, stress-free, and deeply enjoyable for everyone. We aim to highlight local communities, preserve cultural heritage, and empower travelers with reliable, seamless tools to plan their dream trips.
+            </p>
+          </div>
         </div>
-        <div class="col-lg-6 text-lg-end">
-          <h2 class="section-heading">Our Mission</h2>
-          <p class="section-text">
-            Our mission is to make travel in Cambodia accessible, enjoyable,
-            and stress-free for everyone. We aim to promote Cambodia's
-            natural beauty, rich culture, and local communities by helping
-            both local and international travelers discover amazing
-            destinations. Through <strong>TravelEezy</strong>, we strive to
-            inspire people around the world to experience and fall in love
-            with Cambodia.
-          </p>
+
+        <div class="col-lg-6">
+          <div class="mv-card">
+            <div class="mv-icon-circle">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+            <h3 class="section-heading fs-3">Our Vision</h3>
+            <p class="section-text mb-0">
+              To become Cambodia’s leading digital travel ecosystem, celebrated globally for inspiring sustainable tourism, supporting local enterprise, and showcasing Cambodia as one of the world's most welcoming destinations.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OUR VISION SECTION -->
-  <section class="section-padding">
+  <!-- =========================================================
+       CORE VALUES SECTION
+  ========================================================== -->
+  <section class="section-padding py-5 values-section">
     <div class="container px-4 px-lg-5">
-      <div class="row align-items-center gy-4 reveal">
-        <div class="col-lg-6">
-          <h2 class="section-heading">Our Vision</h2>
-          <p class="section-text">
-            We envision <strong>TravelEezy</strong> becoming the leading
-            travel platform for Cambodia, recognized worldwide for helping
-            travelers discover authentic experiences. We want to connect
-            people from different countries, encourage sustainable tourism,
-            and showcase Cambodia as one of the world's most welcoming and
-            beautiful travel destinations.
-          </p>
+      <div class="text-center mb-5 reveal">
+        <span class="badge-pill"><i class="fa-solid fa-star me-1"></i> WHAT DRIVES US</span>
+        <h2 class="section-heading">Our Core Values</h2>
+        <p class="section-text team-subtitle mx-auto">
+          The principles that shape how we build Traveezy and serve every traveler.
+        </p>
+      </div>
+
+      <div class="row g-4 reveal">
+        <div class="col-6 col-lg-3">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-landmark"></i>
+            </div>
+            <h4 class="value-title">Authenticity</h4>
+            <p class="value-desc">Rooted in genuine Cambodian culture, hospitality, and local wisdom.</p>
+          </div>
         </div>
-        <div class="col-lg-6">
-          <!-- To use a real photo: save it as images/vision.jpg -->
-          <div class="img-placeholder placeholder-green"></div>
+
+        <div class="col-6 col-lg-3">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h4 class="value-title">Simplicity</h4>
+            <p class="value-desc">Fast, intuitive, and stress-free trip planning for every user.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h4 class="value-title">Sustainability</h4>
+            <p class="value-desc">Supporting local communities and respecting nature's beauty.</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <h4 class="value-title">Passion</h4>
+            <p class="value-desc">Driven by a shared love for Cambodia and technological excellence.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -142,112 +243,162 @@
   <!-- =========================================================
        OUR TEAM SECTION
   ========================================================== -->
-  <section class="section-padding">
+  <section class="section-padding py-5 my-4" id="team-section">
     <div class="container px-4 px-lg-5">
-      <h2 class="section-heading text-center mb-3 reveal">Our Team</h2>
-      <p class="section-text text-center team-subtitle mx-auto mb-5 reveal">
-        Meet the people behind <strong>TravelEezy</strong>. We work together
-        to help travelers explore Cambodia with confidence, comfort, and
-        ease.
-      </p>
+      <div class="text-center mb-5 reveal">
+        <span class="badge-pill"><i class="fa-solid fa-users me-1"></i> THE CREATORS</span>
+        <h2 class="section-heading">Meet Our Team</h2>
+        <p class="section-text team-subtitle mx-auto">
+          The passionate Cambodian team behind <strong>Traveezy</strong>. We combine design, engineering, and local knowledge to bring you the best travel experience.
+        </p>
+      </div>
 
       <div class="team-grid">
 
-        <!-- To use a real photo: save it as images/team/lim.jpg -->
-        <div class="team-card card-coral reveal delay-1">
-          <h3 class="team-name">LIM<br />KIMHOUNG</h3>
-          <div class="team-card-footer">
-            <div class="team-socials">
-              <!-- paper-plane icon = message this person on the Contact page -->
-              <a href="#" class="team-social-btn" aria-label="Contact Lim">
-                <i class="fa-solid fa-paper-plane"></i>
-              </a>
-              <!-- put Lim's real LinkedIn link in this href -->
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="team-social-btn"
-                aria-label="Lim's LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+        <!-- LIM KIMHOUNG -->
+        <div class="team-member-card reveal delay-1">
+          <div class="team-photo-wrapper">
+            <img src="../../assets/images/about-us/team/lim.jpg" alt="Lim Kimhoung - Traveezy" />
+            <span class="team-role-tag">Project Lead</span>
+          </div>
+          <div class="team-info-body">
+            <div>
+              <h3 class="team-member-name">Lim Kimhoung</h3>
+              <div class="team-member-role-title">Full-Stack & Team Lead</div>
+            </div>
+            <div class="team-action-row">
+              <div class="team-social-icons">
+                <a href="#" class="social-icon-btn" aria-label="Contact Lim"><i class="fa-solid fa-paper-plane"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Lim LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+              <a href="https://kimhoung-lim.github.io/" target="_blank" rel="noopener" class="btn-portfolio-pill">
+                <i class="fa-solid fa-globe me-1"></i> View Portfolio
               </a>
             </div>
-            <a href="#" class="btn team-portfolio-btn">View Portfolio</a>
           </div>
         </div>
 
-        <!-- To use a real photo: save it as images/team/mov.jpg -->
-        <div class="team-card card-blue reveal delay-2">
-          <h3 class="team-name">MOV<br />TEPNY</h3>
-          <div class="team-card-footer">
-            <div class="team-socials">
-              <a href="#" class="team-social-btn" aria-label="Contact Mov">
-                <i class="fa-solid fa-paper-plane"></i>
-              </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="team-social-btn"
-                aria-label="Mov's LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+        <!-- MOV TEPNY -->
+        <div class="team-member-card reveal delay-2">
+          <div class="team-photo-wrapper">
+            <img src="../../assets/images/about-us/team/mov.jpg" alt="Mov Tepny - Traveezy" />
+            <span class="team-role-tag">UI/UX Designer</span>
+          </div>
+          <div class="team-info-body">
+            <div>
+              <h3 class="team-member-name">Mov Tepny</h3>
+              <div class="team-member-role-title">UI/UX & Frontend Dev</div>
+            </div>
+            <div class="team-action-row">
+              <div class="team-social-icons">
+                <a href="#" class="social-icon-btn" aria-label="Contact Mov"><i class="fa-solid fa-paper-plane"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Mov LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+              <a href="https://tepny.github.io/my-portfolio-tepny/" target="_blank" rel="noopener" class="btn-portfolio-pill">
+                <i class="fa-solid fa-globe me-1"></i> View Portfolio
               </a>
             </div>
-            <a href="#" class="btn team-portfolio-btn">View Portfolio</a>
           </div>
         </div>
 
-        <!-- To use a real photo: save it as images/team/yen.jpg -->
-        <div class="team-card card-teal reveal delay-3">
-          <h3 class="team-name">YEN<br />MARA</h3>
-          <div class="team-card-footer">
-            <div class="team-socials">
-              <a href="#" class="team-social-btn" aria-label="Contact Yen">
-                <i class="fa-solid fa-paper-plane"></i>
-              </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="team-social-btn"
-                aria-label="Yen's LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+        <!-- YEN MARA -->
+        <div class="team-member-card reveal delay-3">
+          <div class="team-photo-wrapper">
+            <img src="../../assets/images/about-us/team/yen.jpg" alt="Yen Mara - Traveezy" />
+            <span class="team-role-tag">Frontend Dev</span>
+          </div>
+          <div class="team-info-body">
+            <div>
+              <h3 class="team-member-name">Yen Mara</h3>
+              <div class="team-member-role-title">Frontend Developer</div>
+            </div>
+            <div class="team-action-row">
+              <div class="team-social-icons">
+                <a href="#" class="social-icon-btn" aria-label="Contact Yen"><i class="fa-solid fa-paper-plane"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Yen LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+              <a href="https://yenmara.github.io/Portfolio.github.io/" target="_blank" rel="noopener" class="btn-portfolio-pill">
+                <i class="fa-solid fa-globe me-1"></i> View Portfolio
               </a>
             </div>
-            <a href="#" class="btn team-portfolio-btn">View Portfolio</a>
           </div>
         </div>
 
-        <!-- To use a real photo: save it as images/team/sim.jpg -->
-        <div class="team-card card-purple reveal delay-4">
-          <h3 class="team-name">SIM<br />CHANCHAKRIYA</h3>
-          <div class="team-card-footer">
-            <div class="team-socials">
-              <a href="#" class="team-social-btn" aria-label="Contact Sim">
-                <i class="fa-solid fa-paper-plane"></i>
-              </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="team-social-btn"
-                aria-label="Sim's LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+        <!-- SIM CHANCHAKRIYA -->
+        <div class="team-member-card reveal delay-4">
+          <div class="team-photo-wrapper">
+            <img src="../../assets/images/about-us/team/sim.jpg" alt="Sim Chanchakriya - Traveezy" />
+            <span class="team-role-tag">Branding</span>
+          </div>
+          <div class="team-info-body">
+            <div>
+              <h3 class="team-member-name">Sim Chanchakriya</h3>
+              <div class="team-member-role-title">Content & Branding</div>
+            </div>
+            <div class="team-action-row">
+              <div class="team-social-icons">
+                <a href="#" class="social-icon-btn" aria-label="Contact Sim"><i class="fa-solid fa-paper-plane"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Sim LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+              <a href="portfolio-sim.html" class="btn-portfolio-pill">
+                <i class="fa-solid fa-user me-1"></i> View Portfolio
               </a>
             </div>
-            <a href="portfolio-sim.html" class="btn team-portfolio-btn">View Portfolio</a>
           </div>
         </div>
 
-        <!-- To use a real photo: save it as images/team/kouch.jpg -->
-        <div class="team-card card-olive reveal delay-5">
-          <h3 class="team-name">KOUCH<br />HENGHONG</h3>
-          <div class="team-card-footer">
-            <div class="team-socials">
-              <a href="#" class="team-social-btn" aria-label="Contact Kouch">
-                <i class="fa-solid fa-paper-plane"></i>
-              </a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="team-social-btn"
-                aria-label="Kouch's LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
+        <!-- KOUCH HENGHONG -->
+        <div class="team-member-card reveal delay-5">
+          <div class="team-photo-wrapper">
+            <img src="../../assets/images/about-us/team/kouch.jpg" alt="Kouch Henghong - Traveezy" />
+            <span class="team-role-tag">Backend Dev</span>
+          </div>
+          <div class="team-info-body">
+            <div>
+              <h3 class="team-member-name">Kouch Henghong</h3>
+              <div class="team-member-role-title">Backend Developer</div>
+            </div>
+            <div class="team-action-row">
+              <div class="team-social-icons">
+                <a href="#" class="social-icon-btn" aria-label="Contact Kouch"><i class="fa-solid fa-paper-plane"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Kouch LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              </div>
+              <a href="https://henghong-kouch.github.io/Kouch_Henghong-Portfolio.github.io/" target="_blank" rel="noopener" class="btn-portfolio-pill">
+                <i class="fa-solid fa-globe me-1"></i> View Portfolio
               </a>
             </div>
-            <a href="#" class="btn team-portfolio-btn">View Portfolio</a>
           </div>
         </div>
 
       </div>
-      <!-- END team-grid -->
-
     </div>
   </section>
 
+  <!-- =========================================================
+       CALL TO ACTION BANNER
+  ========================================================== -->
+  <section class="section-padding py-5">
+    <div class="container px-4 px-lg-5">
+      <div class="cta-banner reveal">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <h2 class="cta-title">Ready to Experience Cambodia's Wonders?</h2>
+            <p class="cta-desc">Discover curated travel guides, top-rated hotels, and authentic local cuisine across Cambodia today.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="../destinations/destinations.html" class="btn btn-hero-primary btn-hover-lift">
+              <i class="fa-solid fa-compass me-2"></i>Explore Destinations
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Bootstrap JS bundle must load before our own script -->
+  <!-- FOOTER CONTAINER -->
+  <div id="footer-container"></div>
+
+  <!-- BOOTSTRAP & CUSTOM SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../../components/navbar/navbar.js"></script>
   <script src="../../components/footer/footer.js"></script>
