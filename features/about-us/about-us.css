@@ -8,8 +8,8 @@
 .hero-section {
   position: relative;
   padding: 11rem 0 7rem 0;
-  background: linear-gradient(135deg, rgba(10, 53, 92, 0.92) 0%, rgba(15, 76, 129, 0.88) 100%),
-              url("../../assets/images/about-us/about.jpg") center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.3) 100%),
+    url("../../assets/images/about-us/hero-bg.jpg") center/cover no-repeat;
   color: #ffffff;
   overflow: hidden;
 }
@@ -31,43 +31,49 @@
   gap: 8px;
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #ffffff;
-  padding: 8px 22px;
+  padding: 7px 20px;
   border-radius: 50px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .hero-badge i {
-  color: var(--accent, #F4A261);
-  font-size: 0.9rem;
+  color: var(--secondary, #F4A261);
+  font-size: 0.85rem;
 }
 
 .hero-title {
   font-family: var(--font-heading);
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 700;
   color: #ffffff;
-  font-weight: 800;
-  font-size: clamp(40px, 5.5vw, 68px);
-  line-height: 1.15;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
   margin-bottom: 1.25rem;
 }
 
 .accent-text {
-  color: var(--accent, #F4A261);
+  color: var(--secondary, #F4A261);
   position: relative;
   display: inline-block;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 1.2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 36rem;
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.8vw, 19px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  max-width: 580px;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
@@ -80,26 +86,29 @@
 }
 
 .btn-hero-primary {
-  background-color: var(--accent, #F4A261);
-  color: #0A355C;
-  font-weight: 700;
+  background-color: var(--navy-dark, #0A355C);
+  color: #ffffff;
+  font-weight: 600;
   padding: 0.85rem 2rem;
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(244, 162, 97, 0.35);
-  border: 2px solid var(--accent, #F4A261);
+  box-shadow: 0 4px 15px rgba(10, 53, 92, 0.25);
+  border: 1.5px solid var(--navy-dark, #0A355C);
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-hero-primary:hover {
-  background-color: #e79350;
-  color: #0A355C;
+  background-color: var(--accent, #F4A261);
+  border-color: var(--accent, #F4A261);
+  color: var(--navy-dark, #0A355C);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(244, 162, 97, 0.5);
+  box-shadow: 0 8px 20px rgba(244, 162, 97, 0.4);
 }
 
 .btn-hero-secondary {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1.5px solid rgba(255, 255, 255, 0.4);
@@ -109,12 +118,16 @@
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-hero-secondary:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
   color: #ffffff;
   transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 /* Smaller hero used at the top of each portfolio page */
@@ -515,7 +528,7 @@
 }
 
 .btn-portfolio-pill {
-  background: linear-gradient(135deg, #0F4C81, #0A355C);
+  background-color: var(--navy-dark, #0A355C);
   color: #ffffff;
   border-radius: 50px;
   font-size: 0.78rem;
@@ -525,13 +538,14 @@
   transition: all 0.25s ease;
   display: inline-flex;
   align-items: center;
-  border: none;
-  box-shadow: 0 4px 12px rgba(15, 76, 129, 0.2);
+  border: 1px solid var(--navy-dark, #0A355C);
+  box-shadow: 0 4px 12px rgba(10, 53, 92, 0.2);
 }
 
 .btn-portfolio-pill:hover {
-  background: linear-gradient(135deg, #F4A261, #e79350);
-  color: #0A355C;
+  background-color: var(--accent, #F4A261);
+  border-color: var(--accent, #F4A261);
+  color: var(--navy-dark, #0A355C);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(244, 162, 97, 0.4);
 }
@@ -612,11 +626,25 @@
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0s; }
-.delay-2 { transition-delay: 0.1s; }
-.delay-3 { transition-delay: 0.2s; }
-.delay-4 { transition-delay: 0.3s; }
-.delay-5 { transition-delay: 0.4s; }
+.delay-1 {
+  transition-delay: 0s;
+}
+
+.delay-2 {
+  transition-delay: 0.1s;
+}
+
+.delay-3 {
+  transition-delay: 0.2s;
+}
+
+.delay-4 {
+  transition-delay: 0.3s;
+}
+
+.delay-5 {
+  transition-delay: 0.4s;
+}
 
 /* -----------------------------
    10. PORTFOLIO PAGE STYLES (Subpages)
@@ -628,7 +656,7 @@
   background-size: cover;
   background-position: center;
   transition: background-size 0.5s ease;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-photo:hover {
@@ -673,19 +701,24 @@
 }
 
 .contact-btn-dark {
-  background-color: #0A355C;
+  background-color: var(--navy-dark, #0A355C);
   color: #ffffff;
   border-radius: 50px;
   padding: 0.7rem 1.75rem;
   font-weight: 600;
-  border: none;
+  border: 1.5px solid var(--navy-dark, #0A355C);
   display: inline-block;
   text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(10, 53, 92, 0.2);
 }
 
 .contact-btn-dark:hover {
-  background-color: #0F4C81;
-  color: #ffffff;
+  background-color: var(--accent, #F4A261);
+  border-color: var(--accent, #F4A261);
+  color: var(--navy-dark, #0A355C);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(244, 162, 97, 0.35);
 }
 
 .back-link {
@@ -819,7 +852,8 @@
     width: 100%;
   }
 
-  .btn-hero-primary, .btn-hero-secondary {
+  .btn-hero-primary,
+  .btn-hero-secondary {
     width: 100%;
     text-align: center;
   }

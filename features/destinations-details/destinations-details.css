@@ -1,490 +1,329 @@
+/* --------------------------------------------------------------------------
+   TRAVEEZY DESTINATION DETAILS STYLESHEET
+-------------------------------------------------------------------------- */
+
+/* -----------------------------
+   1. HERO SECTION
+------------------------------ */
 .hero {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-
-    background-image: url("../../assets/images/home/angkor1.jpg");
-    background-size: cover;
-    /* background-position: center; */
-
-    display: flex;
-    flex-direction: column;
-    /*make the children go horizontal */
-    justify-content: center;
-    color: var(--white);
-    padding: 0 16px;
-}
-
-/* Modern gradient overlay on hero photo */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.3) 100%);
-    z-index: 0;
-}
-
-.hero>* {
-    z-index: 1;
+  width: 100%;
+  min-height: 75vh;
+  position: relative;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.35) 100%),
+              url("../../assets/images/home/angkor1.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  padding: 140px 0 70px 0;
+  overflow: hidden;
 }
 
 .hero-content {
-    background: transparent;
-    border: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    box-shadow: none;
-    padding: 0;
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
 }
 
 .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: #ffffff;
-    padding: 7px 20px;
-    border-radius: 50px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .hero-badge i {
-    color: var(--secondary, #F4A261);
-    font-size: 0.85rem;
+  color: var(--secondary, #F4A261);
+  font-size: 0.85rem;
 }
 
 .hero-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2.35rem, 7vw, 58px);
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
-    line-height: 1.15;
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: clamp(38px, 6vw, 68px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.12;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-.h1 {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    font-weight: 600;
-    font-size: clamp(1.75rem, 5vw, 34px);
-    line-height: 1.25;
-    margin: 56px auto 24px;
-    padding: 0 16px;
+.accent-text {
+  color: var(--secondary, #F4A261);
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Layout style */
+.hero-subtitle {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: clamp(15px, 1.8vw, 19px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+.hero-meta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* -----------------------------
+   2. SECTION TYPOGRAPHY & BADGES
+------------------------------ */
+.badge-pill {
+  display: inline-block;
+  background-color: rgba(15, 76, 129, 0.1);
+  color: var(--primary, #0F4C81);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-weight: 700;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  color: #0A355C;
+  line-height: 1.25;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  max-width: 36rem;
+  line-height: 1.6;
+}
+
+.highlight-title {
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #0A355C;
+}
+
+.text-body-custom {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* -----------------------------
+   3. TIMELINE & IMAGE HOVER EFFECTS
+------------------------------ */
 .timeline {
-    position: relative;
+  position: relative;
 }
 
 .timeline::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 3px;
-    height: 100%;
-    background: #d9d9d9;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #e2e8f0;
+  transform: translateX(-50%);
 }
 
-.timeline .row {
-    position: relative;
+.img-hover-zoom {
+  overflow: hidden;
+  position: relative;
 }
 
-.timeline p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 0;
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
 }
 
-.timeline img,
-.siem_reap img,
-.featured-img {
-    aspect-ratio: 16 / 10;
+.img-hover-zoom:hover img {
+  transform: scale(1.06);
 }
 
-.timeline .row::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 16px;
-    height: 16px;
-    background: #999;
-    border: 4px solid #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
-}
-
-/* Travel */
-.container {
-    max-width: 1100px;
-    width: 100%;
-}
-
-.siem_reap p {
-    line-height: 1.7;
-    margin-bottom: 0;
-}
-
-/* Typography styles matching the image design */
+/* -----------------------------
+   4. ACTIVITIES SIDEBAR
+------------------------------ */
 .main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.5rem, 5vw, 4.2rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: 0;
-    margin-bottom: 40px;
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #0A355C;
+  line-height: 1.15;
 }
 
-/* Flex layout for the content row */
 .content-wrapper {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
-/* Left Section: Featured Image Container */
 .image-gallery {
-    flex: 1.8;
-    /* Takes up more visual weight */
+  flex: 1.2;
 }
 
 .featured-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 16px;
-    /* Smooth rounded corners matching the design */
-    display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
-/* Right Section: Sidebar list items */
 .activities-sidebar {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding-top: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Individual list rows */
 .activity-item {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Round Badge/Icon wrapper */
-.icon-wrapper {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    border: 1px solid #e2e8f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    /* Clips the image into a circle */
-    flex-shrink: 0;
+.activity-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
-.icon-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Keeps the image proportions clean without stretching */
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
 }
 
-/* Item Texts typography details */
 .activity-text h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-bottom: 2px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0A355C;
+  margin-bottom: 4px;
 }
 
 .activity-text p {
-    font-size: 0.88rem;
-    color: #718096;
-    /* Subtle grey tone text */
-    line-height: 1.3;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.45;
 }
 
-/* food experiences */
+/* -----------------------------
+   5. CULINARY CARDS & SCROLL
+------------------------------ */
 .food-scroll {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    /* Smooth scrolling on mobile */
-    padding-bottom: 10px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
 }
 
 .food-scroll::-webkit-scrollbar {
-    display: none;
-    /* Hide scrollbar (Chrome, Edge, Safari) */
+  height: 6px;
 }
 
-.food-scroll {
-    scrollbar-width: none;
-    /* Firefox */
+.food-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
 }
 
 .bfood {
-    flex: 0 0 min(82vw, 300px);
-    width: min(82vw, 350px);
-    /* Each card is 300px wide */
-    height: 400px;
-    background: #ddd;
+  flex: 0 0 320px;
+  height: 380px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.hero-section {
-    width: 100%;
-    height: 800px;
-    background-image: url(../../assets/images/province/siem\ reap\ hero\ img.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+.bg-dark-glass {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
-.bfood .col-left,
-.bfood .col-right {
-    width: 70px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.505);
-    border: 1px solid white;
+.bfood .bottom {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
-.bfood .top {
-    width: 100%;
-}
+/* -----------------------------
+   6. RESPONSIVE MEDIA QUERIES
+------------------------------ */
+@media (max-width: 991.98px) {
+  .hero {
+    min-height: 45vh;
+  }
 
-.bfood .top .row {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    margin-left: 0;
-    margin-right: 0;
-}
+  .timeline::before {
+    left: 20px;
+  }
 
-.col-right {
-    width: 100px !important;
-    margin-left: 0;
-}
+  .content-wrapper {
+    flex-direction: column;
+  }
 
-.col-right .fs-7 {
-    font-size: 15px;
-}
-
-.btn-view {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    width: 80px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.505);
-    border: 1px solid white;
-}
-
-.bhotel-left img {
-    width: 100%;
-    height: 900px;
-}
-
-.bhotel-right .col-6 {
-    width: 375px;
-}
-
-.img-frame {
-    height: 250px;
-}
-
-.sub-title-bhotel {
-    font-size: 12px;
-}
-
-.btn-book {
-    height: 35px;
-    margin-left: 130px;
-    font-size: 15px;
-}
-
-.box-bhotel-img {
-    width: 430px;
-    height: 55px;
-    margin-left: 45px;
-    margin-bottom: 70px;
-}
-
-.box-bhotel-img1 {
-    width: 70px;
-    height: 40px;
-}
-
-@media (max-width: 992px) {
-    .hero {
-        min-height: 72vh;
-    }
-
-    .timeline::before,
-    .timeline .row::before {
-        left: 18px;
-    }
-
-    .timeline .row {
-        padding-left: 42px;
-        row-gap: 18px;
-    }
-
-    .timeline .row>[class*="col-"] {
-        width: 100%;
-    }
-
-    .siem_reap .row {
-        row-gap: 22px;
-    }
-
-    .siem_reap .col-8,
-    .siem_reap .col-4 {
-        width: 100%;
-    }
-
-    .content-wrapper {
-        gap: 28px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        min-height: 64vh;
-    }
-
-    .hero-content {
-        margin-top: 3rem !important;
-        margin-bottom: 3rem !important;
-    }
-
-    .timeline {
-        margin-top: 2rem !important;
-        margin-bottom: 2rem !important;
-    }
-
-    .timeline .row {
-        margin-bottom: 2.5rem !important;
-    }
-
-    .timeline img,
-    .siem_reap img,
-    .featured-img {
-        aspect-ratio: 4 / 3;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .main-title {
-        margin-bottom: 28px;
-    }
-
-    .content-wrapper {
-        flex-direction: column;
-    }
-
-    .image-gallery,
-    .activities-sidebar {
-        flex: none;
-        width: 100%;
-    }
-
-    .activities-sidebar {
-        gap: 18px;
-    }
-
-    .section-3 {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .bfood {
-        height: 360px;
-    }
+  .featured-img {
+    height: 320px;
+  }
 }
 
 @media (max-width: 575.98px) {
-    .hero {
-        min-height: 56vh;
-    }
+  .hero-title {
+    font-size: 2.2rem;
+  }
 
-    .hero-title br,
-    .main-title br {
-        display: none;
-    }
-
-    .h1 {
-        margin-top: 40px;
-    }
-
-    .timeline::before,
-    .timeline .row::before {
-        left: 12px;
-    }
-
-    .timeline .row {
-        padding-left: 30px;
-    }
-
-    .activity-item {
-        gap: 12px;
-    }
-
-    .icon-wrapper {
-        width: 46px;
-        height: 46px;
-    }
-
-    .activity-text h3 {
-        font-size: 1rem;
-    }
-
-    .activity-text p {
-        font-size: 0.82rem;
-    }
-
-    .food-scroll {
-        gap: 14px;
-        padding-left: 4px;
-        padding-right: 4px;
-    }
-
-    .bfood {
-        flex-basis: 86vw;
-        height: 330px;
-    }
-
-    .bfood .bottom {
-        width: calc(100% - 24px);
-        gap: 10px;
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-    }
-
-    .bfood .bottom h5 {
-        margin-right: 0 !important;
-        font-size: 1rem;
-    }
-
-    .btn-view {
-        flex: 0 0 auto;
-    }
+  .bfood {
+    flex: 0 0 280px;
+    height: 340px;
+  }
 }
