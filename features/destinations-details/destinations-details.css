@@ -296,6 +296,16 @@
   border-bottom-right-radius: 16px;
 }
 
+.bfood .btn-light:hover,
+.bfood .btn-light:focus,
+.bfood .btn-light:active {
+  background-color: var(--secondary, #F4A261) !important;
+  border-color: var(--secondary, #F4A261) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(244, 162, 97, 0.4) !important;
+  transition: all 0.25s ease;
+}
+
 /* -----------------------------
    6. RESPONSIVE MEDIA QUERIES
 ------------------------------ */
