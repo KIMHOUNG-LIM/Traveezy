@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Local Places in Siem Reap — Secret Spots, Culture &amp; Nature | Traveezy</title>
+
+    <!-- SEO: Primary -->
+    <meta name="description"
+        content="Discover the most enchanting, authentic local places in Siem Reap, Cambodia. From pink sandstone Banteay Srei and sacred Phnom Kulen waterfalls to trendy Wat Bo village, floating communities, and Phare Circus.">
+    <meta name="keywords"
+        content="Siem Reap local places, best places Siem Reap, Banteay Srei, Wat Bo village, Phnom Kulen waterfall, Kampong Phluk floating village, Phare Circus, Old Market Siem Reap, secret spots Cambodia">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Traveezy">
+    <link rel="canonical" href="https://traveezy.com/features/local-places/local-places.html">
+
+    <!-- SEO: Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Perfect Local Places in Siem Reap — Secret Spots &amp; Cultural Gems | Traveezy">
+    <meta property="og:description"
+        content="Curated guide to Siem Reap's finest sanctuaries, sacred waterfalls, artisan villages, floating communities, and cultural experiences with insider tips.">
+    <meta property="og:site_name" content="Traveezy">
+    <meta property="og:url" content="https://traveezy.com/features/local-places/local-places.html">
+    <meta property="og:image" content="../../assets/images/province/province-hero.jpg">
+
+    <!-- SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Perfect Local Places in Siem Reap | Traveezy">
+    <meta name="twitter:description"
+        content="Explore the best sacred, natural, and cultural places across Siem Reap with authentic local tips and maps.">
+    <meta name="twitter:image" content="../../assets/images/province/province-hero.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 & Font Awesome 6.6.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Shared Design System & Components -->
+    <link rel="stylesheet" href="../../shared/variables.css">
+    <link rel="stylesheet" href="../../shared/global.css">
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/fonts.css">
+    <link rel="stylesheet" href="../../components/navbar/navbar.css">
+    <link rel="stylesheet" href="../../components/footer/footer.css">
+    <link rel="stylesheet" href="local-places.css">
+</head>
+
+<body>
+    <!-- Global Navbar Container (Loaded dynamically) -->
+    <div id="navbar-container"></div>
+
+    <!-- HERO HEADER -->
+    <header class="local-hero">
+        <div class="local-hero-overlay"></div>
+        <div class="container position-relative z-2">
+            <a href="../province/province.html" class="hero-back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Siem Reap Province</span>
+            </a>
+
+            <div class="d-inline-flex align-items-center gap-2 mb-3">
+                <span class="local-hero-badge">
+                    <i class="fa-solid fa-gem text-warning me-1"></i> CURATED LOCAL GEMS
+                </span>
+                <span class="badge bg-dark-glass text-white rounded-pill px-3 py-1 small">
+                    <i class="fa-solid fa-map-pin text-info me-1"></i> Siem Reap, Cambodia
+                </span>
+            </div>
+
+            <h1 class="playfair-display hero-title-main mb-3">
+                Perfect Local Places <br>
+                <span class="hero-title-accent">&amp; Hidden Sanctuaries</span>
+            </h1>
+
+            <p class="inter fs-6 text-white-50 max-w-750 leading-relaxed mb-4">
+                Step beyond the beaten path to explore jewel-carved pink sandstones, sacred mountain waterfall plunge pools, peaceful stilted bamboo villages, and the world's coolest artisan neighbourhoods.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 pt-2">
+                <span class="badge bg-white-subtle text-white border border-light-subtle rounded-pill px-3 py-2">
+                    <i class="fa-solid fa-monument text-warning me-1"></i> Sacred Heritage
+                </span>
+                <span class="badge bg-white-subtle text-white border border-light-subtle rounded-pill px-3 py-2">
+                    <i class="fa-solid fa-water text-info me-1"></i> Waterfalls &amp; Lakes
+                </span>
+                <span class="badge bg-white-subtle text-white border border-light-subtle rounded-pill px-3 py-2">
+                    <i class="fa-solid fa-palette text-danger me-1"></i> Arts &amp; Circus
+                </span>
+                <span class="badge bg-white-subtle text-white border border-light-subtle rounded-pill px-3 py-2">
+                    <i class="fa-solid fa-coffee text-success me-1"></i> Cool Villages
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTERACTIVE CATEGORY FILTER & SEARCH BAR -->
+    <nav class="filter-sticky-bar py-3" aria-label="Places filter and search">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <!-- Search Input -->
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="search-input-group">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="placeSearchInput" class="search-input-field"
+                            placeholder="Search places, keywords, or vibes (e.g. sunset, coffee)..."
+                            aria-label="Search local places">
+                    </div>
+                </div>
+
+                <!-- Category Chips -->
+                <div class="col-12 col-md-7 col-lg-8">
+                    <div class="category-chip-container" role="tablist">
+                        <button type="button" class="btn-filter-chip active" data-category="all">
+                            <i class="fa-solid fa-globe"></i> All Places
+                        </button>
+                        <button type="button" class="btn-filter-chip" data-category="heritage">
+                            <i class="fa-solid fa-landmark-dome"></i> Sacred Heritage
+                        </button>
+                        <button type="button" class="btn-filter-chip" data-category="neighbourhood">
+                            <i class="fa-solid fa-tree-city"></i> Cool Neighbourhoods
+                        </button>
+                        <button type="button" class="btn-filter-chip" data-category="nature">
+                            <i class="fa-solid fa-mountain-sun"></i> Nature &amp; Waterfalls
+                        </button>
+                        <button type="button" class="btn-filter-chip" data-category="water-village">
+                            <i class="fa-solid fa-water"></i> Floating Villages
+                        </button>
+                        <button type="button" class="btn-filter-chip" data-category="culture">
+                            <i class="fa-solid fa-masks-theater"></i> Culture &amp; Circus
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN PLACES GRID SECTION -->
+    <main class="py-5 bg-light-subtle">
+        <div class="container">
+            <!-- Results Header -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 pb-2 border-bottom">
+                <div>
+                    <h2 class="playfair-display fw-bold color-navy fs-3 mb-1">Handpicked Authentic Destinations</h2>
+                    <p class="inter text-secondary small mb-0">Verified locations with tested travel advice, entrance details, and direct map links.</p>
+                </div>
+                <div class="mt-2 mt-sm-0">
+                    <span id="resultsCountBadge" class="badge bg-white text-secondary border px-3 py-2 rounded-pill shadow-sm">
+                        Loading places...
+                    </span>
+                </div>
+            </div>
+
+            <!-- Dynamic Place Cards Container -->
+            <div class="row g-4" id="placesGridContainer">
+                <!-- Populated dynamically via local-places.js -->
+            </div>
+        </div>
+    </main>
+
+    <!-- SECTION: SIEM REAP LOCAL TRANSPORT & ETIQUETTE GUIDE -->
+    <section class="py-5 bg-white border-top">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-pill mb-2"><i class="fa-solid fa-motorcycle me-1"></i> TRAVEL WISDOM</span>
+                <h2 class="playfair-display display-6 fw-bold color-navy">How to Experience Siem Reap Like a Local</h2>
+                <p class="inter text-secondary max-w-600 mx-auto fs-6">
+                    Essential tips for transparent transit, temple etiquette, and memorable local interactions.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Transit Card 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100 border">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="tip-icon-box bg-white text-primary shadow-sm">
+                                <i class="fa-solid fa-motorcycle"></i>
+                            </div>
+                            <div>
+                                <h4 class="playfair-display fw-bold color-navy mb-0 fs-5">Tuk-Tuks &amp; Remorks</h4>
+                                <span class="text-muted small">Ride-Hailing Apps</span>
+                            </div>
+                        </div>
+                        <p class="inter text-secondary small leading-relaxed mb-0">
+                            Download <strong>Grab</strong> or <strong>PassApp</strong> on your smartphone for transparent, fixed-price rides across town ($1–$3). For distant excursions (Banteay Srei or Kulen), hire a dedicated Remork driver ($20–$35/day) who will wait for you with chilled water bottles.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Transit Card 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100 border">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="tip-icon-box bg-white text-warning shadow-sm">
+                                <i class="fa-solid fa-shirt"></i>
+                            </div>
+                            <div>
+                                <h4 class="playfair-display fw-bold color-navy mb-0 fs-5">Respect &amp; Etiquette</h4>
+                                <span class="text-muted small">Sacred Conduct</span>
+                            </div>
+                        </div>
+                        <p class="inter text-secondary small leading-relaxed mb-0">
+                            Angkor and pagodas are living spiritual centers. Keep shoulders and knees covered with breathable linen. Greet locals with the traditional <em>Sampeah</em> (pressed palms), and avoid touching anyone on the head or pointing your feet at Buddha statues.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Transit Card 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="p-4 rounded-4 bg-light h-100 border">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="tip-icon-box bg-white text-success shadow-sm">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+                            <div>
+                                <h4 class="playfair-display fw-bold color-navy mb-0 fs-5">Cash &amp; Digital KHQR</h4>
+                                <span class="text-muted small">Seamless Payments</span>
+                            </div>
+                        </div>
+                        <p class="inter text-secondary small leading-relaxed mb-0">
+                            Cash is accepted in both US Dollars ($) and Cambodian Riel (KHR ~4,000 = $1). The <strong>Bakong Tourist KHQR</strong> system allows contactless payments at local street stalls, cafes, and markets without needing heavy currency notes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE PLACE DETAIL MODAL -->
+    <div class="modal fade" id="placeDetailModal" tabindex="-1" aria-labelledby="modalPlaceTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 border-0 shadow-lg overflow-hidden">
+                <!-- Modal Top Visual Frame -->
+                <div class="modal-place-header">
+                    <img id="modalPlaceImg" src="" alt="Place Preview">
+                    <div class="overlay-gradient"></div>
+                    <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="position-absolute bottom-0 start-0 p-4 text-white z-2">
+                        <span id="modalPlaceCategory" class="badge bg-warning text-dark fw-bold rounded-pill px-3 py-1 mb-2">
+                            Category
+                        </span>
+                        <h3 id="modalPlaceTitle" class="playfair-display fw-bold mb-0 fs-2">Place Title</h3>
+                    </div>
+                </div>
+
+                <!-- Modal Body Details -->
+                <div class="modal-body p-4">
+                    <!-- Quick Stats Badges -->
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span id="modalPlaceRating" class="badge bg-light text-dark border px-3 py-2 rounded-pill">
+                            <i class="fa-solid fa-star text-warning me-1"></i> Rating
+                        </span>
+                        <span id="modalPlaceDistance" class="badge bg-light text-dark border px-3 py-2 rounded-pill">
+                            <i class="fa-solid fa-location-dot text-danger me-1"></i> Distance
+                        </span>
+                    </div>
+
+                    <!-- Description -->
+                    <p id="modalPlaceDesc" class="inter text-secondary leading-relaxed mb-3 fs-6">
+                        Place description goes here...
+                    </p>
+
+                    <!-- Key Highlights Box -->
+                    <div class="modal-info-box mb-3">
+                        <h6 class="color-navy fw-bold mb-2"><i class="fa-solid fa-sparkles text-warning me-1"></i> Must-Experience Highlights:</h6>
+                        <ul id="modalPlaceHighlights" class="list-unstyled mb-0 inter small text-secondary">
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </div>
+
+                    <!-- Logistics Info Grid -->
+                    <div class="row g-2 mb-3">
+                        <div class="col-12 col-md-6">
+                            <div class="p-2 px-3 bg-light rounded-3 small inter border">
+                                <span id="modalPlaceBestTime"><i class="fa-regular fa-clock text-primary me-1"></i> Best Time</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="p-2 px-3 bg-light rounded-3 small inter border">
+                                <span id="modalPlaceFee"><i class="fa-solid fa-ticket text-success me-1"></i> Entry &amp; Fee</span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-2 px-3 bg-light rounded-3 small inter border">
+                                <span id="modalPlaceDress"><i class="fa-solid fa-shirt text-info me-1"></i> Dress Code</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Insider Secret Tip -->
+                    <div class="p-3 bg-warning-subtle text-dark rounded-3 small inter mb-4 border border-warning-subtle">
+                        <i class="fa-solid fa-lightbulb text-warning-emphasis me-1"></i>
+                        <span id="modalPlaceTip">Insider travel secret tip...</span>
+                    </div>
+
+                    <!-- Action Footer -->
+                    <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                        <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <a id="modalPlaceMapBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary rounded-pill px-4 fw-semibold text-white">
+                            <i class="fa-solid fa-map-location-dot me-1"></i> Open on Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Footer Container (Loaded dynamically) -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap 5 JS Bundle & Core Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../components/navbar/navbar.js"></script>
+    <script src="../../components/footer/footer.js"></script>
+    <script src="../../shared/main.js"></script>
+    <script src="local-places.js"></script>
+</body>
+
+</html>
