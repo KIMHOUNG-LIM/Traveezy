@@ -2134,7 +2134,7 @@ function renderDestinationDetail(destinationId) {
     if (activitiesGrid) {
         activitiesGrid.innerHTML = dest.activities.map(act => `
             <div class="col-12 col-md-6">
-                <div class="p-4 rounded-4 bg-white border h-100 shadow-sm dest-activity-card">
+                <div class="dest-activity-card h-100 shadow-sm">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <div class="dest-act-icon">
                             <i class="fa-solid ${act.icon}"></i>
@@ -2151,22 +2151,22 @@ function renderDestinationDetail(destinationId) {
     const hotelGrid = document.getElementById("destHotelsGrid");
     if (hotelGrid) {
         hotelGrid.innerHTML = dest.hotels.map(h => `
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="spotlight-card rounded-4 bg-white border overflow-hidden shadow-sm h-100 d-flex flex-column">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="spotlight-card bg-white border overflow-hidden shadow-sm h-100 d-flex flex-column">
                     <div class="spotlight-img-wrap position-relative">
                         <img src="${h.image}" alt="${h.name}" class="w-100 h-100 object-fit-cover" loading="lazy">
-                        <span class="spotlight-badge position-absolute top-0 end-0 m-3 bg-dark-glass text-white rounded-pill px-3 py-1 small">
+                        <span class="spotlight-badge">
                             <i class="fa-solid fa-hotel text-warning me-1"></i> ${h.badge}
                         </span>
                     </div>
-                    <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                    <div class="spotlight-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="badge bg-primary-subtle text-primary rounded-pill px-2 py-1 small fw-semibold">${h.rating}</span>
                             <span class="text-secondary small fw-bold">${h.price}</span>
                         </div>
                         <h4 class="playfair-display fw-bold color-navy fs-5 mb-2">${h.name}</h4>
                         <p class="inter text-secondary small leading-relaxed mb-3 flex-grow-1">${h.highlight}</p>
-                        <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                        <div class="spotlight-footer">
                             <span class="text-muted small"><i class="fa-solid fa-location-dot text-danger me-1"></i> ${h.distance}</span>
                             <a href="${h.link}" class="btn btn-primary btn-sm rounded-pill px-3 fw-semibold text-white">
                                 View Hotel <i class="fa-solid fa-arrow-right ms-1"></i>
@@ -2182,15 +2182,15 @@ function renderDestinationDetail(destinationId) {
     const restGrid = document.getElementById("destRestaurantsGrid");
     if (restGrid) {
         restGrid.innerHTML = dest.restaurants.map(r => `
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="spotlight-card rounded-4 bg-white border overflow-hidden shadow-sm h-100 d-flex flex-column">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="spotlight-card bg-white border overflow-hidden shadow-sm h-100 d-flex flex-column">
                     <div class="spotlight-img-wrap position-relative">
                         <img src="${r.image}" alt="${r.name}" class="w-100 h-100 object-fit-cover" loading="lazy">
-                        <span class="spotlight-badge position-absolute top-0 end-0 m-3 bg-dark-glass text-white rounded-pill px-3 py-1 small">
+                        <span class="spotlight-badge">
                             <i class="fa-solid fa-utensils text-warning me-1"></i> ${r.badge}
                         </span>
                     </div>
-                    <div class="p-3 p-md-4 d-flex flex-column flex-grow-1">
+                    <div class="spotlight-body">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="badge bg-warning-subtle text-dark rounded-pill px-2 py-1 small fw-semibold">${r.rating}</span>
                             <span class="text-secondary small fst-italic">${r.cuisine}</span>
@@ -2199,7 +2199,7 @@ function renderDestinationDetail(destinationId) {
                         <p class="inter text-secondary small leading-relaxed mb-3 flex-grow-1">
                             <strong>Signature Dish:</strong> ${r.signature}
                         </p>
-                        <div class="d-flex justify-content-between align-items-center pt-3 border-top mt-auto">
+                        <div class="spotlight-footer">
                             <span class="text-muted small"><i class="fa-solid fa-location-dot text-danger me-1"></i> ${r.distance}</span>
                             <a href="${r.link}" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-semibold">
                                 View Dining <i class="fa-solid fa-arrow-right ms-1"></i>
@@ -2216,12 +2216,12 @@ function renderDestinationDetail(destinationId) {
     if (tipsContainer) {
         tipsContainer.innerHTML = dest.travelTips.map(tip => `
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="p-4 rounded-4 bg-white border h-100 shadow-sm dest-tip-box d-flex flex-column">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="dest-tip-box h-100 shadow-sm d-flex flex-column">
+                    <div class="dest-tip-header">
                         <div class="dest-tip-icon">
                             <i class="fa-solid ${tip.icon}"></i>
                         </div>
-                        <span class="badge bg-light text-secondary border rounded-pill px-3 py-1 small fw-semibold">
+                        <span class="badge bg-light text-secondary border dest-tip-badge">
                             ${tip.badge}
                         </span>
                     </div>

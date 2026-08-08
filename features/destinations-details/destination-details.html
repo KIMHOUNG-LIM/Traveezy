@@ -64,22 +64,22 @@
 
       <!-- Dynamic Header Info -->
       <div class="dest-hero-content text-start max-w-800">
-        <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+        <div class="dest-hero-badges mb-3" id="destHeroBadges">
           <span id="destCategoryBadge"
-            class="badge bg-white-subtle text-white rounded-pill px-3 py-1 border border-white-50 small">
+            class="badge bg-white-subtle text-white rounded-pill border border-white-50">
             <i class="fa-solid fa-landmark me-1"></i> Category
           </span>
           <span id="destRatingBadge"
-            class="badge bg-dark-glass text-white rounded-pill px-3 py-1 border border-white-25 small">
+            class="badge bg-dark-glass text-white rounded-pill border border-white-25">
             <i class="fa-solid fa-star text-warning me-1"></i> 5.0 (1.2k+ Reviews)
           </span>
           <span id="destLocationBadge"
-            class="badge bg-dark-glass text-white rounded-pill px-3 py-1 border border-white-25 small">
+            class="badge bg-dark-glass text-white rounded-pill border border-white-25">
             <i class="fa-solid fa-location-dot text-danger me-1"></i> Location
           </span>
         </div>
 
-        <h1 class="playfair-display dest-hero-title mb-3" id="destTitle">
+        <h1 class="playfair-display dest-hero-title mb-2" id="destTitle">
           Angkor Wat Grand Complex
         </h1>
 
@@ -88,15 +88,15 @@
         </p>
 
         <!-- Action Group -->
-        <div class="d-flex flex-wrap gap-3 pt-2">
+        <div class="dest-hero-actions pt-2" id="destHeroActions">
           <a id="destMapBtn" href="#" target="_blank" rel="noopener noreferrer"
-            class="btn btn-warning rounded-pill px-4 py-2 fw-semibold text-dark shadow">
+            class="btn btn-warning rounded-pill fw-semibold text-dark shadow">
             <i class="fa-solid fa-map-location-dot me-1"></i> Open in Google Maps
           </a>
-          <a href="#stays-dining" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">
+          <a href="#hotels-nearby" class="btn btn-outline-light rounded-pill fw-semibold">
             <i class="fa-solid fa-hotel me-1"></i> Stays &amp; Dining Nearby
           </a>
-          <a href="#activities" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">
+          <a href="#activities" class="btn btn-outline-light rounded-pill fw-semibold">
             <i class="fa-solid fa-sparkles me-1"></i> Activities &amp; Tips
           </a>
         </div>
@@ -111,7 +111,7 @@
       <div class="row g-4 mb-5">
         <!-- Left: Overview & Logistics -->
         <div class="col-12 col-lg-7">
-          <div class="p-4 p-md-5 rounded-4 bg-white border shadow-sm h-100 d-flex flex-column">
+          <div class="dest-card-box h-100 d-flex flex-column">
             <span class="badge-pill mb-2"><i class="fa-solid fa-book-open me-1"></i> ATTRACTION OVERVIEW</span>
             <h2 class="playfair-display fw-bold color-navy fs-3 mb-3">About This Sanctuary</h2>
 
@@ -120,21 +120,15 @@
             </p>
 
             <!-- Logistics Info Box -->
-            <div class="row g-3 mt-auto pt-3 border-top">
-              <div class="col-12 col-sm-6">
-                <div class="p-3 bg-light rounded-3 small inter border">
-                  <span id="destBestTime"><i class="fa-regular fa-clock text-primary me-1"></i> Best Time</span>
-                </div>
+            <div class="dest-logistics-grid mt-auto pt-3 border-top">
+              <div class="dest-logistics-pill">
+                <span id="destBestTime"><i class="fa-regular fa-clock text-primary me-1"></i> Best Time</span>
               </div>
-              <div class="col-12 col-sm-6">
-                <div class="p-3 bg-light rounded-3 small inter border">
-                  <span id="destAdmission"><i class="fa-solid fa-ticket text-success me-1"></i> Admission</span>
-                </div>
+              <div class="dest-logistics-pill">
+                <span id="destAdmission"><i class="fa-solid fa-ticket text-success me-1"></i> Admission</span>
               </div>
-              <div class="col-12">
-                <div class="p-3 bg-light rounded-3 small inter border">
-                  <span id="destDressCode"><i class="fa-solid fa-shirt text-info me-1"></i> Dress Code</span>
-                </div>
+              <div class="dest-logistics-pill">
+                <span id="destDressCode"><i class="fa-solid fa-shirt text-info me-1"></i> Dress Code</span>
               </div>
             </div>
           </div>
@@ -142,11 +136,11 @@
 
         <!-- Right: Fascinating Architectural & Historical Facts -->
         <div class="col-12 col-lg-5">
-          <div class="p-4 p-md-5 rounded-4 bg-white border shadow-sm h-100">
+          <div class="dest-card-box h-100">
             <span class="badge-pill mb-2"><i class="fa-solid fa-circle-question me-1"></i> FASCINATING FACTS</span>
             <h2 class="playfair-display fw-bold color-navy fs-3 mb-3">What Makes It Special?</h2>
 
-            <ul class="list-unstyled mb-0" id="destFactsList">
+            <ul class="dest-facts-list" id="destFactsList">
               <!-- Populated dynamically via JS -->
             </ul>
           </div>
