@@ -102,7 +102,7 @@ const DESTINATIONS_DATA = [
                 price: "From $220 / night",
                 distance: "4.0 km (8 mins to Gate)",
                 highlight: "Magnificent lagoon pool, championship 18-hole golf course, and lush landscaped botanical gardens.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -249,7 +249,7 @@ const DESTINATIONS_DATA = [
                 price: "From $310 / night",
                 distance: "7.0 km (14 mins to South Gate)",
                 highlight: "Iconic colonial heritage, Cambodia's largest swimming pool, and historic Elephant Bar.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -406,7 +406,7 @@ const DESTINATIONS_DATA = [
                 price: "From $45 / night",
                 distance: "2.0 km (5 mins by Tuk-Tuk)",
                 highlight: "Swim-up pool bar, games lounge, private king rooms and modern dorms in central location.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -544,7 +544,7 @@ const DESTINATIONS_DATA = [
                 price: "From $130 / night",
                 distance: "26 km from Lake (Town South)",
                 highlight: "Meandering 200m river pool weaving past wooden Khmer cottages in tropical jungle gardens.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -701,7 +701,7 @@ const DESTINATIONS_DATA = [
                 price: "From $155 / night",
                 distance: "1.2 km (4 mins by Tuk-Tuk)",
                 highlight: "Classic colonial architecture, private outdoor stone bathtubs, and Thursday live jazz nights.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -828,7 +828,7 @@ const DESTINATIONS_DATA = [
                 price: "From $310 / night",
                 distance: "1.5 km (5 mins by Tuk-Tuk)",
                 highlight: "Historic royal French colonial luxury, 35-meter swimming pool, famous high tea.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -995,7 +995,7 @@ const DESTINATIONS_DATA = [
                 price: "From $75 / night",
                 distance: "150 meters (Wat Bo Village)",
                 highlight: "Secluded outdoor pool bordered by frangipani blossoms and Khmer herbal spa.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -1133,7 +1133,7 @@ const DESTINATIONS_DATA = [
                 price: "From $155 / night",
                 distance: "1.2 km (4 mins by Tuk-Tuk)",
                 highlight: "Classic colonial suites, private outdoor stone soaking tubs, live jazz evenings.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1290,7 +1290,7 @@ const DESTINATIONS_DATA = [
                 price: "From $50 / night",
                 distance: "300 meters (Taphul Village)",
                 highlight: "Twin swimming pools, poolside bar, quiet leafy compound.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -1574,7 +1574,7 @@ const DESTINATIONS_DATA = [
                 price: "From $220 / night",
                 distance: "28 km (North of Town)",
                 highlight: "Magnificent lagoon pool, championship 18-hole golf course, lush botanical gardens.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1711,7 +1711,7 @@ const DESTINATIONS_DATA = [
                 price: "From $310 / night",
                 distance: "10 km (18 mins to East Gate)",
                 highlight: "Iconic colonial heritage, Cambodia's largest swimming pool, Elephant Bar.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -2005,7 +2005,7 @@ const DESTINATIONS_DATA = [
                 price: "From $155 / night",
                 distance: "1.0 km (4 mins by Tuk-Tuk)",
                 highlight: "Classic colonial suites, private outdoor stone bathtubs, live jazz nights.",
-                image: "../../assets/images/home/hotel_suite.png",
+                image: "../../assets/images/province/Templation.webp",
                 link: "../hotel-list/hotel-list.html"
             },
             {
