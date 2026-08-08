@@ -1,339 +1,241 @@
 /* --------------------------------------------------------------------------
    TRAVEEZY DESTINATION DETAILS STYLESHEET
--------------------------------------------------------------------------- */
+   -------------------------------------------------------------------------- */
 
-/* -----------------------------
-   1. HERO SECTION
------------------------------- */
-.hero {
-  width: 100%;
-  min-height: 75vh;
-  position: relative;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.35) 100%),
-              url("../../assets/images/home/angkor1.jpg") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #ffffff;
-  padding: 140px 0 70px 0;
-  overflow: hidden;
+.playfair-display {
+    font-family: var(--font-heading, "Playfair Display", serif);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 720px;
+.inter {
+    font-family: var(--font-body, "Inter", sans-serif);
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #ffffff;
-  padding: 7px 20px;
-  border-radius: 50px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+.color-navy {
+    color: #0A355C !important;
 }
 
-.hero-badge i {
-  color: var(--secondary, #F4A261);
-  font-size: 0.85rem;
+.color-secondary {
+    color: var(--secondary, #F4A261) !important;
 }
 
-.hero-title {
-  font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(38px, 6vw, 68px);
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.12;
-  letter-spacing: -0.5px;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
+.max-w-600 {
+    max-width: 600px;
 }
 
-.accent-text {
-  color: var(--secondary, #F4A261);
-  position: relative;
-  display: inline-block;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+.max-w-800 {
+    max-width: 800px;
 }
 
-.hero-subtitle {
-  font-family: var(--font-body, "Inter", sans-serif);
-  font-size: clamp(15px, 1.8vw, 19px);
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-  max-width: 580px;
-  line-height: 1.6;
+.leading-relaxed {
+    line-height: 1.7 !important;
 }
 
-.hero-meta-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
+.leading-normal {
+    line-height: 1.5 !important;
 }
 
-.meta-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #ffffff;
-  padding: 7px 18px;
-  border-radius: 50px;
-  font-size: 0.84rem;
-  font-weight: 500;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+.fs-xs {
+    font-size: 0.75rem;
 }
 
-/* -----------------------------
-   2. SECTION TYPOGRAPHY & BADGES
------------------------------- */
-.badge-pill {
-  display: inline-block;
-  background-color: rgba(15, 76, 129, 0.1);
-  color: var(--primary, #0F4C81);
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  padding: 6px 16px;
-  border-radius: 50px;
-  text-transform: uppercase;
+/* --------------------------------------------------------------------------
+   DESTINATION QUICK SELECTOR PILL BAR
+   -------------------------------------------------------------------------- */
+.dest-selector-bar {
+    z-index: 1000;
 }
 
-.section-heading {
-  font-family: var(--font-heading, "Playfair Display", serif);
-  font-weight: 700;
-  font-size: clamp(2rem, 3.2vw, 2.75rem);
-  color: #0A355C;
-  line-height: 1.25;
+.dest-selector-scroll-wrap {
+    scrollbar-width: none;
 }
 
-.section-subtitle {
-  font-size: 1.05rem;
-  max-width: 36rem;
-  line-height: 1.6;
+.dest-selector-scroll-wrap::-webkit-scrollbar {
+    display: none;
 }
 
-.highlight-title {
-  font-family: var(--font-heading, "Playfair Display", serif);
-  font-weight: 700;
-  font-size: 1.6rem;
-  color: #0A355C;
+.dest-selector-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    color: #475569;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.text-body-custom {
-  font-size: 1.02rem;
-  line-height: 1.7;
-  color: #4b5563;
+.dest-selector-pill:hover {
+    background: #E2E8F0;
+    color: #0A355C;
+    transform: translateY(-1px);
 }
 
-/* -----------------------------
-   3. TIMELINE & IMAGE HOVER EFFECTS
------------------------------- */
-.timeline {
-  position: relative;
+.dest-selector-pill.active {
+    background: var(--primary, #0F4C81);
+    color: #ffffff;
+    border-color: var(--primary, #0F4C81);
+    box-shadow: 0 4px 15px rgba(15, 76, 129, 0.25);
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: #e2e8f0;
-  transform: translateX(-50%);
-}
-
-.img-hover-zoom {
-  overflow: hidden;
-  position: relative;
-}
-
-.img-hover-zoom img {
-  transition: transform 0.5s ease;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-}
-
-.img-hover-zoom:hover img {
-  transform: scale(1.06);
-}
-
-/* -----------------------------
-   4. ACTIVITIES SIDEBAR
------------------------------- */
-.main-title {
-  font-family: var(--font-heading, "Playfair Display", serif);
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 700;
-  color: #0A355C;
-  line-height: 1.15;
-}
-
-.content-wrapper {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.image-gallery {
-  flex: 1.2;
-}
-
-.featured-img {
-  width: 100%;
-  height: 440px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.activities-sidebar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.activity-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  background: #ffffff;
-  padding: 1.25rem;
-  border-radius: 16px;
-  border: 1px solid #e2e8f0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.activity-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-}
-
-.icon-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  flex-shrink: 0;
-}
-
-.activity-text h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #0A355C;
-  margin-bottom: 4px;
-}
-
-.activity-text p {
-  font-size: 0.9rem;
-  color: #64748b;
-  margin: 0;
-  line-height: 1.45;
-}
-
-/* -----------------------------
-   5. CULINARY CARDS & SCROLL
------------------------------- */
-.food-scroll {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 20px;
-}
-
-.food-scroll::-webkit-scrollbar {
-  height: 6px;
-}
-
-.food-scroll::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 10px;
-}
-
-.bfood {
-  flex: 0 0 320px;
-  height: 380px;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.bg-dark-glass {
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #ffffff;
-  padding: 6px 14px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.bfood .bottom {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-
-.bfood .btn-light:hover,
-.bfood .btn-light:focus,
-.bfood .btn-light:active {
-  background-color: var(--secondary, #F4A261) !important;
-  border-color: var(--secondary, #F4A261) !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 15px rgba(244, 162, 97, 0.4) !important;
-  transition: all 0.25s ease;
-}
-
-/* -----------------------------
-   6. RESPONSIVE MEDIA QUERIES
------------------------------- */
-@media (max-width: 991.98px) {
-  .hero {
-    min-height: 45vh;
-  }
-
-  .timeline::before {
-    left: 20px;
-  }
-
-  .content-wrapper {
+/* --------------------------------------------------------------------------
+   IMMERSIVE HERO SECTION
+   -------------------------------------------------------------------------- */
+.dest-hero-section {
+    width: 100%;
+    min-height: 65vh;
+    min-height: 65dvh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
     flex-direction: column;
-  }
-
-  .featured-img {
-    height: 320px;
-  }
+    justify-content: center;
+    color: #ffffff;
+    padding: 130px 0 60px 0;
+    overflow: hidden;
+    transition: background-image 0.6s ease-in-out;
 }
 
-@media (max-width: 575.98px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
+.dest-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 53, 92, 0.8) 0%, rgba(10, 53, 92, 0.55) 45%, rgba(10, 53, 92, 0.95) 100%);
+    z-index: 1;
+}
 
-  .bfood {
-    flex: 0 0 280px;
-    height: 340px;
-  }
+.dest-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.dest-back-btn:hover {
+    color: var(--secondary, #F4A261);
+    transform: translateX(-4px);
+}
+
+.dest-hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.dest-hero-tagline {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   ACTIVITIES & SPOTLIGHT CARDS
+   -------------------------------------------------------------------------- */
+.dest-activity-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dest-activity-card:hover {
+    transform: translateY(-5px);
+    border-color: #CBD5E1 !important;
+    box-shadow: 0 16px 36px rgba(15, 76, 129, 0.08) !important;
+}
+
+.dest-act-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(15, 76, 129, 0.08);
+    color: var(--primary, #0F4C81);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.dest-activity-card:hover .dest-act-icon {
+    background: var(--primary, #0F4C81);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Spotlight Stays & Dining */
+.spotlight-card {
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.spotlight-card:hover {
+    transform: translateY(-6px);
+    border-color: #CBD5E1 !important;
+    box-shadow: 0 20px 40px rgba(15, 76, 129, 0.12) !important;
+}
+
+.spotlight-img-wrap {
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+    background: #E2E8F0;
+}
+
+.spotlight-img-wrap img {
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.spotlight-card:hover .spotlight-img-wrap img {
+    transform: scale(1.06);
+}
+
+/* Travel Tips Box */
+.dest-tip-box {
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.dest-tip-box:hover {
+    transform: translateY(-5px);
+    border-color: #CBD5E1 !important;
+    box-shadow: 0 16px 36px rgba(15, 76, 129, 0.09) !important;
+}
+
+.dest-tip-box:hover .dest-tip-icon {
+    background: var(--secondary, #F4A261);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.dest-tip-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(244, 162, 97, 0.15);
+    color: var(--secondary, #F4A261);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+    .dest-hero-section {
+        padding-top: 110px;
+        min-height: 50vh;
+    }
+
+    .spotlight-img-wrap {
+        height: 180px;
+    }
 }

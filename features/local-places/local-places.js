@@ -50,7 +50,7 @@ const PLACES_DATA = [
         distance: "48 km Northeast of Town",
         bestTime: "Morning (8:30 AM – 2:00 PM)",
         fee: "$20 USD (Separate ticket)",
-        image: "https://i.pinimg.com/1200x/6e/8b/6f/6e8b6f3879fbb9b3e100e4054a3be095.jpg",
+        image: "../../assets/images/home/heritage1.jpg",
         description: "The sacred birthplace of the ancient Khmer Empire (802 AD). Features refreshing multi-tier jungle waterfalls for swimming, the River of 1,000 Lingas, and a giant hilltop reclining Buddha.",
         highlights: ["Twin-tier jungle waterfalls with natural plunge pools for swimming", "Kbal Spean sacred River of a Thousand Lingas riverbed carvings", "Preah Ang Thom 16th-century giant gold-painted rock Buddha", "Sacred mountain wild red bananas and fresh forest coconut water"],
         insiderTip: "Road traffic goes uphill until 11:30 AM and downhill after 12:30 PM. Plan your departure by 8:00 AM to enjoy the cool waterfall morning.",
@@ -68,7 +68,7 @@ const PLACES_DATA = [
         distance: "30 km Southeast of Town",
         bestTime: "3:30 PM – 6:30 PM (Golden Sunset)",
         fee: "$20–$25 USD (Includes wooden longtail boat)",
-        image: "https://i.pinimg.com/1200x/83/6f/35/836f352d68e26c625eb8cc1b453f8e3d.jpg",
+        image: "../../assets/images/province/Tonlé Sap Floating Village.avif",
         description: "An authentic fishing community built on towering 8-meter bamboo stilts over the Tonlé Sap Biosphere Reserve. Features peaceful hand-paddled wooden canoe rides through flooded mangrove forests.",
         highlights: ["Towering stilted wooden houses adapting to the dramatic seasonal water levels", "Flooded mangrove forest canoe tours operated by local village women", "Floating pagoda and local primary school on the water", "Breathtaking sunset horizon views across the Great Tonlé Sap Lake"],
         insiderTip: "Support the local women's canoe cooperative (approx. $5–$6 per small canoe) for the peaceful paddle through the flooded forest canopy.",
@@ -86,7 +86,7 @@ const PLACES_DATA = [
         distance: "2 km (Ring Road Downtown)",
         bestTime: "Shows at 8:00 PM Nightly (Dinner from 6:30 PM)",
         fee: "$18–$38 USD (Supports Youth NGO)",
-        image: "https://i.pinimg.com/1200x/57/46/79/5746797825b4ec2b65103a89e9f649bf.jpg",
+        image: "../../assets/images/province/Phare.webp",
         description: "More than just a circus — an internationally acclaimed live performing arts theatre blending high-energy acrobatics, contemporary dance, live Khmer music, and heartwarming Cambodian storytelling.",
         highlights: ["100% human talent with electrifying aerial acrobatics and fire acts", "Storylines inspired by Cambodian folklore, history, and modern life", "Nightly open-air street food village and artisan craft market before show", "All ticket sales empower social education and vocational careers for youth"],
         insiderTip: "Book preferred seat tickets (Section A/B) at least 24 hours in advance during high season as seats sell out daily.",
@@ -177,7 +177,7 @@ function renderPlaces(filter = "all", searchQuery = "") {
 
     const filtered = PLACES_DATA.filter(place => {
         const matchesCategory = (filter === "all") || (place.category === filter);
-        const matchesSearch = cleanQuery === "" || 
+        const matchesSearch = cleanQuery === "" ||
             place.title.toLowerCase().includes(cleanQuery) ||
             place.categoryLabel.toLowerCase().includes(cleanQuery) ||
             place.description.toLowerCase().includes(cleanQuery) ||
@@ -267,7 +267,7 @@ function openPlaceModal(placeId) {
     document.getElementById("modalPlaceDress").innerHTML = `<i class="fa-solid fa-shirt text-info me-1"></i> <strong>Dress Code:</strong> ${place.dressCode}`;
     document.getElementById("modalPlaceDesc").textContent = place.description;
     document.getElementById("modalPlaceTip").innerHTML = `<strong>Insider Travel Secret:</strong> ${place.insiderTip}`;
-    
+
     // Highlights
     const highlightsContainer = document.getElementById("modalPlaceHighlights");
     highlightsContainer.innerHTML = place.highlights.map(h => `
@@ -303,7 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
         chip.addEventListener("click", () => {
             chips.forEach(c => c.classList.remove("active"));
             chip.classList.add("active");
-            
+
             const category = chip.getAttribute("data-category");
             const searchInput = document.getElementById("placeSearchInput");
             const query = searchInput ? searchInput.value : "";
