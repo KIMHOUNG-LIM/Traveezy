@@ -1,22 +1,56 @@
-const slider = document.querySelector(".food-scroll");
+// Province Feature Scripts: 3D Stack Carousel, Food Scroll & Interactive Guide
 
-let isDown = false;
-let startX;
-let scrollLeft;
+function initFoodScroll() {
+    const slider = document.querySelector(".food-scroll");
+    if (!slider) return;
 
-slider.addEventListener("mousedown", (e) => {
-    isDown = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-});
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    slider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        slider.classList.add("active");
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener("mouseleave", () => {
+        isDown = false;
+        slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mouseup", () => {
+        isDown = false;
+        slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // Drag speed multiplier
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
+    // Optional horizontal wheel scroll
+    slider.addEventListener("wheel", (e) => {
+        if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
+            // Horizontal scroll with vertical wheel if desired
+            if (e.shiftKey) return;
+        }
+    }, { passive: true });
+}
 
 // Initialize 3D Stack Carousels (Desktop & Mobile)
 function initStackCarousel(wrapperSelector, btnsSelector) {
-    const cards = Array.from(document.querySelectorAll(`${wrapperSelector} .destination-card`));
+    const wrapper = document.querySelector(wrapperSelector);
+    if (!wrapper) return;
+
+    const cards = Array.from(wrapper.querySelectorAll(".destination-card"));
     if (cards.length < 2) return;
 
     const btns = document.querySelectorAll(`${btnsSelector} .btn`);
-    const wrapper = document.querySelector(wrapperSelector);
     const positionClasses = ['card1', 'card2', 'card3', 'card4'];
     let current = positionClasses.slice(0, cards.length);
 
@@ -31,13 +65,13 @@ function initStackCarousel(wrapperSelector, btnsSelector) {
             const relative = posIndex - centerIndex; // -1 left, 0 center (active), 1 right, 2 back
 
             const isMobile = window.innerWidth < 992;
-            const gap = isMobile ? (window.innerWidth < 600 ? 70 : 90) : 130;
+            const gap = isMobile ? (window.innerWidth < 600 ? 60 : 85) : 125;
             const tx = relative * gap;
             const ty = relative === 0 ? -10 : Math.abs(relative) * 10;
             const scale = relative === 0 ? 1.08 : (Math.abs(relative) === 1 ? 0.88 : 0.78);
 
             el.style.transform = `translateX(${tx}px) translateY(${ty}px) scale(${scale})`;
-            el.style.zIndex = relative === 0 ? '6' : Math.max(1, 5 - Math.abs(relative));
+            el.style.zIndex = relative === 0 ? '6' : String(Math.max(1, 5 - Math.abs(relative)));
 
             if (relative === 0) {
                 el.classList.add('active');
@@ -61,7 +95,7 @@ function initStackCarousel(wrapperSelector, btnsSelector) {
     let timer = null;
     function startAutoplay() {
         stopAutoplay();
-        timer = setInterval(rotateNext, 4000);
+        timer = setInterval(rotateNext, 4500);
     }
 
     function stopAutoplay() {
@@ -87,10 +121,26 @@ function initStackCarousel(wrapperSelector, btnsSelector) {
         });
     }
 
-    if (wrapper) {
-        wrapper.addEventListener('mouseenter', stopAutoplay);
-        wrapper.addEventListener('mouseleave', startAutoplay);
-    }
+    wrapper.addEventListener('mouseenter', stopAutoplay);
+    wrapper.addEventListener('mouseleave', startAutoplay);
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    wrapper.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        stopAutoplay();
+    }, { passive: true });
+
+    wrapper.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 45) {
+            rotateNext();
+        } else if (touchEndX - touchStartX > 45) {
+            rotatePrev();
+        }
+        startAutoplay();
+    }, { passive: true });
 
     cards.forEach((el, idx) => {
         el.style.cursor = 'pointer';
@@ -109,42 +159,27 @@ function initStackCarousel(wrapperSelector, btnsSelector) {
     startAutoplay();
 }
 
+// Smooth scrolling for in-page anchors (e.g. #travel-tips)
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#' || targetId === '') return;
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                e.preventDefault();
+                targetEl.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    initFoodScroll();
     initStackCarousel('.desktop-cards-wrapper', '.desktop-slider-btns');
     initStackCarousel('.mobile-cards-wrapper', '.mobile-slider-btns');
-});
-
-slider.addEventListener("mouseleave", () => isDown = false);
-slider.addEventListener("mouseup", () => isDown = false);
-
-slider.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; // Drag speed
-    slider.scrollLeft = scrollLeft - walk;
-});
-
-const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    centeredSlides: true,
-    loop: true,
-
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-        320: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        992: {
-            slidesPerView: 3
-        }
-    }
+    initSmoothScroll();
 });

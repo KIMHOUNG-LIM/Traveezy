@@ -4,30 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siem Reap Cambodia — Top Tourist Destination | Traveezy</title>
+    <title>Siem Reap Cambodia — Kingdom of Wonder, Angkor & Beyond | Traveezy</title>
 
     <!-- SEO: Primary -->
     <meta name="description"
-        content="Explore Siem Reap — Cambodia's top tourist destination. Find the best hotels, local food &amp; unmissable attractions near Angkor Wat.">
+        content="Explore Siem Reap, Cambodia — home to Angkor Wat, sacred waterfalls, floating villages, vibrant night markets, and authentic Khmer cuisine. Complete travel guide, tips & stays.">
     <meta name="keywords"
-        content="Siem Reap Cambodia, tourist in Cambodia, best places in Siem Reap, Angkor Wat travel, Cambodia vacation, hotels Siem Reap">
+        content="Siem Reap Cambodia, Angkor Wat travel, tourist in Cambodia, Siem Reap travel tips, best places in Siem Reap, Wat Bo, Pub Street, Old Market, Taphul Village, Tonle Sap, hotels Siem Reap">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Traveezy">
-    <link rel="canonical" href="https://traveezy.com/siem-reap">
+    <link rel="canonical" href="https://traveezy.com/features/province/province.html">
 
     <!-- SEO: Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Siem Reap Cambodia — Top Tourist Destination | Traveezy">
+    <meta property="og:title" content="Siem Reap Cambodia — Kingdom of Wonder, Angkor & Beyond | Traveezy">
     <meta property="og:description"
-        content="Explore Siem Reap — Cambodia's top tourist destination. Find the best hotels, local food &amp; unmissable attractions near Angkor Wat.">
+        content="Explore Siem Reap, Cambodia — home to Angkor Wat, sacred waterfalls, floating villages, vibrant night markets, and authentic Khmer cuisine. Complete travel guide, tips & stays.">
     <meta property="og:site_name" content="Traveezy">
-    <meta property="og:url" content="https://traveezy.com/siem-reap">
+    <meta property="og:url" content="https://traveezy.com/features/province/province.html">
+    <meta property="og:image" content="../../assets/images/province/province-hero.jpg">
 
     <!-- SEO: Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Siem Reap Cambodia — Top Tourist Destination | Traveezy">
+    <meta name="twitter:title" content="Siem Reap Cambodia — Kingdom of Wonder, Angkor & Beyond | Traveezy">
     <meta name="twitter:description"
-        content="Explore Siem Reap — Cambodia's top tourist destination. Find the best hotels, local food &amp; unmissable attractions near Angkor Wat.">
+        content="Explore Siem Reap, Cambodia — home to Angkor Wat, sacred waterfalls, floating villages, vibrant night markets, and authentic Khmer cuisine. Complete travel guide, tips & stays.">
+    <meta name="twitter:image" content="../../assets/images/province/province-hero.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap 5 & FontAwesome -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,14 +47,13 @@
     <link rel="stylesheet" href="../../shared/variables.css">
     <link rel="stylesheet" href="../../shared/global.css">
     <link rel="stylesheet" href="../../shared/theme.css">
-    <link rel="stylesheet" href="../../shared/fonts.css">
     <link rel="stylesheet" href="../../components/navbar/navbar.css">
     <link rel="stylesheet" href="../../components/footer/footer.css">
     <link rel="stylesheet" href="province.css">
 </head>
 
 <body>
-    <!-- Global Navbar Container -->
+    <!-- Global Navbar Container (Loaded dynamically) -->
     <div id="navbar-container"></div>
 
     <!-- HERO SECTION -->
@@ -53,28 +61,87 @@
         <div class="overlay"></div>
 
         <!-- Desktop Hero Layout (Large Screens >= 992px) -->
-        <div class="container h-100 d-none d-lg-block">
+        <div class="container h-100 d-none d-lg-block position-relative z-2">
             <div class="row h-100 align-items-center">
 
-                <!-- Left Content -->
-                <div class="col-lg-6 col-md-12 text-white z-2">
-                    <div class="hero-badge mb-3">
-                        <i class="fa-solid fa-location-dot"></i> PROVINCE EXPLORER
+                <!-- Left Content Column -->
+                <div class="col-lg-6 col-md-12 text-white">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div class="hero-badge">
+                            <i class="fa-solid fa-crown text-warning"></i> CAMBODIA'S CULTURAL HEARTBEAT
+                        </div>
+                        <div class="live-pulse-badge">
+                            <span class="pulse-dot"></span> Season 2026 Guide
+                        </div>
                     </div>
-                    <h1 class="display-1 playfair-display hero-title">
-                        Siem Reap
+
+                    <h1 class="hero-title">
+                        Siem Reap <br>
+                        <span class="accent-text">Kingdom of Wonder</span>
                     </h1>
 
                     <p class="hero-subtitle mt-3">
-                        Siem Reap is a vibrant blend of culture, history, and natural beauty, offering something for
-                        every traveller. Whether wandering through Angkor Wat or exploring local markets, this city
-                        promises unforgettable experiences.
+                        Where ancient Khmer majesty meets modern soul. From golden dawns over Angkor Wat to tranquil
+                        floating villages, sacred mountain waterfalls, and vibrant starlit night markets — your
+                        unforgettable journey begins here.
                     </p>
 
-                    <a href="../destinations-details/destination-details.html" class="btn-booking mt-4">
-                        Explore Destination
-                        <span class="circle"><i class="fa-solid fa-chevron-right"></i></span>
-                    </a>
+                    <!-- Modern Glassmorphism Stat Cards -->
+                    <div class="hero-stats-glass my-4">
+                        <div class="stat-glass-item">
+                            <div class="stat-glass-icon text-warning">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="stat-glass-text">
+                                <div class="val">4.9 / 5.0</div>
+                                <div class="lbl">1.2k+ Reviews</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-glass-item">
+                            <div class="stat-glass-icon text-warning">
+                                <i class="fa-solid fa-landmark"></i>
+                            </div>
+                            <div class="stat-glass-text">
+                                <div class="val">UNESCO</div>
+                                <div class="lbl">Heritage Site</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-glass-item">
+                            <div class="stat-glass-icon text-info">
+                                <i class="fa-solid fa-plane-arrival"></i>
+                            </div>
+                            <div class="stat-glass-text">
+                                <div class="val">SAI Airport</div>
+                                <div class="lbl">45m Expressway</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-glass-item">
+                            <div class="stat-glass-icon text-success">
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <div class="stat-glass-text">
+                                <div class="val">Nov – Feb</div>
+                                <div class="lbl">Peak Breeze</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modern Action Buttons -->
+                    <div class="d-flex flex-wrap align-items-center gap-3">
+                        <a href="../destinations-details/destination-details.html" class="btn-hero-primary">
+                            <span>Explore Destinations</span>
+                            <span class="hero-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        <a href="#travel-tips" class="btn-hero-glass">
+                            <i class="fa-solid fa-compass me-2"></i> Travel Tips &amp; Guide
+                        </a>
+                        <a href="#best-neighbourhoods" class="btn-hero-glass">
+                            <i class="fa-solid fa-map-location-dot me-2"></i> Area Map
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Right 3D Stack Cards (Desktop Visual) -->
@@ -88,7 +155,7 @@
                                 </span>
                             </div>
                             <img src="../../assets/images/province/siem%20reap%20hero%20img.jpg"
-                                class="w-100 rounded-4">
+                                alt="Angkor Wat Siem Reap" class="w-100 rounded-4">
                         </div>
 
                         <div class="destination-card card2">
@@ -97,7 +164,8 @@
                                     <i class="fa-solid fa-location-dot"></i> Bayon Temple
                                 </span>
                             </div>
-                            <img src="../../assets/images/province/province-hero.jpg" class="w-100 rounded-4">
+                            <img src="../../assets/images/province/province-hero.jpg" alt="Bayon Temple Stone Faces"
+                                class="w-100 rounded-4">
                         </div>
 
                         <div class="destination-card card3">
@@ -107,7 +175,7 @@
                                 </span>
                             </div>
                             <img src="../../assets/images/province/Tonl%C3%A9%20Sap%20Floating%20Village.avif"
-                                class="w-100 rounded-4">
+                                alt="Tonle Sap Floating Village" class="w-100 rounded-4">
                         </div>
 
                         <div class="destination-card card4">
@@ -116,17 +184,18 @@
                                     <i class="fa-solid fa-location-dot"></i> Phnom Kulen
                                 </span>
                             </div>
-                            <img src="../../assets/images/home/heritage1.jpg" class="w-100 rounded-4">
+                            <img src="../../assets/images/home/heritage1.jpg" alt="Phnom Kulen Waterfall & Heritage"
+                                class="w-100 rounded-4">
                         </div>
 
                     </div>
 
                     <!-- Slider Buttons for 3D Stack -->
                     <div class="slider-btns desktop-slider-btns">
-                        <button class="btn btn-light rounded-circle me-2" aria-label="Previous">
+                        <button class="btn btn-light rounded-circle me-2" aria-label="Previous Destination">
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
-                        <button class="btn btn-light rounded-circle" aria-label="Next">
+                        <button class="btn btn-light rounded-circle" aria-label="Next Destination">
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
@@ -136,25 +205,45 @@
         </div>
 
         <!-- Mobile & Tablet Hero Layout (Screens < 992px) -->
-        <div class="d-block d-lg-none w-100 px-3">
-            <!-- Hero Content Centered in Middle -->
+        <div class="d-block d-lg-none w-100 px-3 position-relative z-2">
             <div class="hero-content text-center">
-                <div class="hero-badge mb-3 mx-auto">
-                    <i class="fa-solid fa-location-dot"></i> PROVINCE EXPLORER
+                <div class="d-inline-flex align-items-center gap-2 mb-3">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-crown text-warning"></i> CULTURAL HEARTBEAT
+                    </div>
+                    <div class="live-pulse-badge small">
+                        <span class="pulse-dot"></span> 2026 Guide
+                    </div>
                 </div>
                 <h1 class="hero-title text-center">
-                    Siem Reap
+                    Siem Reap <br>
+                    <span class="accent-text">Kingdom of Wonder</span>
                 </h1>
 
                 <p class="hero-subtitle text-center mx-auto">
-                    Siem Reap is a vibrant blend of culture, history, and natural beauty, offering something for every
-                    traveller.
+                    Ancient Khmer majesty, mystical temples, serene floating villages, and vibrant night markets.
                 </p>
 
-                <a href="../destinations-details/destination-details.html" class="btn-booking mt-3">
-                    Explore Destination
-                    <span class="circle"><i class="fa-solid fa-chevron-right"></i></span>
-                </a>
+                <!-- Modern Mobile Glass Stats -->
+                <div class="d-flex justify-content-center flex-wrap gap-2 my-3">
+                    <span class="badge-tag bg-dark-glass"><i class="fa-solid fa-star text-warning me-1"></i> 4.9/5
+                        Rating</span>
+                    <span class="badge-tag bg-dark-glass"><i class="fa-solid fa-landmark text-warning me-1"></i> UNESCO
+                        Site</span>
+                    <span class="badge-tag bg-dark-glass"><i class="fa-solid fa-plane-arrival text-info me-1"></i> SAI
+                        (45m)</span>
+                </div>
+
+                <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-2 mt-3">
+                    <a href="../destinations-details/destination-details.html"
+                        class="btn-hero-primary w-100 w-sm-auto justify-content-center">
+                        <span>Explore Destinations</span>
+                        <span class="hero-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="#travel-tips" class="btn-hero-glass w-100 w-sm-auto justify-content-center">
+                        <i class="fa-solid fa-compass me-1"></i> Travel Tips
+                    </a>
+                </div>
             </div>
 
             <!-- 3D Rotating Stack Cards Next Below Content -->
@@ -166,7 +255,8 @@
                             <i class="fa-solid fa-location-dot"></i> Angkor Wat
                         </span>
                     </div>
-                    <img src="../../assets/images/province/siem%20reap%20hero%20img.jpg" class="w-100 rounded-4">
+                    <img src="../../assets/images/province/siem%20reap%20hero%20img.jpg" alt="Angkor Wat"
+                        class="w-100 rounded-4">
                 </div>
 
                 <div class="destination-card card2">
@@ -175,7 +265,8 @@
                             <i class="fa-solid fa-location-dot"></i> Bayon Temple
                         </span>
                     </div>
-                    <img src="../../assets/images/province/province-hero.jpg" class="w-100 rounded-4">
+                    <img src="../../assets/images/province/province-hero.jpg" alt="Bayon Temple"
+                        class="w-100 rounded-4">
                 </div>
 
                 <div class="destination-card card3">
@@ -185,7 +276,7 @@
                         </span>
                     </div>
                     <img src="../../assets/images/province/Tonl%C3%A9%20Sap%20Floating%20Village.avif"
-                        class="w-100 rounded-4">
+                        alt="Tonle Sap Floating Village" class="w-100 rounded-4">
                 </div>
 
                 <div class="destination-card card4">
@@ -194,7 +285,7 @@
                             <i class="fa-solid fa-location-dot"></i> Phnom Kulen
                         </span>
                     </div>
-                    <img src="../../assets/images/home/heritage1.jpg" class="w-100 rounded-4">
+                    <img src="../../assets/images/home/heritage1.jpg" alt="Phnom Kulen" class="w-100 rounded-4">
                 </div>
 
             </div>
@@ -211,31 +302,143 @@
         </div>
     </section>
 
+    <!-- SECTION: PROVINCE AT A GLANCE (KEY FACTS & ESSENTIALS) -->
+    <section class="py-5 bg-province-stats">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-pill mb-2"><i class="fa-solid fa-bolt me-1"></i> PROVINCE SNAPSHOT</span>
+                <h2 class="playfair-display display-5 fw-bold color-navy">Siem Reap at a Glance</h2>
+                <p class="inter text-secondary max-w-600 mx-auto fs-6">
+                    Essential geography, heritage milestones, and travel insights to plan your dream journey with
+                    confidence.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Stat Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="stat-card p-4 rounded-4 h-100">
+                        <div class="stat-icon-wrapper mb-3 bg-navy-light text-primary">
+                            <i class="fa-solid fa-landmark-dome"></i>
+                        </div>
+                        <h4 class="playfair-display fw-bold color-navy mb-2">UNESCO World Heritage</h4>
+                        <p class="inter text-muted small mb-0">
+                            Angkor Archaeological Park covers <strong>400+ km²</strong> of sacred land with over 1,000
+                            recorded monuments, preserved as a global treasure since 1992.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="stat-card p-4 rounded-4 h-100">
+                        <div class="stat-icon-wrapper mb-3 bg-amber-light text-secondary">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                        </div>
+                        <h4 class="playfair-display fw-bold color-navy mb-2">Best Travel Weather</h4>
+                        <p class="inter text-muted small mb-0">
+                            <strong>Nov to Feb:</strong> Pleasant cool breezes (24°C–30°C). <strong>Jun to Oct:</strong>
+                            Emerald green season with lush moats and fewer crowds.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="stat-card p-4 rounded-4 h-100">
+                        <div class="stat-icon-wrapper mb-3 bg-success-light text-success">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                        </div>
+                        <h4 class="playfair-display fw-bold color-navy mb-2">Currency &amp; Payments</h4>
+                        <p class="inter text-muted small mb-0">
+                            US Dollars ($) and Cambodian Riel (KHR ~4,000 KHR = $1) are dual currencies. Digital
+                            <strong>Bakong KHQR</strong> is accepted everywhere.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stat Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="stat-card p-4 rounded-4 h-100">
+                        <div class="stat-icon-wrapper mb-3 bg-info-light text-info">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <h4 class="playfair-display fw-bold color-navy mb-2">Modern SAI Airport</h4>
+                        <p class="inter text-muted small mb-0">
+                            Siem Reap–Angkor International Airport (SAI) opened in 2023, offering world-class facilities
+                            and seamless express transit to town (45 mins).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stat Card 5 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="stat-card p-4 rounded-4 h-100">
+                        <div class="stat-icon-wrapper mb-3 bg-danger-light text-danger">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>
+                        <h4 class="playfair-display fw-bold color-navy mb-2">Iconic Local Remork</h4>
+                        <p class="inter text-muted small mb-0">
+                            Travel like a local with traditional open-air Cambodian Tuk-Tuks (Remork), or book instantly
+                            via <strong>Grab &amp; PassApp</strong> ride-hailing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stat Card 6 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="stat-card p-4 rounded-4 h-100">
+                        <div class="stat-icon-wrapper mb-3 bg-warning-light text-warning">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h4 class="playfair-display fw-bold color-navy mb-2">Legendary Hospitality</h4>
+                        <p class="inter text-muted small mb-0">
+                            Renowned as one of Southeast Asia's safest and friendliest destinations for solo
+                            adventurers, honeymooners, and family vacations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SECTION: DISCOVER YOUR PERFECT PLACE -->
-    <section class="py-5 my-3">
+    <section class="py-5 my-2">
         <div class="container">
             <div class="row align-items-center g-4">
                 <!-- Left -->
                 <div class="col-12 col-lg-6">
                     <span class="badge-pill mb-2"><i class="fa-solid fa-compass me-1"></i> SIEM REAP HIGHLIGHTS</span>
-                    <h2 class="playfair-display font-size display-4 fw-bold color-navy">
+                    <h2 class="playfair-display display-4 fw-bold color-navy">
                         Discover Your <br>
                         Perfect Place
                     </h2>
+                    <div class="culture-pill-group mt-3 d-flex flex-wrap gap-2">
+                        <span class="badge-tag bg-light text-dark border"><i
+                                class="fa-solid fa-archway text-primary me-1"></i> 100+ Ancient Temples</span>
+                        <span class="badge-tag bg-light text-dark border"><i
+                                class="fa-solid fa-water text-info me-1"></i> Tonle Sap Biosphere</span>
+                        <span class="badge-tag bg-light text-dark border"><i
+                                class="fa-solid fa-utensils text-warning me-1"></i> Royal Khmer Cuisine</span>
+                    </div>
                 </div>
 
                 <!-- Right -->
                 <div class="col-12 col-lg-6">
-                    <p class="inter mb-4 text-secondary leading-relaxed fs-5">
-                        Siem Reap is a vibrant blend of culture, history, and natural beauty, offering something for
-                        every traveller. Whether wandering through the ancient corridors of Angkor Wat or diving into
-                        lively local markets...
+                    <p class="inter mb-4 text-secondary leading-relaxed fs-6">
+                        Siem Reap is a timeless blend of sacred history, rich living culture, and breathtaking natural
+                        wonders. Whether marveling at the sunrise reflections over Angkor Wat, exploring the mystical
+                        stone faces of Bayon, cruising through floating stilt villages, or tasting authentic Khmer
+                        street food in bustling night markets — every moment creates memories of a lifetime.
                     </p>
 
-                    <div class="d-flex justify-content-start justify-content-lg-end">
+                    <div class="d-flex justify-content-start justify-content-lg-end gap-3">
                         <a href="../destinations-details/destination-details.html"
                             class="btn btn-outline-primary rounded-pill px-4 py-2 fw-semibold">
-                            See More <i class="fa-solid fa-arrow-right ms-1"></i>
+                            See More Details <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+                        <a href="#travel-tips" class="btn btn-primary rounded-pill px-4 py-2 fw-semibold text-white">
+                            View Travel Tips <i class="fa-solid fa-lightbulb ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -243,63 +446,213 @@
         </div>
     </section>
 
-    <!-- SECTION: ATTRACTIONS GRID -->
-    <section class="pb-5">
+    <!-- SECTION: ATTRACTIONS GRID (MUST-EXPERIENCE WONDERS) -->
+    <section class="py-5 bg-light-subtle">
         <div class="container section-2">
+            <div class="text-center mb-5">
+                <span class="badge-pill mb-2"><i class="fa-solid fa-map-location-dot me-1"></i> TOP ATTRACTIONS</span>
+                <h2 class="playfair-display display-5 fw-bold color-navy">Must-Experience Wonders</h2>
+                <p class="inter text-secondary max-w-600 mx-auto fs-6">
+                    From UNESCO architectural triumphs to thrilling circus arts and aquatic villages.
+                </p>
+            </div>
+
             <div class="row g-4">
+                <!-- Card 1: Angkor Wat -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <a href="../destinations-details/destination-details.html"
-                        class="text-decoration-none card-hover-wrapper d-block h-100">
-                        <div class="top rounded-top-4 overflow-hidden position-relative">
-                            <img src="../../assets/images/province/Phare.webp" alt="Phare Cambodian Circus"
-                                class="w-100 h-100 object-fit-cover rounded-top-4 img-zoom">
-                            <span class="badge-tag position-absolute top-0 end-0 m-3 bg-dark-glass"><i
-                                    class="fa-solid fa-star text-warning me-1"></i> 4.9</span>
+                        class="text-decoration-none card-hover-wrapper d-block h-100 bg-white rounded-4 shadow-sm p-3 border border-light">
+                        <div class="top rounded-4 overflow-hidden position-relative mb-3">
+                            <img src="../../assets/images/province/siem%20reap%20hero%20img.jpg"
+                                alt="Angkor Wat Sunrise" class="w-100 h-100 object-fit-cover rounded-4 img-zoom">
+                            <span class="badge-tag position-absolute top-0 end-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-star text-warning me-1"></i> 5.0
+                            </span>
+                            <span class="badge-tag position-absolute bottom-0 start-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-camera me-1"></i> Sunrise Iconic
+                            </span>
                         </div>
-                        <div class="bottom mt-3 p-2">
+                        <div class="bottom p-1">
+                            <span
+                                class="badge bg-primary-subtle text-primary fw-semibold px-2 py-1 mb-2 rounded-pill small">UNESCO
+                                MONUMENT</span>
+                            <h3 class="playfair-display mb-2 text-dark fs-4 fw-bold">Angkor Wat Grand Complex</h3>
+                            <p class="inter text-secondary text-start fs-6 leading-normal">
+                                The world's largest religious sanctuary, famed for its towering lotus towers,
+                                magnificent bas-reliefs, and breathtaking mirror reflection ponds.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> Open 5:00
+                                    AM</span>
+                                <span class="fw-bold color-navy small">Explore <i
+                                        class="fa-solid fa-arrow-right ms-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 2: Bayon Temple -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="../destinations-details/destination-details.html"
+                        class="text-decoration-none card-hover-wrapper d-block h-100 bg-white rounded-4 shadow-sm p-3 border border-light">
+                        <div class="top rounded-4 overflow-hidden position-relative mb-3">
+                            <img src="../../assets/images/province/province-hero.jpg" alt="Bayon Temple Angkor Thom"
+                                class="w-100 h-100 object-fit-cover rounded-4 img-zoom">
+                            <span class="badge-tag position-absolute top-0 end-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-star text-warning me-1"></i> 4.9
+                            </span>
+                            <span class="badge-tag position-absolute bottom-0 start-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-gem me-1"></i> Angkor Thom
+                            </span>
+                        </div>
+                        <div class="bottom p-1">
+                            <span
+                                class="badge bg-primary-subtle text-primary fw-semibold px-2 py-1 mb-2 rounded-pill small">ROYAL
+                                CAPITAL</span>
+                            <h3 class="playfair-display mb-2 text-dark fs-4 fw-bold">Bayon &amp; 216 Stone Faces</h3>
+                            <p class="inter text-secondary text-start fs-6 leading-normal">
+                                Standing at the center of King Jayavarman VII's capital, Bayon features 54 towers
+                                adorned with 216 enigmatic, serenely smiling stone faces.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> 7:30 AM – 5:30
+                                    PM</span>
+                                <span class="fw-bold color-navy small">Explore <i
+                                        class="fa-solid fa-arrow-right ms-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 3: Phare Circus -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="../destinations-details/destination-details.html"
+                        class="text-decoration-none card-hover-wrapper d-block h-100 bg-white rounded-4 shadow-sm p-3 border border-light">
+                        <div class="top rounded-4 overflow-hidden position-relative mb-3">
+                            <img src="../../assets/images/province/Phare.webp" alt="Phare Cambodian Circus"
+                                class="w-100 h-100 object-fit-cover rounded-4 img-zoom">
+                            <span class="badge-tag position-absolute top-0 end-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-star text-warning me-1"></i> 4.9
+                            </span>
+                            <span class="badge-tag position-absolute bottom-0 start-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-fire me-1"></i> Live Theatre
+                            </span>
+                        </div>
+                        <div class="bottom p-1">
+                            <span
+                                class="badge bg-warning-subtle text-warning-emphasis fw-semibold px-2 py-1 mb-2 rounded-pill small">SOCIAL
+                                ENTERPRISE</span>
                             <h3 class="playfair-display mb-2 text-dark fs-4 fw-bold">Phare, The Cambodian Circus</h3>
                             <p class="inter text-secondary text-start fs-6 leading-normal">
-                                Experience Siem Reap's top-rated authentic evening performance, blending traditional
-                                storytelling, acrobatics, and live music by local youth.
+                                Cambodia's top evening theatrical show, blending traditional folklore, jaw-dropping
+                                acrobatics, and live music performed by talented youth.
                             </p>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> 8:00 PM
+                                    Nightly</span>
+                                <span class="fw-bold color-navy small">Explore <i
+                                        class="fa-solid fa-arrow-right ms-1"></i></span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
+                <!-- Card 4: Tonle Sap Floating Village -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <a href="../destinations-details/destination-details.html"
-                        class="text-decoration-none card-hover-wrapper d-block h-100">
-                        <div class="top rounded-top-4 overflow-hidden position-relative">
-                            <img src="../../assets/images/province/Night%20Market.webp" alt="Siem Reap Night Market"
-                                class="w-100 h-100 object-fit-cover rounded-top-4 img-zoom">
-                            <span class="badge-tag position-absolute top-0 end-0 m-3 bg-dark-glass"><i
-                                    class="fa-solid fa-star text-warning me-1"></i> 4.8</span>
+                        class="text-decoration-none card-hover-wrapper d-block h-100 bg-white rounded-4 shadow-sm p-3 border border-light">
+                        <div class="top rounded-4 overflow-hidden position-relative mb-3">
+                            <img src="../../assets/images/province/Tonl%C3%A9%20Sap%20Floating%20Village.avif"
+                                alt="Tonle Sap Lake Kampong Phluk"
+                                class="w-100 h-100 object-fit-cover rounded-4 img-zoom">
+                            <span class="badge-tag position-absolute top-0 end-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-star text-warning me-1"></i> 4.8
+                            </span>
+                            <span class="badge-tag position-absolute bottom-0 start-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-sailboat me-1"></i> Eco-Boat Tour
+                            </span>
                         </div>
-                        <div class="bottom mt-3 p-2">
+                        <div class="bottom p-1">
+                            <span
+                                class="badge bg-info-subtle text-info-emphasis fw-semibold px-2 py-1 mb-2 rounded-pill small">BIOSPHERE
+                                RESERVE</span>
+                            <h3 class="playfair-display mb-2 text-dark fs-4 fw-bold">Tonlé Sap Floating Villages</h3>
+                            <p class="inter text-secondary text-start fs-6 leading-normal">
+                                Cruise through Kampong Phluk's soaring 10-meter stilt homes and tranquil flooded
+                                mangrove forests on Southeast Asia's greatest freshwater lake.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> Half-Day
+                                    Tour</span>
+                                <span class="fw-bold color-navy small">Explore <i
+                                        class="fa-solid fa-arrow-right ms-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Card 5: Siem Reap Night Market -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <a href="../destinations-details/destination-details.html"
+                        class="text-decoration-none card-hover-wrapper d-block h-100 bg-white rounded-4 shadow-sm p-3 border border-light">
+                        <div class="top rounded-4 overflow-hidden position-relative mb-3">
+                            <img src="../../assets/images/province/Night%20Market.webp" alt="Siem Reap Night Market"
+                                class="w-100 h-100 object-fit-cover rounded-4 img-zoom">
+                            <span class="badge-tag position-absolute top-0 end-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-star text-warning me-1"></i> 4.8
+                            </span>
+                            <span class="badge-tag position-absolute bottom-0 start-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-bag-shopping me-1"></i> Artisan Crafts
+                            </span>
+                        </div>
+                        <div class="bottom p-1">
+                            <span
+                                class="badge bg-success-subtle text-success-emphasis fw-semibold px-2 py-1 mb-2 rounded-pill small">LOCAL
+                                SHOPPING</span>
                             <h3 class="playfair-display mb-2 text-dark fs-4 fw-bold">Siem Reap Night Market</h3>
                             <p class="inter text-secondary text-start fs-6 leading-normal">
-                                Cambodia's first night market featuring over 240 local artisan vendors, vibrant street
-                                food, handmade souvenirs, and lively evening vibes.
+                                Discover over 240 local artisan stalls offering handmade silk scarves, stone sculptures,
+                                organic Kampot pepper, and mouth-watering street snacks.
                             </p>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> 5:00 PM –
+                                    Midnight</span>
+                                <span class="fw-bold color-navy small">Explore <i
+                                        class="fa-solid fa-arrow-right ms-1"></i></span>
+                            </div>
                         </div>
                     </a>
                 </div>
 
+                <!-- Card 6: Apsara Dance -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <a href="../destinations-details/destination-details.html"
-                        class="text-decoration-none card-hover-wrapper d-block h-100">
-                        <div class="top rounded-top-4 overflow-hidden position-relative">
+                        class="text-decoration-none card-hover-wrapper d-block h-100 bg-white rounded-4 shadow-sm p-3 border border-light">
+                        <div class="top rounded-4 overflow-hidden position-relative mb-3">
                             <img src="../../assets/images/province/Apsara%20Dance.webp" alt="Apsara Dance Performance"
-                                class="w-100 h-100 object-fit-cover rounded-top-4 img-zoom">
-                            <span class="badge-tag position-absolute top-0 end-0 m-3 bg-dark-glass"><i
-                                    class="fa-solid fa-star text-warning me-1"></i> 4.9</span>
+                                class="w-100 h-100 object-fit-cover rounded-4 img-zoom">
+                            <span class="badge-tag position-absolute top-0 end-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-star text-warning me-1"></i> 4.9
+                            </span>
+                            <span class="badge-tag position-absolute bottom-0 start-0 m-3 bg-dark-glass">
+                                <i class="fa-solid fa-masks-theater me-1"></i> Royal Heritage
+                            </span>
                         </div>
-                        <div class="bottom mt-3 p-2">
-                            <h3 class="playfair-display mb-2 text-dark fs-4 fw-bold">Apsara Dance Performance</h3>
+                        <div class="bottom p-1">
+                            <span
+                                class="badge bg-danger-subtle text-danger-emphasis fw-semibold px-2 py-1 mb-2 rounded-pill small">CULTURAL
+                                DINING</span>
+                            <h3 class="playfair-display mb-2 text-dark fs-4 fw-bold">Apsara Dance &amp; Banquet</h3>
                             <p class="inter text-secondary text-start fs-6 leading-normal">
-                                Gain a deeper appreciation of Khmer royal history with mesmerizing classical Apsara
-                                dance performances set to traditional live orchestral music.
+                                Immerse yourself in centuries of Khmer royal mythology with graceful dancers in ornate
+                                golden headdresses accompanied by classical Pinpeat music.
                             </p>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> 7:00 PM – 9:00
+                                    PM</span>
+                                <span class="fw-bold color-navy small">Explore <i
+                                        class="fa-solid fa-arrow-right ms-1"></i></span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -307,87 +660,496 @@
         </div>
     </section>
 
-    <!-- SECTION: BEST LOCAL FOOD -->
-    <section class="py-4 bg-light">
-        <div class="container mb-3">
-            <div class="row align-items-center">
-                <div class="col-6 text-start">
-                    <span class="badge-pill mb-1"><i class="fa-solid fa-utensils me-1"></i> CULINARY DELIGHTS</span>
-                    <h2 class="playfair-display fs-2 fs-md-1 fw-bold text-dark mb-0">Best Local Food</h2>
+    <!-- SECTION: SIEM REAP BEST DISTRICTS & WHERE TO STAY GUIDE -->
+    <section id="best-neighbourhoods" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-pill mb-2"><i class="fa-solid fa-map-marked-alt me-1"></i> WHERE TO STAY &amp;
+                    EXPLORE</span>
+                <h2 class="playfair-display display-5 fw-bold color-navy">Best Areas &amp; Neighbourhoods in Siem Reap
+                </h2>
+                <p class="inter text-secondary max-w-600 mx-auto fs-6">
+                    Discover the distinct personality of each district, complete with photo highlights, maps, and direct
+                    location links.
+                </p>
+            </div>
+
+            <!-- Spotlight Visual Map Banner (No Open in Google Map button) -->
+            <div
+                class="neighbourhood-map-spotlight mb-5 p-4 p-lg-5 rounded-4 position-relative overflow-hidden shadow-sm border">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <span class="badge bg-primary text-white fw-bold px-3 py-2 rounded-pill mb-3">
+                            <i class="fa-solid fa-map-location-dot me-1"></i> SIEM REAP STAY &amp; DISTRICT MAP
+                        </span>
+                        <h3 class="playfair-display fw-bold color-navy display-6 mb-3">
+                            Visual Guide: Where to Stay
+                        </h3>
+                        <p class="inter text-secondary leading-relaxed mb-4">
+                            The serene Siem Reap River divides the city center into prime quarters. On the <strong>East
+                                Bank</strong> lies artistic <em>Wat Bo Village</em>; on the <strong>West Bank</strong>
+                            is the historic <em>Old French Quarter</em>, <em>Pub Street</em>, and <em>Old Market (Psar
+                                Chaa)</em>; while peaceful <em>Taphul Village</em> is tucked just a short walk away.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill"><i
+                                    class="fa-solid fa-location-pin text-primary me-1"></i> Wat Bo</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill"><i
+                                    class="fa-solid fa-location-pin text-success me-1"></i> Old French Quarter</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill"><i
+                                    class="fa-solid fa-location-pin text-danger me-1"></i> Pub Street</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill"><i
+                                    class="fa-solid fa-location-pin text-info me-1"></i> Taphul Village</span>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="../hotel-list/hotel-list.html"
+                                class="btn btn-primary rounded-pill px-4 py-2 fw-semibold text-white">
+                                Browse Stays in These Areas <i class="fa-solid fa-hotel ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="map-img-frame rounded-4 overflow-hidden shadow">
+                            <img src="https://i.pinimg.com/1200x/ac/2d/63/ac2d638064cd684a53cb698d2d22fed3.jpg"
+                                alt="Map showing best areas to stay in Siem Reap"
+                                class="w-100 h-100 object-fit-cover map-preview-zoom">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6 text-end">
+            </div>
+
+            <!-- District Detail Cards with Clean Images (No Text Overlays) & Two-Row Full-Width Google Maps & Explore Buttons -->
+            <div class="row g-4">
+                <!-- District 1: Wat Bo Village -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div
+                        class="district-card-modern bg-white rounded-4 overflow-hidden h-100 border shadow-sm d-flex flex-column">
+                        <div class="district-img-wrap">
+                            <img src="https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg"
+                                alt="Wat Bo Village Siem Reap" class="w-100 object-fit-cover district-img">
+                        </div>
+                        <div class="p-3 d-flex flex-column flex-grow-1">
+                            <h4 class="playfair-display fw-bold color-navy fs-5 mb-2">Wat Bo Village</h4>
+                            <p class="inter text-secondary small leading-normal mb-3 flex-grow-1">
+                                Voted one of the coolest neighbourhoods globally. Tree-lined streets, trendy specialty
+                                coffee roasters, art galleries, and serene historic pagodas.
+                            </p>
+                            <div class="district-action-stack">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Wat+Bo+Siem+Reap+Cambodia"
+                                    target="_blank" rel="noopener noreferrer" class="btn-district-map"
+                                    title="Open Wat Bo on Google Maps">
+                                    <i class="fa-solid fa-location-dot text-danger"></i>
+                                    <span>Google Maps</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square fs-xs text-muted"></i>
+                                </a>
+                                <a href="../destinations-details/destination-details.html" class="btn-district-action">
+                                    <i class="fa-solid fa-compass"></i>
+                                    <span>Explore</span>
+                                    <i class="fa-solid fa-chevron-right fs-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District 2: Old Market & Old French Quarter -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div
+                        class="district-card-modern bg-white rounded-4 overflow-hidden h-100 border shadow-sm d-flex flex-column">
+                        <div class="district-img-wrap">
+                            <img src="https://i.pinimg.com/1200x/65/a6/cd/65a6cdb15fdf7aee8354e46ee5bc2520.jpg"
+                                alt="Old Market Psar Chaa & French Quarter" class="w-100 object-fit-cover district-img">
+                        </div>
+                        <div class="p-3 d-flex flex-column flex-grow-1">
+                            <h4 class="playfair-display fw-bold color-navy fs-5 mb-2">Old Market &amp; French Quarter
+                            </h4>
+                            <p class="inter text-secondary small leading-normal mb-3 flex-grow-1">
+                                Colonial-era architecture, shaded riverside walkways, royal gardens, and the bustling
+                                Psar Chaa market filled with spices, crafts, and food stalls.
+                            </p>
+                            <div class="district-action-stack">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Old+Market+Siem+Reap+Psar+Chaa"
+                                    target="_blank" rel="noopener noreferrer" class="btn-district-map"
+                                    title="Open Old Market on Google Maps">
+                                    <i class="fa-solid fa-location-dot text-danger"></i>
+                                    <span>Google Maps</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square fs-xs text-muted"></i>
+                                </a>
+                                <a href="../destinations-details/destination-details.html" class="btn-district-action">
+                                    <i class="fa-solid fa-compass"></i>
+                                    <span>Explore</span>
+                                    <i class="fa-solid fa-chevron-right fs-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District 3: Pub Street & Nightlife -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div
+                        class="district-card-modern bg-white rounded-4 overflow-hidden h-100 border shadow-sm d-flex flex-column">
+                        <div class="district-img-wrap">
+                            <img src="https://homeiswhereyourbagis.b-cdn.net/wp-content/uploads/2017/11/Siem-Reap-Pub-Street.jpg"
+                                alt="Pub Street Siem Reap" class="w-100 object-fit-cover district-img">
+                        </div>
+                        <div class="p-3 d-flex flex-column flex-grow-1">
+                            <h4 class="playfair-display fw-bold color-navy fs-5 mb-2">Pub Street &amp; Night Market</h4>
+                            <p class="inter text-secondary small leading-normal mb-3 flex-grow-1">
+                                The energetic heart of evening fun. Open-air cocktail lounges, live acoustic
+                                performances, Khmer BBQ street carts, foot massages, and night shopping.
+                            </p>
+                            <div class="district-action-stack">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Pub+Street+Siem+Reap"
+                                    target="_blank" rel="noopener noreferrer" class="btn-district-map"
+                                    title="Open Pub Street on Google Maps">
+                                    <i class="fa-solid fa-location-dot text-danger"></i>
+                                    <span>Google Maps</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square fs-xs text-muted"></i>
+                                </a>
+                                <a href="../destinations-details/destination-details.html" class="btn-district-action">
+                                    <i class="fa-solid fa-compass"></i>
+                                    <span>Explore</span>
+                                    <i class="fa-solid fa-chevron-right fs-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District 4: Taphul Village (Svay Dangkum) -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div
+                        class="district-card-modern bg-white rounded-4 overflow-hidden h-100 border shadow-sm d-flex flex-column">
+                        <div class="district-img-wrap">
+                            <img src="https://i.pinimg.com/1200x/83/6f/35/836f352d68e26c625eb8cc1b453f8e3d.jpg"
+                                alt="Taphul Village Siem Reap" class="w-100 object-fit-cover district-img">
+                        </div>
+                        <div class="p-3 d-flex flex-column flex-grow-1">
+                            <h4 class="playfair-display fw-bold color-navy fs-5 mb-2">Taphul Village</h4>
+                            <p class="inter text-secondary small leading-normal mb-3 flex-grow-1">
+                                A quiet, leafy residential sanctuary just 5 minutes walk from downtown. Renowned for
+                                boutique eco-resorts, local bakeries, and relaxing spas.
+                            </p>
+                            <div class="district-action-stack">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Taphul+Village+Siem+Reap"
+                                    target="_blank" rel="noopener noreferrer" class="btn-district-map"
+                                    title="Open Taphul Village on Google Maps">
+                                    <i class="fa-solid fa-location-dot text-danger"></i>
+                                    <span>Google Maps</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square fs-xs text-muted"></i>
+                                </a>
+                                <a href="../destinations-details/destination-details.html" class="btn-district-action">
+                                    <i class="fa-solid fa-compass"></i>
+                                    <span>Explore</span>
+                                    <i class="fa-solid fa-chevron-right fs-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TRAVEL TIPS & VISITOR GUIDE (ENHANCED FOR TOURISTS) -->
+    <section id="travel-tips" class="py-5 bg-tips-gradient">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-pill mb-2"><i class="fa-solid fa-lightbulb me-1"></i> TRAVEL WISDOM</span>
+                <h2 class="playfair-display display-5 fw-bold color-navy">Siem Reap Travel Tips &amp; Insider Guide</h2>
+                <p class="inter text-secondary max-w-600 mx-auto fs-6">
+                    Practical, tested advice for both local Cambodians and international travelers to ensure a smooth,
+                    rewarding journey.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Tip 1: Angkor Pass 101 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tip-card p-4 rounded-4 bg-white shadow-sm h-100 border-top border-4 border-primary">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="tip-icon-box bg-primary-subtle text-primary">
+                                <i class="fa-solid fa-ticket"></i>
+                            </div>
+                            <div>
+                                <h4 class="playfair-display fw-bold color-navy mb-0 fs-5">Angkor Pass Guide</h4>
+                                <span class="badge bg-light text-muted border">Essential</span>
+                            </div>
+                        </div>
+                        <p class="inter text-secondary small leading-relaxed mb-3">
+                            • <strong>1-Day Pass:</strong> $37 USD <br>
+                            • <strong>3-Day Pass:</strong> $62 USD (valid for 10 days) <br>
+                            • <strong>7-Day Pass:</strong> $72 USD (valid for 1 month) <br>
+                            <em>Cambodian citizens enter free with national ID.</em>
+                        </p>
+                        <div
+                            class="tip-pro-callout p-2 px-3 rounded-3 bg-light border-start border-3 border-warning small inter">
+                            <i class="fa-solid fa-star text-warning me-1"></i> <strong>Pro-Tip:</strong> Passes bought
+                            after 5:00 PM grant free entry to watch that evening's sunset at no extra day cost!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tip 2: Temple Dress Code & Etiquette -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tip-card p-4 rounded-4 bg-white shadow-sm h-100 border-top border-4 border-warning">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="tip-icon-box bg-warning-subtle text-warning-emphasis">
+                                <i class="fa-solid fa-shirt"></i>
+                            </div>
+                            <div>
+                                <h4 class="playfair-display fw-bold color-navy mb-0 fs-5">Temple Dress Code</h4>
+                                <span class="badge bg-light text-muted border">Strictly Enforced</span>
+                            </div>
+                        </div>
+                        <p class="inter text-secondary small leading-relaxed mb-3">
+                            Angkor is an active sacred site. Both men and women must cover <strong>shoulders and
+                                knees</strong>. Tight leggings and transparent shawls over sleeveless shirts may be
+                            refused at upper temple levels.
+                        </p>
+                        <div
+                            class="tip-pro-callout p-2 px-3 rounded-3 bg-light border-start border-3 border-info small inter">
+                            <i class="fa-solid fa-circle-info text-info me-1"></i> <strong>Etiquette:</strong> Remove
+                            hats inside active shrines and ask politely before photographing Buddhist monks.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tip 3: Sunrise & Sunset Strategy -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tip-card p-4 rounded-4 bg-white shadow-sm h-100 border-top border-4 border-danger">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="tip-icon-box bg-danger-subtle text-danger">
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <div>
+                                <h4 class="playfair-display fw-bold color-navy mb-0 fs-5">Sunrise &amp; Sunset Secrets
+                                </h4>
+                                <span class="badge bg-light text-muted border">Best Photo Spots</span>
+                            </div>
+                        </div>
+                        <p class="inter text-secondary small leading-relaxed mb-3">
+                            • <strong>Sunrise:</strong> Leave your hotel by 4:45 AM. Head to the <em>Left Reflection
+                                Pond</em> at Angkor Wat for the iconic silhouette shot. <br>
+                            • <strong>Sunset:</strong> Pre Rup, Phnom Bakheng (arrive early; max 300 capacity), or Srah
+                            Srang royal reservoir.
+                        </p>
+                        <div
+                            class="tip-pro-callout p-2 px-3 rounded-3 bg-light border-start border-3 border-danger small inter">
+                            <i class="fa-solid fa-camera text-danger me-1"></i> <strong>Bring:</strong> A small headlamp
+                            or phone flashlight for pre-dawn temple walks.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tip 4: Transport & Getting Around -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tip-card p-4 rounded-4 bg-white shadow-sm h-100 border-top border-4 border-success">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="tip-icon-box bg-success-subtle text-success">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="playfair-display fw-bold color-navy mb-0 fs-5">Getting Around</h4>
+                                <span class="badge bg-light text-muted border">Tuk-Tuk &amp; Apps</span>
+                            </div>
+                        </div>
+                        <p class="inter text-secondary small leading-relaxed mb-3">
+                            Use <strong>Grab</strong> or <strong>PassApp</strong> for transparent, metered rides in town
+                            ($1–$3). For full-day temple touring (Small/Grand Circuit), hire a dedicated Remork driver
+                            ($18–$25/day) who provides cold bottled water and shade.
+                        </p>
+                        <div
+                            class="tip-pro-callout p-2 px-3 rounded-3 bg-light border-start border-3 border-success small inter">
+                            <i class="fa-solid fa-bicycle text-success me-1"></i> <strong>Alternative:</strong> Rent an
+                            eco-friendly e-bike or bicycle to explore shaded forest trails at your own pace.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tip 5: Currency & Digital Pay -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tip-card p-4 rounded-4 bg-white shadow-sm h-100 border-top border-4 border-info">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="tip-icon-box bg-info-subtle text-info">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+                            <div>
+                                <h4 class="playfair-display fw-bold color-navy mb-0 fs-5">Money &amp; Bakong KHQR</h4>
+                                <span class="badge bg-light text-muted border">Smart Payments</span>
+                            </div>
+                        </div>
+                        <p class="inter text-secondary small leading-relaxed mb-3">
+                            Keep crisp USD bills with no tears or stamps, or use Cambodian Riel (KHR). Today, the
+                            <strong>Bakong Tourist App</strong> and KHQR QR codes allow instant digital payments at
+                            almost all cafes, shops, and restaurants.
+                        </p>
+                        <div
+                            class="tip-pro-callout p-2 px-3 rounded-3 bg-light border-start border-3 border-info small inter">
+                            <i class="fa-solid fa-credit-card text-info me-1"></i> <strong>ATMs:</strong> Readily
+                            available in town dispensing both USD and KHR.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tip 6: Responsible & Eco-Travel -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tip-card p-4 rounded-4 bg-white shadow-sm h-100 border-top border-4 border-secondary">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div class="tip-icon-box bg-warning-subtle text-secondary">
+                                <i class="fa-solid fa-seedling"></i>
+                            </div>
+                            <div>
+                                <h4 class="playfair-display fw-bold color-navy mb-0 fs-5">Eco &amp; Responsible Travel
+                                </h4>
+                                <span class="badge bg-light text-muted border">Support Locals</span>
+                            </div>
+                        </div>
+                        <p class="inter text-secondary small leading-relaxed mb-3">
+                            Support ethical social enterprises (Phare Circus, Artisans Angkor, Apopo HeroRATs Center).
+                            Carry a reusable water flask to use the free <em>Refill Not Landfill</em> stations across
+                            town.
+                        </p>
+                        <div
+                            class="tip-pro-callout p-2 px-3 rounded-3 bg-light border-start border-3 border-secondary small inter">
+                            <i class="fa-solid fa-hand-holding-heart text-secondary me-1"></i> <strong>Child
+                                Protection:</strong> Please do not give money to child vendors so they are encouraged to
+                            stay in school.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: BEST LOCAL FOOD -->
+    <section class="py-5 bg-light">
+        <div class="container mb-4">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-8 text-start">
+                    <span class="badge-pill mb-1"><i class="fa-solid fa-utensils me-1"></i> CULINARY DELIGHTS</span>
+                    <h2 class="playfair-display fs-2 fs-md-1 fw-bold text-dark mb-0">Best Local Food &amp; Dining</h2>
+                    <p class="inter text-secondary small mt-1 mb-0">Savor authentic Khmer recipes, royal curries, and
+                        mouth-watering street delicacies.</p>
+                </div>
+                <div class="col-12 col-md-4 text-start text-md-end mt-3 mt-md-0">
                     <a href="../restaurant-list/restaurant-list.html"
                         class="btn btn-outline-primary rounded-pill px-4 fw-semibold">
-                        See More <i class="fa-solid fa-arrow-right ms-1"></i>
+                        See All Restaurants <i class="fa-solid fa-arrow-right ms-1"></i>
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <div class="food-scroll">
-                <div class="bfood rounded-4 position-relative shadow-sm">
-                    <img src="../../assets/images/province/Krousa%20lotchea.jpg" alt="Krousa Lotchea"
-                        class="w-100 h-100 rounded-4 object-fit-cover">
-                    <div class="top position-absolute top-0 w-100 p-3 d-flex justify-content-between">
-                        <span class="badge-tag bg-dark-glass"><i class="fa-solid fa-star text-warning me-1"></i>
-                            4.8</span>
-                        <span class="badge-tag bg-dark-glass"><i class="fa-regular fa-clock me-1"></i> Open Now</span>
-                    </div>
-                    <div
-                        class="bottom position-absolute bottom-0 w-100 p-3 d-flex justify-content-between align-items-center">
-                        <h5 class="text-white mb-0 playfair-display">Krousa Lotchea</h5>
-                        <a href="../restaurant-list/restaurant-list.html"
-                            class="btn btn-sm btn-light rounded-pill px-3 fw-semibold">View Details</a>
-                    </div>
-                </div>
-
-                <div class="bfood rounded-4 position-relative shadow-sm">
-                    <img src="../../assets/images/province/Mesa%20Restaurant.jpg" alt="Mesa Restaurant"
-                        class="w-100 h-100 rounded-4 object-fit-cover">
-                    <div class="top position-absolute top-0 w-100 p-3 d-flex justify-content-between">
-                        <span class="badge-tag bg-dark-glass"><i class="fa-solid fa-star text-warning me-1"></i>
-                            4.7</span>
-                        <span class="badge-tag bg-dark-glass"><i class="fa-regular fa-clock me-1"></i> Open Now</span>
-                    </div>
-                    <div
-                        class="bottom position-absolute bottom-0 w-100 p-3 d-flex justify-content-between align-items-center">
-                        <h5 class="text-white mb-0 playfair-display">Mesa Restaurant</h5>
-                        <a href="../restaurant-list/restaurant-list.html"
-                            class="btn btn-sm btn-light rounded-pill px-3 fw-semibold">View Details</a>
+            <!-- Best Food Cards Grid: Fully responsive 4-card grid (2x2 on 1020px/tablets, 4x1 on wide desktop) -->
+            <div class="row g-3 g-lg-4">
+                <!-- Restaurant 1: Krousa Lotchea -->
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="bfood rounded-4 position-relative shadow-sm overflow-hidden h-100">
+                        <img src="../../assets/images/province/Krousa%20lotchea.jpg" alt="Krousa Lotchea"
+                            class="w-100 h-100 rounded-4 object-fit-cover">
+                        <div class="bfood-top-bar position-absolute top-0 start-0 w-100 p-3 d-flex justify-content-between align-items-center">
+                            <span class="bfood-chip"><i class="fa-solid fa-star text-warning me-1"></i> 4.8</span>
+                            <span class="bfood-chip"><i class="fa-regular fa-clock me-1"></i> Open Now</span>
+                        </div>
+                        <div class="bfood-bottom p-3 position-absolute bottom-0 w-100 bg-gradient-dark d-flex flex-column gap-2">
+                            <div>
+                                <h5 class="text-white mb-0 playfair-display fw-bold">Krousa Lotchea</h5>
+                                <small class="text-white-50 inter">Stir-Fried Pin Noodles &amp; Beef</small>
+                            </div>
+                            <a href="../restaurant-list/restaurant-list.html" class="btn-food-detail">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-right fs-xs"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bfood rounded-4 position-relative shadow-sm">
-                    <img src="../../assets/images/province/Mealea.jpeg" alt="Mealea Watbo"
-                        class="w-100 h-100 rounded-4 object-fit-cover">
-                    <div class="top position-absolute top-0 w-100 p-3 d-flex justify-content-between">
-                        <span class="badge-tag bg-dark-glass"><i class="fa-solid fa-star text-warning me-1"></i>
-                            4.9</span>
-                        <span class="badge-tag bg-dark-glass"><i class="fa-regular fa-clock me-1"></i> Open Now</span>
-                    </div>
-                    <div
-                        class="bottom position-absolute bottom-0 w-100 p-3 d-flex justify-content-between align-items-center">
-                        <h5 class="text-white mb-0 playfair-display">Mealea Watbo</h5>
-                        <a href="../restaurant-list/restaurant-list.html"
-                            class="btn btn-sm btn-light rounded-pill px-3 fw-semibold">View Details</a>
+                <!-- Restaurant 2: Mesa Restaurant -->
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="bfood rounded-4 position-relative shadow-sm overflow-hidden h-100">
+                        <img src="../../assets/images/province/Mesa%20Restaurant.jpg" alt="Mesa Restaurant"
+                            class="w-100 h-100 rounded-4 object-fit-cover">
+                        <div class="bfood-top-bar position-absolute top-0 start-0 w-100 p-3 d-flex justify-content-between align-items-center">
+                            <span class="bfood-chip"><i class="fa-solid fa-star text-warning me-1"></i> 4.7</span>
+                            <span class="bfood-chip"><i class="fa-regular fa-clock me-1"></i> Open Now</span>
+                        </div>
+                        <div class="bfood-bottom p-3 position-absolute bottom-0 w-100 bg-gradient-dark d-flex flex-column gap-2">
+                            <div>
+                                <h5 class="text-white mb-0 playfair-display fw-bold">Mesa Restaurant</h5>
+                                <small class="text-white-50 inter">Khmer Fusion &amp; Garden Dining</small>
+                            </div>
+                            <a href="../restaurant-list/restaurant-list.html" class="btn-food-detail">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-right fs-xs"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bfood rounded-4 position-relative shadow-sm">
-                    <img src="../../assets/images/province/Golden%20Pumpkin.jpg" alt="Golden Pumpkin"
-                        class="w-100 h-100 rounded-4 object-fit-cover">
-                    <div class="top position-absolute top-0 w-100 p-3 d-flex justify-content-between">
-                        <span class="badge-tag bg-dark-glass"><i class="fa-solid fa-star text-warning me-1"></i>
-                            4.6</span>
-                        <span class="badge-tag bg-dark-glass"><i class="fa-regular fa-clock me-1"></i> Open Now</span>
+                <!-- Restaurant 3: Mealea Watbo -->
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="bfood rounded-4 position-relative shadow-sm overflow-hidden h-100">
+                        <img src="../../assets/images/province/Mealea.jpeg" alt="Mealea Watbo"
+                            class="w-100 h-100 rounded-4 object-fit-cover">
+                        <div class="bfood-top-bar position-absolute top-0 start-0 w-100 p-3 d-flex justify-content-between align-items-center">
+                            <span class="bfood-chip"><i class="fa-solid fa-star text-warning me-1"></i> 4.9</span>
+                            <span class="bfood-chip"><i class="fa-regular fa-clock me-1"></i> Open Now</span>
+                        </div>
+                        <div class="bfood-bottom p-3 position-absolute bottom-0 w-100 bg-gradient-dark d-flex flex-column gap-2">
+                            <div>
+                                <h5 class="text-white mb-0 playfair-display fw-bold">Mealea Watbo</h5>
+                                <small class="text-white-50 inter">Royal Khmer Fine Dining</small>
+                            </div>
+                            <a href="../restaurant-list/restaurant-list.html" class="btn-food-detail">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-right fs-xs"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div
-                        class="bottom position-absolute bottom-0 w-100 p-3 d-flex justify-content-between align-items-center">
-                        <h5 class="text-white mb-0 playfair-display">Golden Pumpkin</h5>
-                        <a href="../restaurant-list/restaurant-list.html"
-                            class="btn btn-sm btn-light rounded-pill px-3 fw-semibold">View Details</a>
+                </div>
+
+                <!-- Restaurant 4: Golden Pumpkin -->
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="bfood rounded-4 position-relative shadow-sm overflow-hidden h-100">
+                        <img src="../../assets/images/province/Golden%20Pumpkin.jpg" alt="Golden Pumpkin"
+                            class="w-100 h-100 rounded-4 object-fit-cover">
+                        <div class="bfood-top-bar position-absolute top-0 start-0 w-100 p-3 d-flex justify-content-between align-items-center">
+                            <span class="bfood-chip"><i class="fa-solid fa-star text-warning me-1"></i> 4.6</span>
+                            <span class="bfood-chip"><i class="fa-regular fa-clock me-1"></i> Open Now</span>
+                        </div>
+                        <div class="bfood-bottom p-3 position-absolute bottom-0 w-100 bg-gradient-dark d-flex flex-column gap-2">
+                            <div>
+                                <h5 class="text-white mb-0 playfair-display fw-bold">Golden Pumpkin</h5>
+                                <small class="text-white-50 inter">Authentic Fish Amok &amp; Lok Lak</small>
+                            </div>
+                            <a href="../restaurant-list/restaurant-list.html" class="btn-food-detail">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-right fs-xs"></i>
+                            </a>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Khmer Culinary Tags -->
+            <div
+                class="mt-4 p-3 bg-white rounded-4 border d-flex flex-wrap align-items-center justify-content-between gap-2">
+                <span class="fw-bold color-navy small"><i class="fa-solid fa-fire-burner me-1 text-danger"></i> Must-Try
+                    Khmer Dishes:</span>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-light text-dark border"><i
+                            class="fa-solid fa-bowl-rice text-warning me-1"></i> Fish Amok</span>
+                    <span class="badge bg-light text-dark border"><i
+                            class="fa-solid fa-wheat-awn text-success me-1"></i> Nom Banh Chok Noodles</span>
+                    <span class="badge bg-light text-dark border"><i
+                            class="fa-solid fa-pepper-hot text-danger me-1"></i> Beef Lok Lak</span>
+                    <span class="badge bg-light text-dark border"><i
+                            class="fa-solid fa-cookie-bite text-secondary me-1"></i> Num Krok Coconut Cakes</span>
+                    <span class="badge bg-light text-dark border"><i class="fa-solid fa-seedling text-info me-1"></i>
+                        Kralan Bamboo Sticky Rice</span>
                 </div>
             </div>
         </div>
@@ -397,14 +1159,17 @@
     <section class="py-5">
         <div class="container mb-4">
             <div class="row align-items-center">
-                <div class="col-6 text-start">
-                    <span class="badge-pill mb-1"><i class="fa-solid fa-hotel me-1"></i> LUXURY STAYS</span>
-                    <h2 class="playfair-display fs-2 fs-md-1 fw-bold text-dark mb-0">Best Accommodation</h2>
+                <div class="col-12 col-md-8 text-start">
+                    <span class="badge-pill mb-1"><i class="fa-solid fa-hotel me-1"></i> LUXURY &amp; BOUTIQUE
+                        STAYS</span>
+                    <h2 class="playfair-display fs-2 fs-md-1 fw-bold text-dark mb-0">Hand-Picked Stays in Siem Reap</h2>
+                    <p class="inter text-secondary small mt-1 mb-0">From eco-chic pool villas to serene colonial resorts
+                        and affordable boutique rooms.</p>
                 </div>
-                <div class="col-6 text-end">
+                <div class="col-12 col-md-4 text-start text-md-end mt-3 mt-md-0">
                     <a href="../hotel-list/hotel-list.html"
                         class="btn btn-outline-primary rounded-pill px-4 fw-semibold">
-                        See More <i class="fa-solid fa-arrow-right ms-1"></i>
+                        See All Hotels <i class="fa-solid fa-arrow-right ms-1"></i>
                     </a>
                 </div>
             </div>
@@ -419,12 +1184,14 @@
                             <i class="fa-solid fa-star"></i> FEATURED RESORT
                         </span>
                         <h2 class="playfair-display">Sleep Well, Enjoy The Trip</h2>
-                        <p class="inter">Discover hand-selected 5-star eco-lodges, boutique hotels, and luxury suites in
-                            Siem Reap.</p>
+                        <p class="inter">
+                            Immerse yourself in tranquil Khmer hospitality, tropical saltwater pools, and luxury spa
+                            treatments after an inspiring day of temple wandering.
+                        </p>
                         <div>
                             <a href="../hotel-list/hotel-list.html"
                                 class="btn btn-light rounded-pill px-4 py-2 fw-semibold">
-                                Explore All Hotels <i class="fa-solid fa-arrow-right ms-1"></i>
+                                Explore All Stays <i class="fa-solid fa-arrow-right ms-1"></i>
                             </a>
                         </div>
                     </div>
@@ -433,14 +1200,19 @@
                 <!-- Hotel Grid (4 Cards) -->
                 <div class="col-lg-7 col-md-12">
                     <div class="row g-3">
+                        <!-- Hotel 1 -->
                         <div class="col-sm-6 hotel-card p-2">
-                            <div class="img-frame mb-3 rounded-4 overflow-hidden">
+                            <div class="img-frame mb-3 rounded-4 overflow-hidden position-relative">
                                 <img src="../../assets/images/province/bhotel.jpg" alt="Homewood Hotel"
                                     class="object-fit-cover rounded-4 w-100 h-100 img-zoom">
+                                <span class="badge-tag position-absolute top-0 end-0 m-2 bg-dark-glass small"><i
+                                        class="fa-solid fa-star text-warning"></i> 4.8</span>
                             </div>
-                            <h5 class="playfair-display fw-bold mb-1">Homewood Hotel</h5>
-                            <p class="text-secondary inter sub-title-bhotel small mb-2">Luxurious standard boutique
-                                hotel located conveniently in the central city.</p>
+                            <h5 class="playfair-display fw-bold mb-1">Homewood Hotel &amp; Suites</h5>
+                            <p class="text-secondary inter sub-title-bhotel small mb-2">
+                                Luxurious boutique hotel located conveniently in the central city with rooftop swimming
+                                pool.
+                            </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold color-navy fs-5">$20 <small
                                         class="fs-7 text-muted">/night</small></span>
@@ -449,14 +1221,18 @@
                             </div>
                         </div>
 
+                        <!-- Hotel 2 -->
                         <div class="col-sm-6 hotel-card p-2">
-                            <div class="img-frame mb-3 rounded-4 overflow-hidden">
+                            <div class="img-frame mb-3 rounded-4 overflow-hidden position-relative">
                                 <img src="../../assets/images/province/accomedation.webp" alt="Phum Khmer Lodge"
                                     class="object-fit-cover rounded-4 w-100 h-100 img-zoom">
+                                <span class="badge-tag position-absolute top-0 end-0 m-2 bg-dark-glass small"><i
+                                        class="fa-solid fa-star text-warning"></i> 4.9</span>
                             </div>
                             <h5 class="playfair-display fw-bold mb-1">Phum Khmer Lodge</h5>
-                            <p class="text-secondary inter sub-title-bhotel small mb-2">Cambodian Eco-Lodge, located
-                                just 600m from the center of Siem Reap.</p>
+                            <p class="text-secondary inter sub-title-bhotel small mb-2">
+                                Cambodian Eco-Lodge, nestled in peaceful gardens just 600m from the center of Siem Reap.
+                            </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold color-navy fs-5">$25 <small
                                         class="fs-7 text-muted">/night</small></span>
@@ -465,15 +1241,20 @@
                             </div>
                         </div>
 
+                        <!-- Hotel 3 -->
                         <div class="col-sm-6 hotel-card p-2">
-                            <div class="img-frame mb-3 rounded-4 overflow-hidden">
+                            <div class="img-frame mb-3 rounded-4 overflow-hidden position-relative">
                                 <img src="../../assets/images/province/Anatara%20Angkor%20Resort.webp"
                                     alt="Anantara Angkor Resort"
                                     class="object-fit-cover rounded-4 w-100 h-100 img-zoom">
+                                <span class="badge-tag position-absolute top-0 end-0 m-2 bg-dark-glass small"><i
+                                        class="fa-solid fa-star text-warning"></i> 5.0</span>
                             </div>
                             <h5 class="playfair-display fw-bold mb-1">Anantara Angkor Resort</h5>
-                            <p class="text-secondary inter sub-title-bhotel small mb-2">Intimate luxury resort with 39
-                                tasteful suites and tropical spa pools.</p>
+                            <p class="text-secondary inter sub-title-bhotel small mb-2">
+                                Intimate 5-star luxury resort with 39 tasteful suites, private courtyard plunge pools,
+                                and spa.
+                            </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold color-navy fs-5">$30 <small
                                         class="fs-7 text-muted">/night</small></span>
@@ -482,14 +1263,19 @@
                             </div>
                         </div>
 
+                        <!-- Hotel 4 -->
                         <div class="col-sm-6 hotel-card p-2">
-                            <div class="img-frame mb-3 rounded-4 overflow-hidden">
+                            <div class="img-frame mb-3 rounded-4 overflow-hidden position-relative">
                                 <img src="../../assets/images/province/Templation.webp" alt="Templation Resort"
                                     class="object-fit-cover rounded-4 w-100 h-100 img-zoom">
+                                <span class="badge-tag position-absolute top-0 end-0 m-2 bg-dark-glass small"><i
+                                        class="fa-solid fa-star text-warning"></i> 4.9</span>
                             </div>
                             <h5 class="playfair-display fw-bold mb-1">Templation Resort</h5>
-                            <p class="text-secondary inter sub-title-bhotel small mb-2">Contemporary oasis near Angkor
-                                Wat with a giant lake-sized swimming pool.</p>
+                            <p class="text-secondary inter sub-title-bhotel small mb-2">
+                                Contemporary oasis set closest to Angkor Wat with private pool villas and lake-sized
+                                swimming pool.
+                            </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="fw-bold color-navy fs-5">$15 <small
                                         class="fs-7 text-muted">/night</small></span>
@@ -503,7 +1289,101 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- SECTION: FREQUENTLY ASKED QUESTIONS (TOURIST ACCORDION) -->
+    <section class="py-5 bg-light-subtle">
+        <div class="container max-w-800">
+            <div class="text-center mb-5">
+                <span class="badge-pill mb-2"><i class="fa-solid fa-circle-question me-1"></i> FAQ</span>
+                <h2 class="playfair-display display-5 fw-bold color-navy">Frequently Asked Questions</h2>
+                <p class="inter text-secondary fs-6">Quick answers to help you navigate Siem Reap like a seasoned
+                    traveler.</p>
+            </div>
+
+            <div class="accordion custom-accordion" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item rounded-4 border mb-3 overflow-hidden shadow-sm">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed fw-bold playfair-display color-navy fs-5"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                            aria-controls="collapseOne">
+                            How many days should I stay in Siem Reap?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body inter text-secondary small leading-relaxed">
+                            We recommend at least <strong>3 to 4 full days</strong>. This allows 2 days for the Angkor
+                            temples (Small and Grand Circuits), 1 day for Tonle Sap floating villages and Banteay Srei /
+                            Phnom Kulen waterfalls, and evening time to enjoy Phare Circus, night markets, and local
+                            cuisine.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item rounded-4 border mb-3 overflow-hidden shadow-sm">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-bold playfair-display color-navy fs-5"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                            aria-controls="collapseTwo">
+                            How do I get from Siem Reap Airport (SAI) to town?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body inter text-secondary small leading-relaxed">
+                            The new Siem Reap–Angkor International Airport (SAI) is located 45 km east of town. You can
+                            take an official airport taxi or private van (~$35–$40), airport shuttle bus (~$8), or
+                            pre-arrange airport pick-up with your hotel. Travel time is approximately 45 to 55 minutes
+                            via the direct expressway.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item rounded-4 border mb-3 overflow-hidden shadow-sm">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-bold playfair-display color-navy fs-5"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            Can I buy my Angkor Pass online or with card?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body inter text-secondary small leading-relaxed">
+                            Yes! You can purchase official e-passes securely on the <em>Angkor Enterprise</em> official
+                            portal with Visa/Mastercard, or in person at the official ticket center. Credit cards, debit
+                            cards, USD, and KHR cash are all accepted.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item rounded-4 border mb-3 overflow-hidden shadow-sm">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed fw-bold playfair-display color-navy fs-5"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                            aria-controls="collapseFour">
+                            Is Siem Reap safe for solo female and family travelers?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body inter text-secondary small leading-relaxed">
+                            Siem Reap is considered one of the safest tourist destinations in Southeast Asia. Locals are
+                            welcoming and helpful. Standard travel precautions apply: keep personal belongings secure
+                            when riding in open Remorks and agree on fares or use Grab/PassApp for peace of mind.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER CONTAINER (Loaded dynamically) -->
     <div id="footer-container"></div>
 
     <!-- Bootstrap & Components Scripts -->
