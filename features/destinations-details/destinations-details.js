@@ -92,7 +92,7 @@ const DESTINATIONS_DATA = [
                 price: "From $195 / night",
                 distance: "4.5 km (10 mins to Angkor Wat Gate)",
                 highlight: "100% plastic-free sanctuary, private riverfront gardens, complimentary private Tuk-Tuk service.",
-                image: "https://i.pinimg.com/1200x/ac/2d/63/ac2d638064cd684a53cb698d2d22fed3.jpg",
+                image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -102,7 +102,7 @@ const DESTINATIONS_DATA = [
                 price: "From $220 / night",
                 distance: "4.0 km (8 mins to Gate)",
                 highlight: "Magnificent lagoon pool, championship 18-hole golf course, and lush landscaped botanical gardens.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -112,7 +112,7 @@ const DESTINATIONS_DATA = [
                 price: "From $160 / night",
                 distance: "5.0 km (12 mins to Gate)",
                 highlight: "Former French Governor's mansion featuring salt-water pool, art gallery, and vintage bar lounges.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -239,7 +239,7 @@ const DESTINATIONS_DATA = [
                 price: "From $180 / night",
                 distance: "7.5 km (15 mins by Remork)",
                 highlight: "Award-winning design architecture, tranquil courtyard pool, and Shinta Mani Foundation community support.",
-                image: "https://i.pinimg.com/1200x/65/a6/cd/65a6cdb15fdf7aee8354e46ee5bc2520.jpg",
+                image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -249,7 +249,7 @@ const DESTINATIONS_DATA = [
                 price: "From $310 / night",
                 distance: "7.0 km (14 mins to South Gate)",
                 highlight: "Iconic colonial heritage, Cambodia's largest swimming pool, and historic Elephant Bar.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -259,7 +259,7 @@ const DESTINATIONS_DATA = [
                 price: "From $140 / night",
                 distance: "7.5 km (Riverside Wat Bo)",
                 highlight: "Rooftop infinity pool, curated modern art installations, and organic garden breakfasts.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -386,7 +386,7 @@ const DESTINATIONS_DATA = [
                 price: "From $140 / night",
                 distance: "2.5 km (7 mins by Tuk-Tuk)",
                 highlight: "Rooftop infinity pool, curated contemporary art gallery, organic breakfast buffet.",
-                image: "https://i.pinimg.com/1200x/65/a6/cd/65a6cdb15fdf7aee8354e46ee5bc2520.jpg",
+                image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -396,7 +396,7 @@ const DESTINATIONS_DATA = [
                 price: "From $160 / night",
                 distance: "2.8 km (8 mins by Tuk-Tuk)",
                 highlight: "50s modernist design, 20m emerald saltwater pool, vintage limousine transfers.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -406,7 +406,7 @@ const DESTINATIONS_DATA = [
                 price: "From $45 / night",
                 distance: "2.0 km (5 mins by Tuk-Tuk)",
                 highlight: "Swim-up pool bar, games lounge, private king rooms and modern dorms in central location.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -534,7 +534,7 @@ const DESTINATIONS_DATA = [
                 price: "From $380 / night",
                 distance: "25 km from Lake / 8 km from Town",
                 highlight: "Private stilt villas nestled in working green rice paddies, infinity pool, cigar lounge.",
-                image: "https://i.pinimg.com/1200x/83/6f/35/836f352d68e26c625eb8cc1b453f8e3d.jpg",
+                image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -544,7 +544,7 @@ const DESTINATIONS_DATA = [
                 price: "From $130 / night",
                 distance: "26 km from Lake (Town South)",
                 highlight: "Meandering 200m river pool weaving past wooden Khmer cottages in tropical jungle gardens.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -554,7 +554,7 @@ const DESTINATIONS_DATA = [
                 price: "From $110 / night",
                 distance: "27 km from Lake",
                 highlight: "Saltwater pool surrounded by private wooden sundecks and Khmer fine dining.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -681,7 +681,7 @@ const DESTINATIONS_DATA = [
                 price: "From $160 / night",
                 distance: "600 meters (5 mins walk to Night Market)",
                 highlight: "50s modernist chic design, 20m emerald saltwater pool, vintage limousine transfers, lush vertical gardens.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -691,7 +691,7 @@ const DESTINATIONS_DATA = [
                 price: "From $95 / night",
                 distance: "300 meters (3 mins walk)",
                 highlight: "Urban oasis inspired by Cambodian birdlife, saltwater plunge pool, and canopy cafe.",
-                image: "https://i.pinimg.com/1200x/65/a6/cd/65a6cdb15fdf7aee8354e46ee5bc2520.jpg",
+                image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -701,7 +701,7 @@ const DESTINATIONS_DATA = [
                 price: "From $155 / night",
                 distance: "1.2 km (4 mins by Tuk-Tuk)",
                 highlight: "Classic colonial architecture, private outdoor stone bathtubs, and Thursday live jazz nights.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -828,7 +828,7 @@ const DESTINATIONS_DATA = [
                 price: "From $310 / night",
                 distance: "1.5 km (5 mins by Tuk-Tuk)",
                 highlight: "Historic royal French colonial luxury, 35-meter swimming pool, famous high tea.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -838,7 +838,7 @@ const DESTINATIONS_DATA = [
                 price: "From $220 / night",
                 distance: "2.0 km (7 mins by Tuk-Tuk)",
                 highlight: "Freeform lagoon pool, French-Khmer spa, lush tropical landscaped gardens.",
-                image: "https://i.pinimg.com/1200x/ac/2d/63/ac2d638064cd684a53cb698d2d22fed3.jpg",
+                image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -848,7 +848,7 @@ const DESTINATIONS_DATA = [
                 price: "From $180 / night",
                 distance: "1.0 km (Town Center)",
                 highlight: "Boutique courtyard pool, signature Khmer cocktails, non-profit community foundation.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -975,7 +975,7 @@ const DESTINATIONS_DATA = [
                 price: "From $140 / night",
                 distance: "On-site (Wat Bo Riverside)",
                 highlight: "Rooftop infinity pool, curated contemporary art gallery, organic breakfast buffet.",
-                image: "https://i.pinimg.com/1200x/65/a6/cd/65a6cdb15fdf7aee8354e46ee5bc2520.jpg",
+                image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -985,7 +985,7 @@ const DESTINATIONS_DATA = [
                 price: "From $160 / night",
                 distance: "200 meters (Street 24)",
                 highlight: "50s modernist design, 20m emerald saltwater pool, vintage limousine transfers.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -995,7 +995,7 @@ const DESTINATIONS_DATA = [
                 price: "From $75 / night",
                 distance: "150 meters (Wat Bo Village)",
                 highlight: "Secluded outdoor pool bordered by frangipani blossoms and Khmer herbal spa.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -1123,7 +1123,7 @@ const DESTINATIONS_DATA = [
                 price: "From $160 / night",
                 distance: "800 meters (Pokambor Riverside)",
                 highlight: "Historic French Governor's mansion, saltwater swimming pool, vintage Scribe Bar.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1133,7 +1133,7 @@ const DESTINATIONS_DATA = [
                 price: "From $155 / night",
                 distance: "1.2 km (4 mins by Tuk-Tuk)",
                 highlight: "Classic colonial suites, private outdoor stone soaking tubs, live jazz evenings.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1143,7 +1143,7 @@ const DESTINATIONS_DATA = [
                 price: "From $80 / night",
                 distance: "300 meters (Old Market)",
                 highlight: "Central courtyard pool, private balconies, complimentary airport transfers.",
-                image: "https://i.pinimg.com/1200x/83/6f/35/836f352d68e26c625eb8cc1b453f8e3d.jpg",
+                image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -1270,7 +1270,7 @@ const DESTINATIONS_DATA = [
                 price: "From $110 / night",
                 distance: "On-site (Taphul Road)",
                 highlight: "Stone-carved swimming pool, complimentary daily massages, high-speed WiFi.",
-                image: "https://i.pinimg.com/1200x/65/a6/cd/65a6cdb15fdf7aee8354e46ee5bc2520.jpg",
+                image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1280,7 +1280,7 @@ const DESTINATIONS_DATA = [
                 price: "From $65 / night",
                 distance: "200 meters (Sivatha Road)",
                 highlight: "Generous rooms, tropical garden terrace, central location.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1290,7 +1290,7 @@ const DESTINATIONS_DATA = [
                 price: "From $50 / night",
                 distance: "300 meters (Taphul Village)",
                 highlight: "Twin swimming pools, poolside bar, quiet leafy compound.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -1417,7 +1417,7 @@ const DESTINATIONS_DATA = [
                 price: "From $195 / night",
                 distance: "Town Base (Driver to Mountain)",
                 highlight: "100% plastic-free oasis, private riverfront gardens, complimentary private Tuk-Tuk.",
-                image: "https://i.pinimg.com/1200x/ac/2d/63/ac2d638064cd684a53cb698d2d22fed3.jpg",
+                image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1427,7 +1427,7 @@ const DESTINATIONS_DATA = [
                 price: "From $380 / night",
                 distance: "Town West",
                 highlight: "Private stilt villas nestled in working green rice paddies, infinity pool, cigar lounge.",
-                image: "https://i.pinimg.com/1200x/83/6f/35/836f352d68e26c625eb8cc1b453f8e3d.jpg",
+                image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1437,7 +1437,7 @@ const DESTINATIONS_DATA = [
                 price: "From $120 / night",
                 distance: "Foot of Kulen Mountain",
                 highlight: "Ethical elephant conservation sanctuary, jungle bungalows, organic meals.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -1488,7 +1488,7 @@ const DESTINATIONS_DATA = [
         bestTime: "7:00 AM – 8:30 AM (Soft Pink Sunrise Glow)",
         admission: "Included in Angkor Pass",
         dressCode: "Strict temple dress code: shoulders and knees covered",
-        heroImage: "https://i.pinimg.com/1200x/29/70/4a/29704ae78696b99ca8685cc995bbffba.jpg",
+        heroImage: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop",
         description: "Revered as the jewel of Khmer art, Banteay Srei was built in 967 AD not by a king, but by a royal Brahmin scholar. Carved from rare rose-pink sandstone, its miniature shrines showcase the most intricate, lace-like 3D stone carvings found anywhere in Asia.",
         facts: [
             "Constructed in 967 AD and dedicated to the Hindu deity Shiva.",
@@ -1564,7 +1564,7 @@ const DESTINATIONS_DATA = [
                 price: "From $195 / night",
                 distance: "Town Base (30 mins by Car)",
                 highlight: "100% plastic-free oasis, private riverfront gardens, complimentary private Tuk-Tuk.",
-                image: "https://i.pinimg.com/1200x/ac/2d/63/ac2d638064cd684a53cb698d2d22fed3.jpg",
+                image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1574,7 +1574,7 @@ const DESTINATIONS_DATA = [
                 price: "From $220 / night",
                 distance: "28 km (North of Town)",
                 highlight: "Magnificent lagoon pool, championship 18-hole golf course, lush botanical gardens.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1584,7 +1584,7 @@ const DESTINATIONS_DATA = [
                 price: "From $45 / night",
                 distance: "2 km from Temple",
                 highlight: "Authentic wooden chalets, organic rice paddies, home-cooked country dinners.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -1635,7 +1635,7 @@ const DESTINATIONS_DATA = [
         bestTime: "7:30 AM (Morning Mist) or 12:30 PM (Quiet Midday)",
         admission: "Included in Angkor Pass",
         dressCode: "Temple dress code strictly enforced: shoulders & knees covered",
-        heroImage: "https://i.pinimg.com/1200x/b0/bb/99/b0bb9930f367e9b08499252c80309995.jpg",
+        heroImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
         description: "Preserved intentionally in its semi-wild jungle state, Ta Prohm is a mesmerizing testament to nature's power. Massive silk-cotton and strangler fig tree roots weave through ancient stone galleries, vaulted corridors, and celestial Apsara shrines.",
         facts: [
             "Consecrated in 1186 AD by King Jayavarman VII as a Mahayana Buddhist monastery dedicated to his mother.",
@@ -1711,7 +1711,7 @@ const DESTINATIONS_DATA = [
                 price: "From $310 / night",
                 distance: "10 km (18 mins to East Gate)",
                 highlight: "Iconic colonial heritage, Cambodia's largest swimming pool, Elephant Bar.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1721,7 +1721,7 @@ const DESTINATIONS_DATA = [
                 price: "From $180 / night",
                 distance: "11 km (Wat Bo Quarter)",
                 highlight: "Award-winning design architecture, courtyard pool, community foundations.",
-                image: "https://i.pinimg.com/1200x/65/a6/cd/65a6cdb15fdf7aee8354e46ee5bc2520.jpg",
+                image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1731,7 +1731,7 @@ const DESTINATIONS_DATA = [
                 price: "From $155 / night",
                 distance: "10.5 km",
                 highlight: "Outdoor stone bathtubs, private gardens, live Thursday jazz.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -1782,7 +1782,7 @@ const DESTINATIONS_DATA = [
         bestTime: "8:30 AM – 4:30 PM (Guided Tours on the Hour)",
         admission: "$10 USD Donation (Directly Funds Mine Clearance)",
         dressCode: "Casual comfortable walking wear",
-        heroImage: "https://i.pinimg.com/1200x/8c/b5/02/8cb502bb2b467657d235334fa251ea78.jpg",
+        heroImage: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1200&auto=format&fit=crop",
         description: "An uplifting, world-renowned center where African giant pouched rats ('HeroRATs') are trained using positive scent-detection to swiftly locate landmines, releasing cleared land back to rural Cambodian farming communities.",
         facts: [
             "HeroRATs are too light to trigger landmines (weighing only ~1 kg) and have saved countless lives across Cambodia.",
@@ -1858,7 +1858,7 @@ const DESTINATIONS_DATA = [
                 price: "From $160 / night",
                 distance: "4.5 km (Downtown Wat Bo)",
                 highlight: "Modernist design, 20m emerald saltwater pool, vintage limousine transfers.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1868,7 +1868,7 @@ const DESTINATIONS_DATA = [
                 price: "From $140 / night",
                 distance: "4.0 km (Riverside)",
                 highlight: "Rooftop infinity pool, contemporary art gallery, organic breakfast buffet.",
-                image: "https://i.pinimg.com/1200x/65/a6/cd/65a6cdb15fdf7aee8354e46ee5bc2520.jpg",
+                image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -1878,7 +1878,7 @@ const DESTINATIONS_DATA = [
                 price: "From $195 / night",
                 distance: "3.5 km (River Park)",
                 highlight: "100% plastic-free oasis, private riverfront gardens, complimentary private Tuk-Tuk.",
-                image: "https://i.pinimg.com/1200x/ac/2d/63/ac2d638064cd684a53cb698d2d22fed3.jpg",
+                image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
@@ -1929,7 +1929,7 @@ const DESTINATIONS_DATA = [
         bestTime: "9:00 AM – 4:00 PM (Workshops in Full Swing)",
         admission: "Free Guided Walking Tours",
         dressCode: "Casual comfortable",
-        heroImage: "https://i.pinimg.com/1200x/99/d5/a2/99d5a23f4c6ee560f8541e2bf7fa9324.jpg",
+        heroImage: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop",
         description: "Created to train rural Cambodian youth in classical Khmer master crafts, Artisans Angkor is an inspiring social enterprise. Watch sculptors chisel fine sandstone, master woodcarvers shape teak, and see golden silkworms spin pure Cambodian silk threads.",
         facts: [
             "Founded in the late 1990s to revive traditional Khmer arts and provide sustainable rural employment.",
@@ -2005,7 +2005,7 @@ const DESTINATIONS_DATA = [
                 price: "From $155 / night",
                 distance: "1.0 km (4 mins by Tuk-Tuk)",
                 highlight: "Classic colonial suites, private outdoor stone bathtubs, live jazz nights.",
-                image: "../../assets/images/province/Templation.webp",
+                image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -2015,7 +2015,7 @@ const DESTINATIONS_DATA = [
                 price: "From $180 / night",
                 distance: "800 meters (Downtown)",
                 highlight: "Bill Bensley design architecture, courtyard pool, community foundations.",
-                image: "https://i.pinimg.com/1200x/65/a6/cd/65a6cdb15fdf7aee8354e46ee5bc2520.jpg",
+                image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             },
             {
@@ -2025,7 +2025,7 @@ const DESTINATIONS_DATA = [
                 price: "From $160 / night",
                 distance: "1.2 km (Wat Bo)",
                 highlight: "50s modernist design, 20m emerald saltwater pool, vintage limousine transfers.",
-                image: "https://i.pinimg.com/736x/a1/dc/9f/a1dc9f28eb49e2b7b3e0f1e2209ba50f.jpg",
+                image: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=800&auto=format&fit=crop",
                 link: "../hotel-list/hotel-list.html"
             }
         ],
